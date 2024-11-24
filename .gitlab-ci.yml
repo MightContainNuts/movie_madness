@@ -27,7 +27,7 @@ test:
         echo "No tests to run."
       fi
 
-# Deployment stage (if you need to deploy, adjust this to your requirements)
+
 deploy:
   stage: deploy
   script:

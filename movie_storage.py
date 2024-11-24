@@ -463,12 +463,7 @@ class MovieDB:
         self.logger.info("Quit starting ...")
         print("Exiting MovieMadness...")
         self.save_to_file()
-        # note to self, sys.exit throws a SystemExit exception.
-        try:
-            sys.exit()
-        except SystemExit as e:
-            # Log the termination in a way that doesn't treat it as an error
-            self.logger.info("Program terminating...")
-            print("Bye!!")
-            self.logger.info("... quit finished")
-            raise e  # Re-raise the exception to actually exit the program
+        self.logger.info("Program terminating...")
+        print("Bye!!")
+        self.logger.info("... quit finished")
+        sys.exit()

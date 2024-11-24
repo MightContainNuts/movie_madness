@@ -76,3 +76,36 @@ SystemExit
 2024-11-24 06:27:01,601 - INFO - Assertion checked: Remote DB is synced with local storage
 2024-11-24 06:27:01,601 - INFO - ... saving local_storage to file finished
 2024-11-24 06:27:01,601 - INFO - Context Manager exited. DB saved to: data.json
+2024-11-24 11:19:22,863 - INFO - New Instance of MovieDB started
+2024-11-24 11:19:22,864 - INFO - loading file to local_storage started ...
+2024-11-24 11:19:22,864 - INFO - Database loaded into local
+2024-11-24 11:19:22,864 - INFO - ... loading file to local_storage finished
+2024-11-24 11:19:22,864 - INFO - Context Manager started
+2024-11-24 11:19:27,852 - INFO - Option executed Exit MovieMadness
+2024-11-24 11:19:27,852 - INFO - Quit starting ...
+2024-11-24 11:19:27,852 - INFO - Saving local storage to file ...
+2024-11-24 11:19:27,853 - INFO - Movie DB saved to file: data.json
+2024-11-24 11:19:27,853 - INFO - Assertion checked: Remote is synced with Local
+2024-11-24 11:19:27,853 - INFO - ... saving local_storage to file finished
+2024-11-24 11:19:27,853 - INFO - Program terminating...
+2024-11-24 11:19:27,854 - INFO - ... quit finished
+2024-11-24 11:19:27,854 - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 250, in command_menu_options
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 53, in <lambda>
+    "FUNCTION": lambda: self.quit(),
+                        ^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 474, in quit
+    raise e  # Re-raise the exception to actually exit the program
+    ^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 468, in quit
+    sys.exit()
+SystemExit
+2024-11-24 11:19:27,856 - INFO - Saving local storage to file ...
+2024-11-24 11:19:27,856 - INFO - Movie DB saved to file: data.json
+2024-11-24 11:19:27,856 - INFO - Assertion checked: Remote is synced with Local
+2024-11-24 11:19:27,856 - INFO - ... saving local_storage to file finished
+2024-11-24 11:19:27,856 - INFO - Context Manager exited. DB saved to: data.json
