@@ -1,41 +1,29 @@
 stages:
   - lint
-  - format
   - test
+  - deploy
 
-# Docker image for Python and pre-commit hooks
-image: python:3.12
-
-# Cache Python dependencies to speed up builds
-cache:
-  paths:
-    - .venv/
-    - ~/.cache/pip
-
-before_script:
-  - pip install --upgrade pip
-  - pip install -r requirements.txt  # Adjust if you have a different way of managing dependencies
-  - pip install pre-commit  # To run pre-commit hooks
-
-# Linting with flake8
+# Linting stage
 lint:
   stage: lint
+  image: python:3.12  # or your preferred Python version
   script:
-    - pip install flake8
-    - flake8 .  # You can specify a folder, e.g. 'src' if your code is in a subfolder
+    - pip install -r requirements.txt  # Install dependencies
+    - pip install black flake8  # Install Black and Flake8
+    - flake8 . --exclude venv,.venv,__pycache__,.tox,.nox,.coverage,*.egg-info,dist  # Run flake8 with exclusions
+    - black . --exclude "venv|.venv|__pycache__|\.tox|\.nox|\.coverage|*.egg-info|dist"  # Run Black with exclusions
 
-# Code formatting with black
-format:
-  stage: format
-  script:
-    - pip install black
-    - black --check .  # '--check' ensures no code is modified and will exit with non-zero if there are issues
-  allow_failure: true  # You can set this to 'true' if you don't want the pipeline to fail on formatting errors
-
-# Test stage (add pytest later)
+# Testing stage (optional, for pytest)
 test:
   stage: test
+  image: python:3.12  # or your preferred Python version
   script:
-    - pip install pytest
-    - pytest  # This will be where you add your tests later
-  allow_failure: true  # Optional, based on your testing strategy (set to false when you're ready)
+    - pip install -r requirements.txt  # Install dependencies
+    - pip install pytest  # Install pytest
+    - pytest  # Run tests
+
+# Deployment stage (if you need to deploy, adjust this to your requirements)
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying the application..."
