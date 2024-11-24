@@ -1,0 +1,41 @@
+stages:
+  - lint
+  - format
+  - test
+
+# Docker image for Python and pre-commit hooks
+image: python:3.12
+
+# Cache Python dependencies to speed up builds
+cache:
+  paths:
+    - .venv/
+    - ~/.cache/pip
+
+before_script:
+  - pip install --upgrade pip
+  - pip install -r requirements.txt  # Adjust if you have a different way of managing dependencies
+  - pip install pre-commit  # To run pre-commit hooks
+
+# Linting with flake8
+lint:
+  stage: lint
+  script:
+    - pip install flake8
+    - flake8 .  # You can specify a folder, e.g. 'src' if your code is in a subfolder
+
+# Code formatting with black
+format:
+  stage: format
+  script:
+    - pip install black
+    - black --check .  # '--check' ensures no code is modified and will exit with non-zero if there are issues
+  allow_failure: true  # You can set this to 'true' if you don't want the pipeline to fail on formatting errors
+
+# Test stage (add pytest later)
+test:
+  stage: test
+  script:
+    - pip install pytest
+    - pytest  # This will be where you add your tests later
+  allow_failure: true  # Optional, based on your testing strategy (set to false when you're ready)
