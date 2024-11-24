@@ -1,6 +1,7 @@
 import json
 import statistics
 import sys
+import pandas as pd
 
 import logger
 from sys import exc_info
@@ -115,6 +116,7 @@ class MovieDB:
     ##### DB File handling #####
 
     def load_to_local(self) -> None:
+        self.logger.info("loading file to local_storage started ...")
         self.local_storage.clear()
         try:
             with open(self.MOVIE_DB, "r") as handle:
@@ -132,8 +134,10 @@ class MovieDB:
             self.logger.error("Error decoding JSON in the file: %s", self.MOVIE_DB)
         except Exception as e:
             self.logger.error("Yikes, something went wrong: %s", e, exc_info=True)
+        self.logger.info("... loading file to local_storage finished")
 
     def save_to_file(self) -> None:
+        self.logger.info("Saving local storage to file ...")
         try:
             if self.MOVIE_DB is not None:
                 with open(self.MOVIE_DB, "w") as write_handle:
@@ -156,6 +160,7 @@ class MovieDB:
             self.logger.error("DB File not found: %s", self.MOVIE_DB)
         except Exception as e:
             self.logger.error("Yikes, something went wrong: %s", e, exc_info=True)
+        self.logger.info("... saving local_storage to file finished")
 
     ##### common functions #####
     def check_movie_title(self, in_database: bool) -> "valid_movie_title":
@@ -166,6 +171,7 @@ class MovieDB:
         False, check if title exist for delete, update
         :return: valid movie
         """
+        self.logger.info("starting check_movie_title ...")
         while True:
             # Prompt for title
             movie_title = input('Enter movie TITLE ("exit" to cancel): ').strip()
@@ -190,9 +196,11 @@ class MovieDB:
                     continue
             break
         self.logger.info("Movie Title checked for validity %s", movie_title)
+        self.logger.info("... Title check finished")
         return movie_title
 
     def check_movie_rating(self):
+        self.logger.info("Start check movie rating ...")
         while True:
             movie_rating = input("Enter movie RATING: ").strip()
             if not movie_rating:
@@ -208,6 +216,8 @@ class MovieDB:
                 continue
             break
         self.logger.info("Rating checked for validity %s", movie_rating)
+        self.logger.info("... Rating check finished")
+
         return movie_rating
 
     ##### Command Menu #####
@@ -232,7 +242,8 @@ class MovieDB:
 
     ##### Movie commands options #####
     def list_movies(self):
-        print("Listing movies...")
+        print("Listing movies ...")
+        self.logger.info("Listing Movies started")
         if self.local_storage:
             print("\n\nFilms in database:")
             print("-" * 65)
@@ -247,6 +258,7 @@ class MovieDB:
             self.logger.error(
                 "MovieDB is empty or not loaded correctly: %s", self.MOVIE_DB
             )
+        self.logger.info("... Listing Movies finished")
         return self.MOVIE_DB
 
     def add_movie(self):
@@ -255,7 +267,8 @@ class MovieDB:
         Loads the information from the JSON file, add the movie,
         and saves it. The function doesn't need to validate the input.
         """
-        print("Adding Movie...")
+        print("Adding Movie ...")
+        self.logger.info("Add Movie started...")
         new_movie_title = self.check_movie_title(True)
         while True:
             new_movie_date = input("Enter new movie DATE): ").strip()
@@ -286,6 +299,7 @@ class MovieDB:
                 "An error occurred while saving the movie: %s", e, exc_info=True
             )
             print("An error occurred while saving the movie. Please try again.")
+        self.logger.info("... Add movie finished")
 
     def delete_movie(self):
         """
@@ -293,7 +307,8 @@ class MovieDB:
         Loads the information from the JSON file, deletes the movie,
         and saves it. The function doesn't need to validate the input.
         """
-        print("Deleting Movie...")
+        print("Deleting Movie... ")
+        self.logger.info("Delete Movie starting...")
         film_to_delete = self.check_movie_title(False)
         print(f"Removing {film_to_delete} from database... ")
         self.logger.info(
@@ -317,6 +332,7 @@ class MovieDB:
             print(f"An error occurred while removing the movie: {e}")
             self.logger.error("Unexpected error while removing film: %s", e)
         self.save_to_file()
+        self.logger.info("... Delete Movie finished")
 
     def update_movie(self):
         """
@@ -324,7 +340,8 @@ class MovieDB:
         Loads the information from the JSON file, updates the movie,
         and saves it. The function doesn't need to validate the input.
         """
-        print("Updating Movie...")
+        print("Updating Movie ...")
+        self.logger.info("Starting update_movie")
         film_to_update = self.check_movie_title(False)
         new_rating = self.check_movie_rating()
         old_rating = self.local_storage[film_to_update]["rating"]
@@ -344,63 +361,106 @@ class MovieDB:
             f"Movie Updated. {film_to_update}'s rating from {old_rating} changed to {new_rating}"
         )
         self.save_to_file()
+        self.logger.info("... Update Movie finished")
 
     def print_stats(self):
         """
+        Create local dictionary to capture ratings and best, worst movies
+        display statsL
         Average rating, Median rating, best movies, worst movies
-        :return:
+        :return: None
         """
         print("Displaying statistics...")
+        self.logger.info("displying stats started ...")
 
-        best_movies = {}
-        worst_movies = {}
-        best_worst_movies = {
-            {
-            "Best": 0,
-            "Films": []
-            },
-            {
-            "Worst": 10,
-            "Films": []
-            }
-        }
+        movie_stats = {}
+
         if not self.local_storage:
             print("No films to display statistics for")
             self.logger.warning("No films in local storage")
             return
-        rating_list = [movie_data["rating"] for movie_data in self.local_storage.values()]
 
+        movie_stats["ratings"] = [
+            movie_data["rating"] for movie_data in self.local_storage.values()
+        ]
 
-        # for movie, movie_data in self.local_storage.items():
-        #     _, rating = movie_data
-        #     if movie_data[rating] == min_rating:
-        #         if min_rating not in worst_movies:
-        #             worst_movies[min_rating] = []
-        #         worst_movies[min_rating].append(movie)
-        #     elif movie_data[rating] == max_rating:
-        #         if max_rating not in best_movies:
-        #             best_movies[max_rating] = []
-        #         best_movies[max_rating].append(movie)
+        max_rating = max(movie_stats["ratings"])
+        min_rating = min(movie_stats["ratings"])
 
-        max_rating = max(rating_list)
-        min_rating = min(rating_list)
-        average_rating = sum(rating_list) / len(rating_list)
-        median_rating = statistics.median(rating_list)
+        movie_stats["best_movies"] = [
+            movie
+            for movie in self.local_storage.items()
+            if movie[1]["rating"] == max_rating
+        ]
 
-        print("best movies", best_movies)
-        print("worst movies", worst_movies)
-        print(min_rating)
-        print(max_rating)
-        print("Median rating", median_rating)
-        print("Average rating", average_rating)
+        movie_stats["worst_movies"] = [
+            movie
+            for movie in self.local_storage.items()
+            if movie[1]["rating"] == min_rating
+        ]
 
+        if movie_stats["best_movies"]:
+            # Create a DataFrame with the movie name and rating
+            df = pd.DataFrame(
+                [
+                    (movie[0], movie[1]["rating"])
+                    for movie in movie_stats["best_movies"]
+                ],
+                columns=["Movie", "Rating"],
+            )
+            print("\n\nBest rated movies:")
+            print("-" * 40)
+            print(df)
+        else:
+            print("No best movies found.")
+            self.logger.error(
+                "displaying stats: No best_movies found %s", movie_stats["best_movies"]
+            )
 
+        if movie_stats["worst_movies"]:
+            df = pd.DataFrame(
+                [
+                    (movie[0], movie[1]["rating"])
+                    for movie in movie_stats["worst_movies"]
+                ],
+                columns=["Movie", "Rating"],
+            )
+            print("\n\nWorst rated movies:")
+            print("-" * 40)
+            print(df)
+        else:
+            print("No worst movies found.")
+            self.logger.error(
+                "displaying stats: No worst_movies found %s",
+                movie_stats["worst_movies"],
+            )
 
-
-
+        if movie_stats["ratings"]:
+            self.logger.info("displaying stats: ratings")
+            df = pd.DataFrame(movie_stats["ratings"], columns=["Rating"])
+            median_rating = df["Rating"].median()
+            average_rating = df["Rating"].mean()
+            print("\n\nRatings:")
+            print("-" * 40)
+            print("\nMedian ", median_rating)
+            print("Average ", average_rating)
+        else:
+            print("No worst movies found.")
+            self.logger.errorinfo(
+                "displaying stats: No ratings found %s", movie_stats["ratings"]
+            )
+        self.logger.info("...Stats printed finished")
 
     def quit(self):
+        self.logger.info("Quit starting ...")
         print("Exiting MovieMadness...")
         self.save_to_file()
-        print("Bye!!")
-        sys.exit()
+        # note to self, sys.exit throws a SystemExit exception.
+        try:
+            sys.exit()
+        except SystemExit as e:
+            # Log the termination in a way that doesn't treat it as an error
+            self.logger.info("Program terminating...")
+            print("Bye!!")
+            self.logger.info("... quit finished")
+            raise e  # Re-raise the exception to actually exit the program
