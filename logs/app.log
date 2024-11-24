@@ -1,0 +1,55 @@
+2024-11-23 11:35:56,797 - INFO - New Instance of MovieDB started
+2024-11-23 11:35:56,798 - INFO - Database loaded into local
+2024-11-23 11:35:56,798 - INFO - Context Manager started
+2024-11-23 11:36:00,591 - INFO - Option executed Print statistics
+2024-11-23 11:36:00,592 - ERROR - Exception occurred: too many values to unpack (expected 2)
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/Playground/Codio_Assesments/movie_maker/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/Playground/Codio_Assesments/movie_maker/movie_storage.py", line 231, in command_menu_options
+    func()
+  File "/Users/dda/PycharmProjects/Playground/Codio_Assesments/movie_maker/movie_storage.py", line 55, in <lambda>
+    "FUNCTION": lambda: self.print_stats(),
+                        ^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/Playground/Codio_Assesments/movie_maker/movie_storage.py", line 362, in print_stats
+    rating_list = [movie_data[rating] for _, movie_data in self.local_storage]
+                                          ^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+2024-11-23 11:36:00,598 - INFO - Movie DB saved to file: data.json
+2024-11-23 11:36:00,599 - INFO - Assertion checked: Remote DB is synced with local storage
+2024-11-23 11:36:00,599 - INFO - Context Manager exited. DB saved to: data.json
+2024-11-23 11:42:04,665 - INFO - New Instance of MovieDB started
+2024-11-23 11:42:04,665 - INFO - Database loaded into local
+2024-11-23 11:42:04,665 - INFO - Context Manager started
+2024-11-23 11:42:07,497 - INFO - Option executed Print statistics
+2024-11-23 11:43:20,693 - ERROR - Exception occurred: 
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/Playground/Codio_Assesments/movie_maker/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/Playground/Codio_Assesments/movie_maker/movie_storage.py", line 222, in command_menu_options
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2024-11-23 11:43:20,698 - INFO - Movie DB saved to file: data.json
+2024-11-23 11:43:20,698 - INFO - Assertion checked: Remote DB is synced with local storage
+2024-11-23 11:43:20,698 - INFO - Context Manager exited. DB saved to: data.json
+2024-11-23 11:43:23,603 - INFO - New Instance of MovieDB started
+2024-11-23 11:43:23,603 - INFO - Database loaded into local
+2024-11-23 11:43:23,603 - INFO - Context Manager started
+2024-11-23 11:43:25,738 - INFO - Option executed Print statistics
+2024-11-23 11:43:25,738 - ERROR - Exception occurred: name 'rating' is not defined
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/Playground/Codio_Assesments/movie_maker/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/Playground/Codio_Assesments/movie_maker/movie_storage.py", line 231, in command_menu_options
+    func()
+  File "/Users/dda/PycharmProjects/Playground/Codio_Assesments/movie_maker/movie_storage.py", line 55, in <lambda>
+    "FUNCTION": lambda: self.print_stats(),
+                        ^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/Playground/Codio_Assesments/movie_maker/movie_storage.py", line 369, in print_stats
+    if movie_data[rating] == min_rating:
+                  ^^^^^^
+NameError: name 'rating' is not defined
+2024-11-23 11:43:25,745 - INFO - Movie DB saved to file: data.json
+2024-11-23 11:43:25,746 - INFO - Assertion checked: Remote DB is synced with local storage
+2024-11-23 11:43:25,746 - INFO - Context Manager exited. DB saved to: data.json
