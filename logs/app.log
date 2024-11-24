@@ -109,3 +109,25 @@ SystemExit
 2024-11-24 11:19:27,856 - INFO - Assertion checked: Remote is synced with Local
 2024-11-24 11:19:27,856 - INFO - ... saving local_storage to file finished
 2024-11-24 11:19:27,856 - INFO - Context Manager exited. DB saved to: data.json
+2024-11-24 13:49:35,247 - INFO - New Instance of MovieDB started
+2024-11-24 13:49:35,247 - INFO - loading file to local_storage started ...
+2024-11-24 13:49:35,247 - INFO - Database loaded into local
+2024-11-24 13:49:35,247 - INFO - ... loading file to local_storage finished
+2024-11-24 13:49:35,247 - INFO - Context Manager started
+2024-11-24 13:50:15,302 - INFO - Option executed Print statistics
+2024-11-24 13:50:15,305 - INFO - displying stats started ...
+2024-11-24 13:50:15,336 - INFO - displaying stats: ratings
+2024-11-24 13:50:15,337 - INFO - ...Stats printed finished
+2024-11-24 13:56:58,069 - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 240, in command_menu_options
+    except Exception as e:
+                     ^^^^^^
+KeyboardInterrupt
+2024-11-24 13:56:58,073 - INFO - Saving local storage to file ...
+2024-11-24 13:56:58,073 - INFO - Movie DB saved to file: data.json
+2024-11-24 13:56:58,073 - INFO - Assertion checked: Remote is synced with Local
+2024-11-24 13:56:58,073 - INFO - ... saving local_storage to file finished
+2024-11-24 13:56:58,073 - INFO - Context Manager exited. DB saved to: data.json

@@ -21,7 +21,7 @@ class MovieDB:
         :param db_path: optional, defaults to none
         :return: None
         """
-        self.option_list = {
+        self.OPTION_LIST = {
             1: {
                 "DESCRIPTION": "List movies",
                 "ARGUMENTS": 0,
@@ -223,15 +223,15 @@ class MovieDB:
         return movie_rating
 
     # Command Menu #
+    def display_menu(self):
+        print("\n\nWelcome to MovieMadness ! - the movie app with meaning!")
+        print("-" * 60)
+        for option, option_data in self.OPTION_LIST.items():
+            print(f'{option:>2}: {option_data["DESCRIPTION"]}')
 
     def command_menu_options(self):
         while True:
-            print(
-                "\n\nWelcome to MovieMadness ! - the movie app with meaning!"
-            )
-            print("-" * 60)
-            for option, option_data in self.option_list.items():
-                print(f'{option:>2}: {option_data["DESCRIPTION"]}')
+            self.display_menu()
             try:
                 action = int(input("\n\nWhat do you want to do ?   "))
             except Exception as e:
@@ -240,12 +240,12 @@ class MovieDB:
             if (
                 isinstance(action, int)
                 and action >= 0
-                and action in self.option_list
+                and action in self.OPTION_LIST
             ):
-                func = self.option_list[action]["FUNCTION"]
+                func = self.OPTION_LIST[action]["FUNCTION"]
                 self.logger.info(
                     "Option executed %s",
-                    self.option_list[action]["DESCRIPTION"],
+                    self.OPTION_LIST[action]["DESCRIPTION"],
                 )
                 func()
 
@@ -370,6 +370,32 @@ class MovieDB:
         self.save_to_file()
         self.logger.info("... Update Movie finished")
 
+    def calc_stats(self):
+        self.logger.info("calculating stats started ...")
+        movie_stat_dict = {}
+        if not self.local_storage:
+            print("No films to display statistics for")
+            self.logger.warning("No films in local storage")
+            return
+        movie_stat_dict["ratings"] = [
+            movie_data["rating"] for movie_data in self.local_storage.values()
+        ]
+        max_rating = max(movie_stat_dict["ratings"])
+        min_rating = min(movie_stat_dict["ratings"])
+        movie_stat_dict["best_movies"] = [
+            movie
+            for movie in self.local_storage.items()
+            if movie[1]["rating"] == max_rating
+        ]
+
+        movie_stat_dict["worst_movies"] = [
+            movie
+            for movie in self.local_storage.items()
+            if movie[1]["rating"] == min_rating
+        ]
+        self.logger.info("... Calculating stats finished")
+        return movie_stat_dict
+
     def print_stats(self):
         """
         Create local dictionary to capture ratings and best, worst movies
@@ -377,37 +403,10 @@ class MovieDB:
         Average rating, Median rating, best movies, worst movies
         :return: None
         """
+        self.logger.info("Display stats started ...")
         print("Displaying statistics...")
-        self.logger.info("displying stats started ...")
-
-        movie_stats = {}
-
-        if not self.local_storage:
-            print("No films to display statistics for")
-            self.logger.warning("No films in local storage")
-            return
-
-        movie_stats["ratings"] = [
-            movie_data["rating"] for movie_data in self.local_storage.values()
-        ]
-
-        max_rating = max(movie_stats["ratings"])
-        min_rating = min(movie_stats["ratings"])
-
-        movie_stats["best_movies"] = [
-            movie
-            for movie in self.local_storage.items()
-            if movie[1]["rating"] == max_rating
-        ]
-
-        movie_stats["worst_movies"] = [
-            movie
-            for movie in self.local_storage.items()
-            if movie[1]["rating"] == min_rating
-        ]
-
+        movie_stats = self.calc_stats()
         if movie_stats["best_movies"]:
-            # Create a DataFrame with the movie name and rating
             df = pd.DataFrame(
                 [
                     (movie[0], movie[1]["rating"])
@@ -424,7 +423,6 @@ class MovieDB:
                 "displaying stats: No best_movies found %s",
                 movie_stats["best_movies"],
             )
-
         if movie_stats["worst_movies"]:
             df = pd.DataFrame(
                 [
