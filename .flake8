@@ -1,0 +1,3 @@
+[flake8]
+# Ignore the print statement warning (WPS421 is related to print statements)
+ignore = WPS421, W503

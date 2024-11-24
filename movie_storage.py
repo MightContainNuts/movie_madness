@@ -1,16 +1,8 @@
 import json
-import statistics
 import sys
 import pandas as pd
-
-import logger
-from sys import exc_info
-
 import logging
 import os
-
-##### TESTS #####
-# will move these into tests folder later
 
 
 class MovieDB:
@@ -20,13 +12,13 @@ class MovieDB:
     DATE = "date"
     RATING = "rating"
 
-    ##### magic methods and overrides #####
+    # magic methods and overrides #
 
     def __init__(self, logging=logging, MOVIE_DB: str = None) -> None:
         """
         Setup default values for new instance
         :param self: access to class
-        :param db_path: optional, defaults to none in case of custom/test requirements
+        :param db_path: optional, defaults to none
         :return: None
         """
         self.option_list = {
@@ -111,9 +103,11 @@ class MovieDB:
                 exc_info=(exc_type, exc_value, traceback),
             )
             self.save_to_file()
-            self.logger.info("Context Manager exited. DB saved to: %s", self.MOVIE_DB)
+            self.logger.info(
+                "Context Manager exited. DB saved to: %s", self.MOVIE_DB
+            )
 
-    ##### DB File handling #####
+    # DB File handling #
 
     def load_to_local(self) -> None:
         self.logger.info("loading file to local_storage started ...")
@@ -131,9 +125,13 @@ class MovieDB:
         except FileNotFoundError:
             self.logger.error("DB File not found: %s", self.MOVIE_DB)
         except json.JSONDecodeError:
-            self.logger.error("Error decoding JSON in the file: %s", self.MOVIE_DB)
+            self.logger.error(
+                "Error decoding JSON in the file: %s", self.MOVIE_DB
+            )
         except Exception as e:
-            self.logger.error("Yikes, something went wrong: %s", e, exc_info=True)
+            self.logger.error(
+                "Yikes, something went wrong: %s", e, exc_info=True
+            )
         self.logger.info("... loading file to local_storage finished")
 
     def save_to_file(self) -> None:
@@ -148,22 +146,26 @@ class MovieDB:
                     file_contents = json.load(read_handle)
                 if file_contents == self.local_storage:
                     self.logger.info(
-                        "Assertion checked: Remote DB is synced with local storage"
+                        "Assertion checked: Remote is synced with Local"
                     )
                 else:
                     self.logger.error(
-                        "Assertion failed: Remote DB is not synced with local storage!"
+                        "Assertion failed: Remote is not synced with Local!"
                     )
             else:
-                self.logger.warning("Movie DB path is None; skipping save operation")
+                self.logger.warning(
+                    "Movie DB path is None; skipping save operation"
+                )
         except FileNotFoundError:
             self.logger.error("DB File not found: %s", self.MOVIE_DB)
         except Exception as e:
-            self.logger.error("Yikes, something went wrong: %s", e, exc_info=True)
+            self.logger.error(
+                "Yikes, something went wrong: %s", e, exc_info=True
+            )
         self.logger.info("... saving local_storage to file finished")
 
-    ##### common functions #####
-    def check_movie_title(self, in_database: bool) -> "valid_movie_title":
+    # common functions #
+    def check_movie_title(self, in_database: bool):
         """
         Checks for valid movie title for the operation
         :param in_database
@@ -174,7 +176,9 @@ class MovieDB:
         self.logger.info("starting check_movie_title ...")
         while True:
             # Prompt for title
-            movie_title = input('Enter movie TITLE ("exit" to cancel): ').strip()
+            movie_title = input(
+                'Enter movie TITLE ("exit" to cancel): '
+            ).strip()
             if movie_title.lower() == "exit":
                 print("Add movie operation canceled.")
                 self.logger.info("Movie operation cancelled gracefully")
@@ -182,17 +186,15 @@ class MovieDB:
             if not movie_title:
                 print("Title cannot be empty. Please try again.")
                 continue
-            if in_database == True:
+            if in_database:
                 if movie_title in self.local_storage:
                     print(
-                        f"The movie '{movie_title}' already exists in the database. Try again."
+                        f"The movie '{movie_title}' already exists. Try again."
                     )
                     continue
             else:
                 if movie_title not in self.local_storage:
-                    print(
-                        f"The movie '{movie_title}' does not exists in the database. Try again."
-                    )
+                    print(f"'{movie_title}' does not exists. Try again.")
                     continue
             break
         self.logger.info("Movie Title checked for validity %s", movie_title)
@@ -220,11 +222,13 @@ class MovieDB:
 
         return movie_rating
 
-    ##### Command Menu #####
+    # Command Menu #
 
     def command_menu_options(self):
         while True:
-            print("\n\nWelcome to MovieMadness ! - the movie app with meaning!")
+            print(
+                "\n\nWelcome to MovieMadness ! - the movie app with meaning!"
+            )
             print("-" * 60)
             for option, option_data in self.option_list.items():
                 print(f'{option:>2}: {option_data["DESCRIPTION"]}')
@@ -233,14 +237,19 @@ class MovieDB:
             except Exception as e:
                 self.logger.error("Ooops. invalid option chosen  %s", e)
 
-            if isinstance(action, int) and action >= 0 and action in self.option_list:
+            if (
+                isinstance(action, int)
+                and action >= 0
+                and action in self.option_list
+            ):
                 func = self.option_list[action]["FUNCTION"]
                 self.logger.info(
-                    "Option executed %s", self.option_list[action]["DESCRIPTION"]
+                    "Option executed %s",
+                    self.option_list[action]["DESCRIPTION"],
                 )
                 func()
 
-    ##### Movie commands options #####
+    # Movie commands options #
     def list_movies(self):
         print("Listing movies ...")
         self.logger.info("Listing Movies started")
@@ -291,14 +300,16 @@ class MovieDB:
             )
             # sync file
             self.save_to_file()
-            print(
-                f"Movie added. The movie '{new_movie_title}' has been successfully added."
-            )
+            print(f"'{new_movie_title}' has been successfully added.")
         except Exception as e:
             self.logger.error(
-                "An error occurred while saving the movie: %s", e, exc_info=True
+                "An error occurred while saving the movie: %s",
+                e,
+                exc_info=True,
             )
-            print("An error occurred while saving the movie. Please try again.")
+            print(
+                "An error occurred while saving the movie. Please try again."
+            )
         self.logger.info("... Add movie finished")
 
     def delete_movie(self):
@@ -317,15 +328,13 @@ class MovieDB:
         try:
             del self.local_storage[film_to_delete]
             print(
-                f"Movie deleted. Successfully removed '{film_to_delete}' from the database."
+                f"Movie deleted. '{film_to_delete}' removed from the database."
             )
             self.logger.info("Film removed successfully: %s", film_to_delete)
         except KeyError:
-            print(
-                f"Unexpected error: '{film_to_delete}' was not found in the database (KeyError)."
-            )
+            print(f"Unexpected error: '{film_to_delete}' was not found.")
             self.logger.error(
-                "KeyError: Failed to remove film '%s'. It was not found in local storage.",
+                "KeyError: Failed to remove film '%s' - film not found.",
                 film_to_delete,
             )
         except Exception as e:
@@ -357,9 +366,7 @@ class MovieDB:
             old_rating,
             new_rating,
         )
-        print(
-            f"Movie Updated. {film_to_update}'s rating from {old_rating} changed to {new_rating}"
-        )
+        print(f"{film_to_update}': {old_rating} -> {new_rating}")
         self.save_to_file()
         self.logger.info("... Update Movie finished")
 
@@ -414,7 +421,8 @@ class MovieDB:
         else:
             print("No best movies found.")
             self.logger.error(
-                "displaying stats: No best_movies found %s", movie_stats["best_movies"]
+                "displaying stats: No best_movies found %s",
+                movie_stats["best_movies"],
             )
 
         if movie_stats["worst_movies"]:
