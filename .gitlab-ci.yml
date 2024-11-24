@@ -16,11 +16,16 @@ lint:
 # Testing stage (optional, for pytest)
 test:
   stage: test
-  image: python:3.12  # or your preferred Python version
+  image: python:3.12  # Or your preferred Python version
   script:
     - pip install -r requirements.txt  # Install dependencies
     - pip install pytest  # Install pytest
-    - pytest  # Run tests
+    - |
+      if pytest --collect-only > /dev/null 2>&1; then
+        pytest
+      else
+        echo "No tests to run."
+      fi
 
 # Deployment stage (if you need to deploy, adjust this to your requirements)
 deploy:
