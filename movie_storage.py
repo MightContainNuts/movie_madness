@@ -4,6 +4,7 @@ import pandas as pd
 import logging
 import os
 from datetime import datetime
+import re
 
 
 class MovieDB:
@@ -25,32 +26,30 @@ class MovieDB:
         self.OPTION_LIST = {
             1: {
                 "DESCRIPTION": "List movies",
-                "ARGUMENTS": 0,
                 "FUNCTION": lambda: self.list_movies(),
             },
             2: {
                 "DESCRIPTION": "Add new movie",
-                "ARGUMENTS": 0,
                 "FUNCTION": lambda: self.add_movie(),
             },
             3: {
                 "DESCRIPTION": "Delete movie from database",
-                "ARGUMENTS": 0,
                 "FUNCTION": lambda: self.delete_movie(),
             },
             4: {
                 "DESCRIPTION": "Update Movie rating",
-                "ARGUMENTS": 0,
                 "FUNCTION": lambda: self.update_movie(),
             },
             5: {
                 "DESCRIPTION": "Print statistics",
-                "ARGUMENTS": 0,
                 "FUNCTION": lambda: self.print_stats(),
+            },
+            6: {
+                "DESCRIPTION": "Search for movie",
+                "FUNCTION": lambda: self.search_movie(),
             },
             0: {
                 "DESCRIPTION": "Exit MovieMadness",
-                "ARGUMENTS": 0,
                 "FUNCTION": lambda: self.quit(),
             },
         }
@@ -375,7 +374,7 @@ class MovieDB:
         print("Updating Movie ...")
         self.logger.info("Starting update_movie")
         movie_to_update = self.check_movie_title()
-        if self.movie_in_db():
+        if self.movie_in_db(movie_to_update):
             new_rating = self.check_movie_rating()
             old_rating = self.local_storage[movie_to_update]["rating"]
             try:
@@ -484,6 +483,30 @@ class MovieDB:
                 "displaying stats: No ratings found %s", movie_stats["ratings"]
             )
         self.logger.info("...Stats printed finished")
+
+    def search_movie(self):
+        self.logger.info("search movie stats started ...")
+        find_movie = self.check_movie_title()
+        print(f"Searching for movies matching: {find_movie}")
+        try:
+            pattern = re.compile(find_movie, re.IGNORECASE)
+            matches = {
+                title: data
+                for title, data in self.local_storage.items()
+                if pattern.search(title)
+            }
+            if matches:
+                print("Found matching movies:")
+                for title, data in matches.items():
+                    print(f"{title} ({data['date']})- : {data['rating']}, ")
+            else:
+                print("No movies found matching your search.")
+
+        except re.error as e:
+            print(f"Invalid regular expression: {e}")
+            self.logger.error(
+                f"Invalid regex search term: {find_movie} - Error: {e}"
+            )
 
     def quit(self):
         self.logger.info("Quit starting ...")
