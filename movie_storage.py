@@ -22,6 +22,10 @@ class MovieDB:
         :return: None
         """
         self.OPTION_LIST = {
+            0: {
+                "DESCRIPTION": "Exit MovieMadness",
+                "FUNCTION": lambda: self.quit(),
+            },
             1: {
                 "DESCRIPTION": "List movies",
                 "FUNCTION": lambda: self.list_movies(),
@@ -49,10 +53,6 @@ class MovieDB:
             7: {
                 "DESCRIPTION": "List movies by rating",
                 "FUNCTION": lambda: self.sort_movie_rating(),
-            },
-            0: {
-                "DESCRIPTION": "Exit MovieMadness",
-                "FUNCTION": lambda: self.quit(),
             },
         }
         self.logger = setup_logger(__name__)

@@ -381,3 +381,42 @@ KeyboardInterrupt
 2024-11-26 08:25:55,514 - movie_storage - INFO - Assertion checked: Remote is synced with Local
 2024-11-26 08:25:55,514 - movie_storage - INFO - ... saving local_storage to file finished
 2024-11-26 08:25:55,514 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-26 08:39:32,812 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-26 08:39:32,813 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-26 08:39:32,813 - movie_storage - INFO - Database loaded into local
+2024-11-26 08:39:32,813 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-26 08:39:32,813 - movie_storage - INFO - Context Manager started
+2024-11-26 08:39:32,813 - utils - INFO - Printing options menu...
+2024-11-26 08:39:32,813 - utils - INFO - ...finished printing options
+2024-11-26 08:39:40,739 - movie_storage - INFO - Option executed List movies by rating
+2024-11-26 08:39:40,748 - movie_storage - INFO - starting to sort movies by rating...
+2024-11-26 08:39:40,748 - utils - INFO - Printing sorted movies...
+2024-11-26 08:39:40,748 - utils - INFO - ...finished printing options
+2024-11-26 08:39:40,748 - movie_storage - INFO - ...finished sort movies by rating
+2024-11-26 08:39:40,748 - utils - INFO - Printing options menu...
+2024-11-26 08:39:40,749 - utils - INFO - ...finished printing options
+2024-11-26 08:39:49,463 - movie_storage - INFO - Option executed Exit MovieMadness
+2024-11-26 08:39:49,463 - movie_storage - INFO - Quit starting ...
+2024-11-26 08:39:49,463 - movie_storage - INFO - Saving local storage to file ...
+2024-11-26 08:39:49,464 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-26 08:39:49,464 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-26 08:39:49,464 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-26 08:39:49,464 - movie_storage - INFO - Program terminating...
+2024-11-26 08:39:49,465 - movie_storage - INFO - ... quit finished
+2024-11-26 08:39:49,465 - movie_storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 179, in command_menu_options
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 27, in <lambda>
+    "FUNCTION": lambda: self.quit(),
+                        ^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 381, in quit
+    sys.exit()
+SystemExit
+2024-11-26 08:39:49,468 - movie_storage - INFO - Saving local storage to file ...
+2024-11-26 08:39:49,468 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-26 08:39:49,469 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-26 08:39:49,469 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-26 08:39:49,469 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
