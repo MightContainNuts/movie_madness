@@ -420,3 +420,23 @@ SystemExit
 2024-11-26 08:39:49,469 - movie_storage - INFO - Assertion checked: Remote is synced with Local
 2024-11-26 08:39:49,469 - movie_storage - INFO - ... saving local_storage to file finished
 2024-11-26 08:39:49,469 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-26 10:45:36,687 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-26 10:45:36,688 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-26 10:45:36,688 - movie_storage - INFO - Database loaded into local
+2024-11-26 10:45:36,688 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-26 10:45:36,688 - movie_storage - INFO - Context Manager started
+2024-11-26 10:45:36,688 - utils - INFO - Printing options menu...
+2024-11-26 10:45:36,688 - utils - INFO - ...finished printing options
+2024-11-26 10:45:40,449 - movie_storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 165, in command_menu_options
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2024-11-26 10:45:40,451 - movie_storage - INFO - Saving local storage to file ...
+2024-11-26 10:45:40,451 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-26 10:45:40,451 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-26 10:45:40,451 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-26 10:45:40,451 - movie_storage - INFO - Context Manager exited. DB saved to: data.json

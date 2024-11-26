@@ -1,6 +1,8 @@
+from __future__ import annotations
 from logger import setup_logger
 import pandas as pd
 from datetime import datetime
+
 import statistics
 
 
@@ -51,7 +53,7 @@ class MovieUtils:
         print("Average".ljust(10), f"{average_rating:.2f}".rjust(5))
         self.logger.info("...Stats printed finished")
 
-    def print_movie_list(self, db_instance):
+    def print_movie_list(self, db_instance: dict[str, dict]):
         """
         print movie list unsorted
         :param db_instance:
@@ -67,7 +69,7 @@ class MovieUtils:
             print(movie_data)
             self.logger.info("...Printing movie data using finished")
 
-    def display_menu(self, app):
+    def display_menu(self, app: "MovieDB"):  # noqa F821
         """
         Struggling with pandas, but it's a learning process.
         :param app instance of MovieDB class:
@@ -83,7 +85,7 @@ class MovieUtils:
 
         self.logger.info("...finished printing options")
 
-    def print_sorted_movies(self, sorted_movies):
+    def print_sorted_movies(self, sorted_movies: dict):
         """
         print sorted menus
         :param sorted_movies:
@@ -178,6 +180,6 @@ class MovieUtils:
                 )
                 self.logger.warning(f"Invalid movie year: {movie_date}")
 
-    def movie_in_db(self, movie: str, db_instance) -> bool:
+    def movie_in_db(self, movie: str, db_instance: dict[str, dict]) -> bool:
         self.logger.info("starting movie_in_db check...")
         return movie in db_instance
