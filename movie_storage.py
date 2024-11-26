@@ -3,6 +3,7 @@ import sys
 import pandas as pd
 import logging
 import os
+from datetime import datetime
 
 
 class MovieDB:
@@ -165,7 +166,7 @@ class MovieDB:
         self.logger.info("... saving local_storage to file finished")
 
     # common functions #
-    def check_movie_title(self, in_database: bool):
+    def check_movie_title(self):
         """
         Checks for valid movie title for the operation
         :param in_database
@@ -186,16 +187,6 @@ class MovieDB:
             if not movie_title:
                 print("Title cannot be empty. Please try again.")
                 continue
-            if in_database:
-                if movie_title in self.local_storage:
-                    print(
-                        f"The movie '{movie_title}' already exists. Try again."
-                    )
-                    continue
-            else:
-                if movie_title not in self.local_storage:
-                    print(f"'{movie_title}' does not exists. Try again.")
-                    continue
             break
         self.logger.info("Movie Title checked for validity %s", movie_title)
         self.logger.info("... Title check finished")
@@ -219,8 +210,36 @@ class MovieDB:
             break
         self.logger.info("Rating checked for validity %s", movie_rating)
         self.logger.info("... Rating check finished")
-
         return movie_rating
+
+    def check_movie_date(self):
+        self.logger.info("Start check movie date ...")
+        current_year = datetime.now().year
+        while True:
+            movie_date = input("Enter new movie DATE (e.g. 1990): ").strip()
+
+            if not movie_date:
+                print("Date cannot be empty. Please try again.")
+                continue
+
+            try:
+                movie_date = int(movie_date)
+            except ValueError as e:
+                print("Invalid input. Date needs to be an integer.")
+                self.logger.error("ValueError on date %s: %s", movie_date, e)
+                continue
+            if 1888 <= movie_date <= current_year:
+                self.logger.info(f"Movie year {movie_date} is valid.")
+                return movie_date
+            else:
+                print(
+                    f"{movie_date} needs to be between 1888 and {current_year}"
+                )
+                self.logger.warning(f"Invalid movie year: {movie_date}")
+
+    def movie_in_db(self, movie: str) -> bool:
+        self.logger.info("starting movie_in_db check...")
+        return movie in self.local_storage
 
     # Command Menu #
     def display_menu(self):
@@ -278,38 +297,36 @@ class MovieDB:
         """
         print("Adding Movie ...")
         self.logger.info("Add Movie started...")
-        new_movie_title = self.check_movie_title(True)
-        while True:
-            new_movie_date = input("Enter new movie DATE): ").strip()
-            if not new_movie_date:
-                print("Date cannot be empty. Please try again.")
-                continue
-            break
-        new_movie_rating = self.check_movie_rating()
-        # save to local storage
-        try:
-            self.local_storage[new_movie_title] = {
-                self.DATE: new_movie_date,
-                self.RATING: new_movie_rating,
-            }
-            self.logger.info(
-                "New movie added: Title: %s, Date: %s, Rating: %s",
-                new_movie_title,
-                new_movie_date,
-                new_movie_rating,
-            )
-            # sync file
-            self.save_to_file()
-            print(f"'{new_movie_title}' has been successfully added.")
-        except Exception as e:
-            self.logger.error(
-                "An error occurred while saving the movie: %s",
-                e,
-                exc_info=True,
-            )
-            print(
-                "An error occurred while saving the movie. Please try again."
-            )
+        new_movie_title = self.check_movie_title()
+        if not self.movie_in_db(new_movie_title):
+            new_movie_date = self.check_movie_date()
+            new_movie_rating = self.check_movie_rating()
+            # save to local storage
+            try:
+                self.local_storage[new_movie_title] = {
+                    self.DATE: new_movie_date,
+                    self.RATING: new_movie_rating,
+                }
+                self.logger.info(
+                    "New movie added: Title: %s, Date: %s, Rating: %s",
+                    new_movie_title,
+                    new_movie_date,
+                    new_movie_rating,
+                )
+                # sync file
+                self.save_to_file()
+                print(f"'{new_movie_title}' has been successfully added.")
+            except Exception as e:
+                self.logger.error(
+                    "An error occurred while saving the movie: %s",
+                    e,
+                    exc_info=True,
+                )
+                print(
+                    "Error occurred while saving the movie. Please try again."
+                )
+        else:
+            print("Movie exists in db")
         self.logger.info("... Add movie finished")
 
     def delete_movie(self):
@@ -320,26 +337,32 @@ class MovieDB:
         """
         print("Deleting Movie... ")
         self.logger.info("Delete Movie starting...")
-        film_to_delete = self.check_movie_title(False)
-        print(f"Removing {film_to_delete} from database... ")
-        self.logger.info(
-            "Attempting to remove film from local storage %s", film_to_delete
-        )
-        try:
-            del self.local_storage[film_to_delete]
-            print(
-                f"Movie deleted. '{film_to_delete}' removed from the database."
+        movie_to_delete = self.check_movie_title()
+        if self.movie_in_db(movie_to_delete):
+            print(f"Removing {movie_to_delete} from database... ")
+            self.logger.info(
+                "Attempting to remove film from local storage %s",
+                movie_to_delete,
             )
-            self.logger.info("Film removed successfully: %s", film_to_delete)
-        except KeyError:
-            print(f"Unexpected error: '{film_to_delete}' was not found.")
-            self.logger.error(
-                "KeyError: Failed to remove film '%s' - film not found.",
-                film_to_delete,
-            )
-        except Exception as e:
-            print(f"An error occurred while removing the movie: {e}")
-            self.logger.error("Unexpected error while removing film: %s", e)
+            try:
+                del self.local_storage[movie_to_delete]
+                print(f"Movie deleted. '{movie_to_delete}'")
+                self.logger.info(
+                    "Film removed successfully: %s", movie_to_delete
+                )
+            except KeyError:
+                print(f"Unexpected error: '{movie_to_delete}' was not found.")
+                self.logger.error(
+                    "KeyError: Failed to remove film '%s' - film not found.",
+                    movie_to_delete,
+                )
+            except Exception as e:
+                print(f"An error occurred while removing the movie: {e}")
+                self.logger.error(
+                    "Unexpected error while removing film: %s", e
+                )
+        else:
+            print(f"{movie_to_delete} not in DB")
         self.save_to_file()
         self.logger.info("... Delete Movie finished")
 
@@ -351,22 +374,27 @@ class MovieDB:
         """
         print("Updating Movie ...")
         self.logger.info("Starting update_movie")
-        film_to_update = self.check_movie_title(False)
-        new_rating = self.check_movie_rating()
-        old_rating = self.local_storage[film_to_update]["rating"]
-        try:
-            self.local_storage[film_to_update]["rating"] = new_rating
-        except Exception as e:
-            self.logger.error(
-                "Unexpected error while updating rating: %s", e, exc_info=True
+        movie_to_update = self.check_movie_title()
+        if self.movie_in_db():
+            new_rating = self.check_movie_rating()
+            old_rating = self.local_storage[movie_to_update]["rating"]
+            try:
+                self.local_storage[movie_to_update]["rating"] = new_rating
+            except Exception as e:
+                self.logger.error(
+                    "Unexpected error while updating rating: %s",
+                    e,
+                    exc_info=True,
+                )
+            self.logger.info(
+                "Film %s : rating updated from %s to %s",
+                movie_to_update,
+                old_rating,
+                new_rating,
             )
-        self.logger.info(
-            "Film %s : rating updated from %s to %s",
-            film_to_update,
-            old_rating,
-            new_rating,
-        )
-        print(f"{film_to_update}': {old_rating} -> {new_rating}")
+            print(f"{movie_to_update}': {old_rating} -> {new_rating}")
+        else:
+            print(f"{movie_to_update} not in DB")
         self.save_to_file()
         self.logger.info("... Update Movie finished")
 

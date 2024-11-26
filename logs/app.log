@@ -131,3 +131,148 @@ KeyboardInterrupt
 2024-11-24 13:56:58,073 - INFO - Assertion checked: Remote is synced with Local
 2024-11-24 13:56:58,073 - INFO - ... saving local_storage to file finished
 2024-11-24 13:56:58,073 - INFO - Context Manager exited. DB saved to: data.json
+2024-11-25 21:54:59,443 - INFO - New Instance of MovieDB started
+2024-11-25 21:54:59,443 - INFO - loading file to local_storage started ...
+2024-11-25 21:54:59,443 - INFO - Database loaded into local
+2024-11-25 21:54:59,443 - INFO - ... loading file to local_storage finished
+2024-11-25 21:54:59,443 - INFO - Context Manager started
+2024-11-25 21:55:06,737 - INFO - Option executed List movies
+2024-11-25 21:55:06,740 - INFO - Listing Movies started
+2024-11-25 21:55:06,740 - INFO - List Movies: executed successfully
+2024-11-25 21:55:06,740 - INFO - ... Listing Movies finished
+2024-11-25 21:55:13,355 - INFO - Option executed Add new movie
+2024-11-25 21:55:13,356 - INFO - Add Movie started...
+2024-11-25 21:55:13,356 - INFO - starting check_movie_title ...
+2024-11-25 21:55:23,858 - INFO - Movie Title checked for validity Twilight
+2024-11-25 21:55:23,859 - INFO - ... Title check finished
+2024-11-25 21:55:23,859 - INFO - starting movie_in_db check...
+2024-11-25 21:55:31,703 - INFO - Start check movie rating ...
+2024-11-25 21:55:39,911 - INFO - Rating checked for validity 10.0
+2024-11-25 21:55:39,912 - INFO - ... Rating check finished
+2024-11-25 21:55:39,912 - INFO - New movie added: Title: Twilight, Date: 2008, Rating: 10.0
+2024-11-25 21:55:39,912 - INFO - Saving local storage to file ...
+2024-11-25 21:55:39,913 - INFO - Movie DB saved to file: data.json
+2024-11-25 21:55:39,913 - INFO - Assertion checked: Remote is synced with Local
+2024-11-25 21:55:39,913 - INFO - ... saving local_storage to file finished
+2024-11-25 21:55:39,914 - INFO - ... Add movie finished
+2024-11-25 21:55:42,580 - INFO - Option executed List movies
+2024-11-25 21:55:42,580 - INFO - Listing Movies started
+2024-11-25 21:55:42,581 - INFO - List Movies: executed successfully
+2024-11-25 21:55:42,581 - INFO - ... Listing Movies finished
+2024-11-25 21:55:53,793 - INFO - Option executed Delete movie from database
+2024-11-25 21:55:53,794 - INFO - Delete Movie starting...
+2024-11-25 21:55:53,794 - INFO - starting check_movie_title ...
+2024-11-25 21:55:58,733 - INFO - Movie Title checked for validity Twilight
+2024-11-25 21:55:58,734 - INFO - ... Title check finished
+2024-11-25 21:55:58,734 - ERROR - Exception occurred: MovieDB.movie_in_db() missing 1 required positional argument: 'movie'
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 243, in command_menu_options
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 38, in <lambda>
+    "FUNCTION": lambda: self.delete_movie(),
+                        ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 321, in delete_movie
+    if self.movie_in_db():
+       ^^^^^^^^^^^^^^^^^^
+TypeError: MovieDB.movie_in_db() missing 1 required positional argument: 'movie'
+2024-11-25 21:55:58,740 - INFO - Saving local storage to file ...
+2024-11-25 21:55:58,740 - INFO - Movie DB saved to file: data.json
+2024-11-25 21:55:58,740 - INFO - Assertion checked: Remote is synced with Local
+2024-11-25 21:55:58,740 - INFO - ... saving local_storage to file finished
+2024-11-25 21:55:58,740 - INFO - Context Manager exited. DB saved to: data.json
+2024-11-25 21:56:37,178 - INFO - New Instance of MovieDB started
+2024-11-25 21:56:37,178 - INFO - loading file to local_storage started ...
+2024-11-25 21:56:37,178 - INFO - Database loaded into local
+2024-11-25 21:56:37,179 - INFO - ... loading file to local_storage finished
+2024-11-25 21:56:37,179 - INFO - Context Manager started
+2024-11-25 21:56:45,343 - INFO - Option executed Delete movie from database
+2024-11-25 21:56:45,350 - INFO - Delete Movie starting...
+2024-11-25 21:56:45,350 - INFO - starting check_movie_title ...
+2024-11-25 21:56:49,466 - INFO - Movie Title checked for validity Twilight
+2024-11-25 21:56:49,467 - INFO - ... Title check finished
+2024-11-25 21:56:49,467 - INFO - starting movie_in_db check...
+2024-11-25 21:56:49,467 - INFO - Attempting to remove film from local storage Twilight
+2024-11-25 21:56:49,467 - INFO - Film removed successfully: Twilight
+2024-11-25 21:56:49,467 - INFO - Saving local storage to file ...
+2024-11-25 21:56:49,468 - INFO - Movie DB saved to file: data.json
+2024-11-25 21:56:49,469 - INFO - Assertion checked: Remote is synced with Local
+2024-11-25 21:56:49,469 - INFO - ... saving local_storage to file finished
+2024-11-25 21:56:49,469 - INFO - ... Delete Movie finished
+2024-11-25 21:56:57,677 - INFO - Option executed Print statistics
+2024-11-25 21:56:57,678 - INFO - Display stats started ...
+2024-11-25 21:56:57,678 - INFO - calculating stats started ...
+2024-11-25 21:56:57,678 - INFO - ... Calculating stats finished
+2024-11-25 21:56:57,695 - INFO - displaying stats: ratings
+2024-11-25 21:56:57,697 - INFO - ...Stats printed finished
+2024-11-25 22:12:32,095 - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 229, in command_menu_options
+    return movie_date
+                 ^^^^^
+KeyboardInterrupt
+2024-11-25 22:12:32,100 - INFO - Saving local storage to file ...
+2024-11-25 22:12:32,100 - INFO - Movie DB saved to file: data.json
+2024-11-25 22:12:32,100 - INFO - Assertion checked: Remote is synced with Local
+2024-11-25 22:12:32,100 - INFO - ... saving local_storage to file finished
+2024-11-25 22:12:32,100 - INFO - Context Manager exited. DB saved to: data.json
+2024-11-25 22:12:33,746 - INFO - New Instance of MovieDB started
+2024-11-25 22:12:33,746 - INFO - loading file to local_storage started ...
+2024-11-25 22:12:33,747 - INFO - Database loaded into local
+2024-11-25 22:12:33,747 - INFO - ... loading file to local_storage finished
+2024-11-25 22:12:33,747 - INFO - Context Manager started
+2024-11-25 22:12:42,826 - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 256, in command_menu_options
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2024-11-25 22:12:42,828 - INFO - Saving local storage to file ...
+2024-11-25 22:12:42,828 - INFO - Movie DB saved to file: data.json
+2024-11-25 22:12:42,828 - INFO - Assertion checked: Remote is synced with Local
+2024-11-25 22:12:42,828 - INFO - ... saving local_storage to file finished
+2024-11-25 22:12:42,828 - INFO - Context Manager exited. DB saved to: data.json
+2024-11-25 22:12:44,458 - INFO - New Instance of MovieDB started
+2024-11-25 22:12:44,458 - INFO - loading file to local_storage started ...
+2024-11-25 22:12:44,458 - INFO - Database loaded into local
+2024-11-25 22:12:44,458 - INFO - ... loading file to local_storage finished
+2024-11-25 22:12:44,458 - INFO - Context Manager started
+2024-11-25 22:12:46,793 - INFO - Option executed Add new movie
+2024-11-25 22:12:46,794 - INFO - Add Movie started...
+2024-11-25 22:12:46,794 - INFO - starting check_movie_title ...
+2024-11-25 22:12:50,697 - INFO - Movie Title checked for validity Twilight
+2024-11-25 22:12:50,698 - INFO - ... Title check finished
+2024-11-25 22:12:50,698 - INFO - starting movie_in_db check...
+2024-11-25 22:12:50,698 - INFO - Start check movie date ...
+2024-11-25 22:12:56,147 - INFO - Movie year 2008 is valid.
+2024-11-25 22:12:56,147 - INFO - Start check movie rating ...
+2024-11-25 22:13:01,253 - INFO - Rating checked for validity 10.0
+2024-11-25 22:13:01,253 - INFO - ... Rating check finished
+2024-11-25 22:13:01,253 - INFO - New movie added: Title: Twilight, Date: 2008, Rating: 10.0
+2024-11-25 22:13:01,253 - INFO - Saving local storage to file ...
+2024-11-25 22:13:01,254 - INFO - Movie DB saved to file: data.json
+2024-11-25 22:13:01,254 - INFO - Assertion checked: Remote is synced with Local
+2024-11-25 22:13:01,254 - INFO - ... saving local_storage to file finished
+2024-11-25 22:13:01,254 - INFO - ... Add movie finished
+2024-11-25 22:13:04,888 - INFO - Option executed List movies
+2024-11-25 22:13:04,888 - INFO - Listing Movies started
+2024-11-25 22:13:04,888 - INFO - List Movies: executed successfully
+2024-11-25 22:13:04,888 - INFO - ... Listing Movies finished
+2024-11-25 22:13:12,972 - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 256, in command_menu_options
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2024-11-25 22:13:12,973 - INFO - Saving local storage to file ...
+2024-11-25 22:13:12,974 - INFO - Movie DB saved to file: data.json
+2024-11-25 22:13:12,974 - INFO - Assertion checked: Remote is synced with Local
+2024-11-25 22:13:12,974 - INFO - ... saving local_storage to file finished
+2024-11-25 22:13:12,974 - INFO - Context Manager exited. DB saved to: data.json
