@@ -46,6 +46,10 @@ class MovieDB:
                 "DESCRIPTION": "Search for movie",
                 "FUNCTION": lambda: self.search_movie(),
             },
+            7: {
+                "DESCRIPTION": "List movies by rating",
+                "FUNCTION": lambda: self.sort_movie_rating(),
+            },
             0: {
                 "DESCRIPTION": "Exit MovieMadness",
                 "FUNCTION": lambda: self.quit(),
@@ -317,13 +321,17 @@ class MovieDB:
             for movie in self.local_storage.items()
             if movie[1]["rating"] == min_rating
         ]
-        self.utils.print_stats(movie_stat_dict)
+        if movie_stat_dict:
+            self.utils.print_stats(movie_stat_dict)
+        else:
+            print("No data for statistics")
+            self.logger.warning("No data for statistics %s", movie_stat_dict)
         self.logger.info("... Calculating stats finished")
         return movie_stat_dict
 
     def search_movie(self):
         self.logger.info("search movie stats started ...")
-        find_movie = self.check_movie_title()
+        find_movie = self.utils.check_movie_title()
         print(f"Searching for movies matching: {find_movie}")
         try:
             pattern = re.compile(find_movie, re.IGNORECASE)
@@ -344,6 +352,24 @@ class MovieDB:
             self.logger.error(
                 f"Invalid regex search term: {find_movie} - Error: {e}"
             )
+
+    def sort_movie_rating(self):
+        """
+        list movies in order of rating, highest first
+        :return:
+        """
+        self.logger.info("starting to sort movies by rating...")
+        sorted_movies = sorted(
+            self.local_storage.items(),
+            key=lambda x: x[1]["rating"],
+            reverse=True,
+        )
+        if sorted_movies:
+            self.utils.print_sorted_movies(sorted_movies)
+        else:
+            print("No movies in DB")
+            self.logger.warning("No movies in DB %s", self.local_storage)
+        self.logger.info("...finished sort movies by rating")
 
     def quit(self):
         self.logger.info("Quit starting ...")

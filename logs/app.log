@@ -1,593 +1,383 @@
-2024-11-26 06:03:48,908 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 06:03:48,908 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 06:03:48,908 - movie_storage - INFO - Database loaded into local
-2024-11-26 06:03:48,908 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 06:03:48,908 - movie_storage - INFO - Context Manager started
-2024-11-26 06:03:52,233 - movie_storage - INFO - Option executed Print statistics
-2024-11-26 06:03:52,234 - movie_storage - INFO - calculating stats started ...
-2024-11-26 06:03:52,235 - movie_storage - ERROR - Exception occurred: MovieUtils.print_stats() missing 1 required positional argument: 'movie_stats'
+2024-11-26 08:02:11,817 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-26 08:02:11,818 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-26 08:02:11,818 - movie_storage - INFO - Database loaded into local
+2024-11-26 08:02:11,818 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-26 08:02:11,818 - movie_storage - INFO - Context Manager started
+2024-11-26 08:02:11,818 - utils - INFO - Printing options menu...
+2024-11-26 08:02:11,821 - utils - INFO - ...finished printing options
+2024-11-26 08:02:19,885 - movie_storage - INFO - Option executed List movies
+2024-11-26 08:02:19,886 - movie_storage - INFO - Listing Movies started
+2024-11-26 08:02:19,886 - utils - INFO - Printing movie data using Pandas...
+2024-11-26 08:02:19,895 - utils - INFO - ...Printing movie data using finished
+2024-11-26 08:02:19,895 - movie_storage - INFO - ... Listing Movies finished
+2024-11-26 08:02:19,895 - utils - INFO - Printing options menu...
+2024-11-26 08:02:19,896 - utils - INFO - ...finished printing options
+2024-11-26 08:02:29,640 - movie_storage - INFO - Option executed Add new movie
+2024-11-26 08:02:29,641 - movie_storage - INFO - Add Movie started...
+2024-11-26 08:02:29,641 - utils - INFO - starting check_movie_title ...
+2024-11-26 08:02:41,136 - utils - INFO - Movie Title checked for validity Ice Age
+2024-11-26 08:02:41,137 - utils - INFO - ... Title check finished
+2024-11-26 08:02:41,138 - utils - INFO - starting movie_in_db check...
+2024-11-26 08:02:41,138 - utils - INFO - Start check movie date ...
+2024-11-26 08:02:45,081 - utils - ERROR - ValueError on date d: invalid literal for int() with base 10: 'd'
+2024-11-26 08:02:51,005 - utils - INFO - Movie year 2000 is valid.
+2024-11-26 08:02:51,006 - utils - INFO - Start check movie rating ...
+2024-11-26 08:02:54,548 - utils - INFO - Rating checked for validity 7.6
+2024-11-26 08:02:54,549 - utils - INFO - ... Rating check finished
+2024-11-26 08:02:54,549 - movie_storage - INFO - New movie added: Title: Ice Age, Date: 2000, Rating: 7.6
+2024-11-26 08:02:54,549 - movie_storage - INFO - Saving local storage to file ...
+2024-11-26 08:02:54,550 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-26 08:02:54,550 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-26 08:02:54,550 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-26 08:02:54,550 - movie_storage - INFO - ... Add movie finished
+2024-11-26 08:02:54,550 - utils - INFO - Printing options menu...
+2024-11-26 08:02:54,553 - utils - INFO - ...finished printing options
+2024-11-26 08:02:57,813 - movie_storage - INFO - Option executed Update Movie rating
+2024-11-26 08:02:57,814 - movie_storage - INFO - Starting update_movie
+2024-11-26 08:02:57,814 - utils - INFO - starting check_movie_title ...
+2024-11-26 08:03:01,466 - utils - INFO - Movie Title checked for validity Ice Age
+2024-11-26 08:03:01,466 - utils - INFO - ... Title check finished
+2024-11-26 08:03:01,466 - utils - INFO - starting movie_in_db check...
+2024-11-26 08:03:01,466 - utils - INFO - Start check movie rating ...
+2024-11-26 08:03:04,461 - utils - INFO - Rating checked for validity 8.0
+2024-11-26 08:03:04,461 - utils - INFO - ... Rating check finished
+2024-11-26 08:03:04,461 - movie_storage - INFO - Film Ice Age : rating updated from 7.6 to 8.0
+2024-11-26 08:03:04,461 - movie_storage - INFO - Saving local storage to file ...
+2024-11-26 08:03:04,462 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-26 08:03:04,462 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-26 08:03:04,462 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-26 08:03:04,462 - movie_storage - INFO - ... Update Movie finished
+2024-11-26 08:03:04,462 - utils - INFO - Printing options menu...
+2024-11-26 08:03:04,465 - utils - INFO - ...finished printing options
+2024-11-26 08:03:08,296 - movie_storage - INFO - Option executed Print statistics
+2024-11-26 08:03:08,296 - movie_storage - INFO - calculating stats started ...
+2024-11-26 08:03:08,296 - utils - INFO - Display stats started ...
+2024-11-26 08:03:08,305 - utils - INFO - displaying stats: ratings
+2024-11-26 08:03:08,308 - utils - INFO - ...Stats printed finished
+2024-11-26 08:03:08,308 - movie_storage - INFO - ... Calculating stats finished
+2024-11-26 08:03:08,308 - utils - INFO - Printing options menu...
+2024-11-26 08:03:08,309 - utils - INFO - ...finished printing options
+2024-11-26 08:03:27,262 - movie_storage - INFO - Option executed Search for movie
+2024-11-26 08:03:27,262 - movie_storage - INFO - search movie stats started ...
+2024-11-26 08:03:27,262 - movie_storage - ERROR - Exception occurred: 'MovieDB' object has no attribute 'check_movie_title'
 Traceback (most recent call last):
   File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
     app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 259, in command_menu_options
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 179, in command_menu_options
     func()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 46, in <lambda>
-    "FUNCTION": lambda: self.display_stats(),
-                        ^^^^^^^^^^^^^^^^^^^^
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 414, in display_stats
-    MovieUtils.print_stats(movie_stat_dict)
-TypeError: MovieUtils.print_stats() missing 1 required positional argument: 'movie_stats'
-2024-11-26 06:03:52,240 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 06:03:52,241 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 06:03:52,241 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 06:03:52,241 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 06:03:52,241 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 06:05:01,483 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 06:05:01,484 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 06:05:01,484 - movie_storage - INFO - Database loaded into local
-2024-11-26 06:05:01,484 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 06:05:01,484 - movie_storage - INFO - Context Manager started
-2024-11-26 06:05:04,008 - movie_storage - INFO - Option executed Print statistics
-2024-11-26 06:05:04,008 - movie_storage - INFO - calculating stats started ...
-2024-11-26 06:05:04,008 - movie_storage - ERROR - Exception occurred: MovieUtils.print_stats() missing 1 required positional argument: 'movie_stat_dict'
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 47, in <lambda>
+    "FUNCTION": lambda: self.search_movie(),
+                        ^^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 330, in search_movie
+    find_movie = self.check_movie_title()
+                 ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MovieDB' object has no attribute 'check_movie_title'
+2024-11-26 08:03:27,265 - movie_storage - INFO - Saving local storage to file ...
+2024-11-26 08:03:27,266 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-26 08:03:27,266 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-26 08:03:27,266 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-26 08:03:27,266 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-26 08:04:33,118 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-26 08:04:33,118 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-26 08:04:33,118 - movie_storage - INFO - Database loaded into local
+2024-11-26 08:04:33,118 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-26 08:04:33,118 - movie_storage - INFO - Context Manager started
+2024-11-26 08:04:33,118 - utils - INFO - Printing options menu...
+2024-11-26 08:04:33,123 - utils - INFO - ...finished printing options
+2024-11-26 08:04:38,020 - movie_storage - INFO - Option executed Search for movie
+2024-11-26 08:04:38,020 - movie_storage - INFO - search movie stats started ...
+2024-11-26 08:04:38,020 - utils - INFO - starting check_movie_title ...
+2024-11-26 08:04:41,879 - utils - INFO - Movie Title checked for validity Ice Age
+2024-11-26 08:04:41,880 - utils - INFO - ... Title check finished
+2024-11-26 08:04:41,880 - utils - INFO - Printing options menu...
+2024-11-26 08:04:41,882 - utils - INFO - ...finished printing options
+2024-11-26 08:04:57,598 - movie_storage - INFO - Option executed List movies by rating
+2024-11-26 08:04:57,598 - movie_storage - INFO - starting to sort movies by rating...
+2024-11-26 08:04:57,598 - movie_storage - WARNING - No movies in DB {'Inception': {'date': '2016', 'rating': 9.3}, 'The Thing': {'date': '1997', 'rating': 9.0}, 'Twilight': {'date': 2008, 'rating': 10.0}, 'Breaking Dawn': {'date': 1990, 'rating': 9.8}, 'Ice Age': {'date': 2000, 'rating': 8.0}}
+2024-11-26 08:04:57,598 - movie_storage - INFO - ...finished sort movies by rating
+2024-11-26 08:04:57,598 - utils - INFO - Printing options menu...
+2024-11-26 08:04:57,600 - utils - INFO - ...finished printing options
+2024-11-26 08:05:22,806 - movie_storage - ERROR - Exception occurred:
 Traceback (most recent call last):
   File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
     app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 259, in command_menu_options
-    func()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 46, in <lambda>
-    "FUNCTION": lambda: self.display_stats(),
-                        ^^^^^^^^^^^^^^^^^^^^
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 414, in display_stats
-    MovieUtils.print_stats(movie_stat_dict)
-TypeError: MovieUtils.print_stats() missing 1 required positional argument: 'movie_stat_dict'
-2024-11-26 06:05:04,011 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 06:05:04,011 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 06:05:04,011 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 06:05:04,011 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 06:05:04,011 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 06:05:42,870 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 06:05:42,870 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 06:05:42,870 - movie_storage - INFO - Database loaded into local
-2024-11-26 06:05:42,870 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 06:05:42,870 - movie_storage - INFO - Context Manager started
-2024-11-26 06:05:46,401 - movie_storage - INFO - Option executed Print statistics
-2024-11-26 06:05:46,402 - movie_storage - INFO - calculating stats started ...
-2024-11-26 06:05:46,402 - movie_storage - ERROR - Exception occurred: MovieUtils.print_stats() missing 1 required positional argument: 'movie_stats'
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 259, in command_menu_options
-    func()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 46, in <lambda>
-    "FUNCTION": lambda: self.display_stats(),
-                        ^^^^^^^^^^^^^^^^^^^^
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 414, in display_stats
-    MovieUtils.print_stats(movie_stat_dict)
-TypeError: MovieUtils.print_stats() missing 1 required positional argument: 'movie_stats'
-2024-11-26 06:05:46,404 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 06:05:46,405 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 06:05:46,405 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 06:05:46,405 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 06:05:46,405 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 06:14:40,741 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 06:14:40,741 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 06:14:40,741 - movie_storage - INFO - Database loaded into local
-2024-11-26 06:14:40,741 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 06:14:40,741 - movie_storage - INFO - Context Manager started
-2024-11-26 06:14:43,989 - movie_storage - INFO - Option executed Print statistics
-2024-11-26 06:14:43,990 - movie_storage - INFO - calculating stats started ...
-2024-11-26 06:14:43,991 - utils - INFO - Display stats started ...
-2024-11-26 06:14:44,004 - utils - INFO - displaying stats: ratings
-2024-11-26 06:14:44,006 - utils - INFO - ...Stats printed finished
-2024-11-26 06:14:44,006 - movie_storage - INFO - ... Calculating stats finished
-2024-11-26 06:15:12,518 - movie_storage - ERROR - Exception occurred:
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 245, in command_menu_options
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 165, in command_menu_options
     action = int(input("\n\nWhat do you want to do ?   "))
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
-2024-11-26 06:15:12,524 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 06:15:12,524 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 06:15:12,525 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 06:15:12,525 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 06:15:12,525 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 06:31:35,203 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 06:31:35,204 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 06:31:35,204 - movie_storage - INFO - Database loaded into local
-2024-11-26 06:31:35,204 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 06:31:35,204 - movie_storage - INFO - Context Manager started
-2024-11-26 06:31:37,497 - movie_storage - INFO - Option executed List movies
-2024-11-26 06:31:37,498 - movie_storage - INFO - Listing Movies started
-2024-11-26 06:31:37,499 - movie_storage - ERROR - Exception occurred: 'dict' object is not callable
+2024-11-26 08:05:22,809 - movie_storage - INFO - Saving local storage to file ...
+2024-11-26 08:05:22,809 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-26 08:05:22,809 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-26 08:05:22,809 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-26 08:05:22,809 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-26 08:05:24,932 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-26 08:05:24,932 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-26 08:05:24,932 - movie_storage - INFO - Database loaded into local
+2024-11-26 08:05:24,932 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-26 08:05:24,932 - movie_storage - INFO - Context Manager started
+2024-11-26 08:05:24,932 - utils - INFO - Printing options menu...
+2024-11-26 08:05:24,933 - utils - INFO - ...finished printing options
+2024-11-26 08:05:27,626 - movie_storage - INFO - Option executed List movies by rating
+2024-11-26 08:05:27,626 - movie_storage - INFO - starting to sort movies by rating...
+2024-11-26 08:05:27,626 - utils - INFO - Printing sorted movies...
+2024-11-26 08:05:27,627 - utils - INFO - ...finished printing options
+2024-11-26 08:05:27,627 - movie_storage - INFO - ...finished sort movies by rating
+2024-11-26 08:05:27,627 - utils - INFO - Printing options menu...
+2024-11-26 08:05:27,629 - utils - INFO - ...finished printing options
+2024-11-26 08:08:04,129 - movie_storage - ERROR - Exception occurred:
 Traceback (most recent call last):
   File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
     app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 260, in command_menu_options
-    func()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 30, in <lambda>
-    "FUNCTION": lambda: self.list_movies(),
-                        ^^^^^^^^^^^^^^^^^^
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 267, in list_movies
-    self.utils.print_movie_list(self.local_storage)
-  File "/Users/dda/PycharmProjects/MovieMadness/utils.py", line 72, in print_movie_list
-    for movie, movie_data in db_instance():
-                             ^^^^^^^^^^^^^
-TypeError: 'dict' object is not callable
-2024-11-26 06:31:37,502 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 06:31:37,502 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 06:31:37,502 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 06:31:37,502 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 06:31:37,502 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 06:32:37,070 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 06:32:37,071 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 06:32:37,071 - movie_storage - INFO - Database loaded into local
-2024-11-26 06:32:37,071 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 06:32:37,071 - movie_storage - INFO - Context Manager started
-2024-11-26 06:32:38,807 - movie_storage - INFO - Option executed List movies
-2024-11-26 06:32:38,807 - movie_storage - INFO - Listing Movies started
-2024-11-26 06:32:38,808 - movie_storage - ERROR - Exception occurred: 'MovieUtils' object has no attribute 'DATE'
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 260, in command_menu_options
-    func()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 30, in <lambda>
-    "FUNCTION": lambda: self.list_movies(),
-                        ^^^^^^^^^^^^^^^^^^
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 267, in list_movies
-    self.utils.print_movie_list(self.local_storage)
-  File "/Users/dda/PycharmProjects/MovieMadness/utils.py", line 74, in print_movie_list
-    date = movie_data.get(self.DATE, "N/A")
-                          ^^^^^^^^^
-AttributeError: 'MovieUtils' object has no attribute 'DATE'
-2024-11-26 06:32:38,810 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 06:32:38,811 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 06:32:38,811 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 06:32:38,811 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 06:32:38,811 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 06:40:30,980 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 06:40:30,980 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 06:40:30,980 - movie_storage - INFO - Database loaded into local
-2024-11-26 06:40:30,980 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 06:40:30,980 - movie_storage - INFO - Context Manager started
-2024-11-26 06:40:34,302 - movie_storage - INFO - Option executed List movies
-2024-11-26 06:40:34,302 - movie_storage - INFO - Listing Movies started
-2024-11-26 06:40:34,302 - utils - INFO - Printing movie data using Pandas...
-2024-11-26 06:40:34,313 - utils - INFO - ...Printing movie data using finished
-2024-11-26 06:40:34,313 - movie_storage - INFO - ... Listing Movies finished
-2024-11-26 06:45:47,802 - movie_storage - INFO - Option executed List movies
-2024-11-26 06:45:47,804 - movie_storage - INFO - Listing Movies started
-2024-11-26 06:45:47,804 - utils - INFO - Printing movie data using Pandas...
-2024-11-26 06:45:47,822 - utils - INFO - ...Printing movie data using finished
-2024-11-26 06:45:47,822 - movie_storage - INFO - ... Listing Movies finished
-2024-11-26 06:48:21,241 - movie_storage - ERROR - Exception occurred:
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 246, in command_menu_options
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 165, in command_menu_options
     action = int(input("\n\nWhat do you want to do ?   "))
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
-2024-11-26 06:48:21,244 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 06:48:21,246 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 06:48:21,246 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 06:48:21,246 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 06:48:21,246 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 06:48:21,747 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 06:48:21,747 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 06:48:21,747 - movie_storage - INFO - Database loaded into local
-2024-11-26 06:48:21,747 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 06:48:21,747 - movie_storage - INFO - Context Manager started
-2024-11-26 06:48:21,748 - movie_storage - ERROR - Exception occurred: ('option', ['DESCRIPTION'])
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
-    return self._engine.get_loc(casted_key)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
-  File "index.pyx", line 173, in pandas._libs.index.IndexEngine.get_loc
-TypeError: '('option', ['DESCRIPTION'])' is an invalid key
-
-During handling of the above exception, another exception occurred:
-
+2024-11-26 08:08:04,138 - movie_storage - INFO - Saving local storage to file ...
+2024-11-26 08:08:04,138 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-26 08:08:04,138 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-26 08:08:04,138 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-26 08:08:04,138 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-26 08:08:04,553 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-26 08:08:04,553 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-26 08:08:04,553 - movie_storage - INFO - Database loaded into local
+2024-11-26 08:08:04,553 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-26 08:08:04,553 - movie_storage - INFO - Context Manager started
+2024-11-26 08:08:04,553 - utils - INFO - Printing options menu...
+2024-11-26 08:08:04,553 - utils - INFO - ...finished printing options
+2024-11-26 08:20:37,452 - movie_storage - ERROR - Exception occurred:
 Traceback (most recent call last):
   File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
     app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 244, in command_menu_options
-    self.utils.display_menu(self.local_storage)
-  File "/Users/dda/PycharmProjects/MovieMadness/utils.py", line 84, in display_menu
-    option_menu = option_menu['option', ['DESCRIPTION']]
-                  ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/frame.py", line 4102, in __getitem__
-    indexer = self.columns.get_loc(key)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3817, in get_loc
-    self._check_indexing_error(key)
-  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6059, in _check_indexing_error
-    raise InvalidIndexError(key)
-pandas.errors.InvalidIndexError: ('option', ['DESCRIPTION'])
-2024-11-26 06:48:21,751 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 06:48:21,751 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 06:48:21,751 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 06:48:21,751 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 06:48:21,751 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 06:53:25,840 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 06:53:25,840 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 06:53:25,840 - movie_storage - INFO - Database loaded into local
-2024-11-26 06:53:25,840 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 06:53:25,840 - movie_storage - INFO - Context Manager started
-2024-11-26 06:53:25,840 - utils - INFO - Printing options menu...
-2024-11-26 06:53:25,840 - movie_storage - ERROR - Exception occurred: 'dict' object has no attribute 'OPTION_LIST'
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 244, in command_menu_options
-    self.utils.display_menu(self.local_storage)
-  File "/Users/dda/PycharmProjects/MovieMadness/utils.py", line 84, in display_menu
-    option_data = pd.DataFrame.from_dict(db_instance.OPTION_LIST, orient='index')
-                                         ^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'dict' object has no attribute 'OPTION_LIST'
-2024-11-26 06:53:25,842 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 06:53:25,842 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 06:53:25,842 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 06:53:25,842 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 06:53:25,842 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 06:54:11,486 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 06:54:11,486 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 06:54:11,487 - movie_storage - INFO - Database loaded into local
-2024-11-26 06:54:11,487 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 06:54:11,487 - movie_storage - INFO - Context Manager started
-2024-11-26 06:54:11,487 - utils - INFO - Printing options menu...
-2024-11-26 06:54:11,487 - movie_storage - ERROR - Exception occurred: 'dict' object has no attribute 'OPTION_LIST'
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 244, in command_menu_options
-    self.utils.display_menu(self.local_storage)
-  File "/Users/dda/PycharmProjects/MovieMadness/utils.py", line 84, in display_menu
-    option_data = pd.DataFrame.from_dict(app.OPTION_LIST, orient='index')
-                                         ^^^^^^^^^^^^^^^
-AttributeError: 'dict' object has no attribute 'OPTION_LIST'
-2024-11-26 06:54:11,487 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 06:54:11,488 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 06:54:11,488 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 06:54:11,488 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 06:54:11,488 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 06:54:48,868 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 06:54:48,868 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 06:54:48,869 - movie_storage - INFO - Database loaded into local
-2024-11-26 06:54:48,869 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 06:54:48,869 - movie_storage - INFO - Context Manager started
-2024-11-26 06:54:48,869 - utils - INFO - Printing options menu...
-2024-11-26 06:54:48,876 - utils - INFO - ...finished printing options
-2024-11-26 06:55:51,091 - movie_storage - ERROR - Exception occurred:
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 246, in command_menu_options
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 165, in command_menu_options
     action = int(input("\n\nWhat do you want to do ?   "))
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
-2024-11-26 06:55:51,094 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 06:55:51,094 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 06:55:51,094 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 06:55:51,094 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 06:55:51,094 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 06:55:51,516 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 06:55:51,516 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 06:55:51,516 - movie_storage - INFO - Database loaded into local
-2024-11-26 06:55:51,516 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 06:55:51,516 - movie_storage - INFO - Context Manager started
-2024-11-26 06:55:51,516 - utils - INFO - Printing options menu...
-2024-11-26 06:55:51,519 - utils - INFO - ...finished printing options
-2024-11-26 06:56:35,391 - movie_storage - ERROR - Exception occurred:
+2024-11-26 08:20:37,460 - movie_storage - INFO - Saving local storage to file ...
+2024-11-26 08:20:37,461 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-26 08:20:37,461 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-26 08:20:37,461 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-26 08:20:37,461 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-26 08:20:39,066 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-26 08:20:39,066 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-26 08:20:39,066 - movie_storage - INFO - Database loaded into local
+2024-11-26 08:20:39,066 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-26 08:20:39,066 - movie_storage - INFO - Context Manager started
+2024-11-26 08:20:39,066 - utils - INFO - Printing options menu...
+2024-11-26 08:20:39,066 - utils - INFO - ...finished printing options
+2024-11-26 08:20:42,820 - movie_storage - INFO - Option executed Print statistics
+2024-11-26 08:20:42,820 - movie_storage - INFO - calculating stats started ...
+2024-11-26 08:20:42,821 - utils - INFO - Display stats started ...
+2024-11-26 08:20:42,821 - utils - INFO - displaying stats: ratings
+2024-11-26 08:20:42,821 - utils - INFO - ...Stats printed finished
+2024-11-26 08:20:42,821 - movie_storage - INFO - ... Calculating stats finished
+2024-11-26 08:20:42,821 - utils - INFO - Printing options menu...
+2024-11-26 08:20:42,821 - utils - INFO - ...finished printing options
+2024-11-26 08:21:51,151 - movie_storage - ERROR - Exception occurred:
 Traceback (most recent call last):
   File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
     app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 246, in command_menu_options
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 165, in command_menu_options
     action = int(input("\n\nWhat do you want to do ?   "))
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
-2024-11-26 06:56:35,394 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 06:56:35,394 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 06:56:35,394 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 06:56:35,394 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 06:56:35,395 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 06:56:35,810 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 06:56:35,810 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 06:56:35,810 - movie_storage - INFO - Database loaded into local
-2024-11-26 06:56:35,810 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 06:56:35,810 - movie_storage - INFO - Context Manager started
-2024-11-26 06:56:35,810 - utils - INFO - Printing options menu...
-2024-11-26 06:56:35,811 - movie_storage - ERROR - Exception occurred: "None of [Index(['DESCRIPTION'], dtype='object')] are in the [columns]"
+2024-11-26 08:21:51,154 - movie_storage - INFO - Saving local storage to file ...
+2024-11-26 08:21:51,155 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-26 08:21:51,155 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-26 08:21:51,155 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-26 08:21:51,155 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-26 08:21:51,583 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-26 08:21:51,583 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-26 08:21:51,583 - movie_storage - INFO - Database loaded into local
+2024-11-26 08:21:51,583 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-26 08:21:51,583 - movie_storage - INFO - Context Manager started
+2024-11-26 08:21:51,583 - utils - INFO - Printing options menu...
+2024-11-26 08:21:51,583 - utils - INFO - ...finished printing options
+2024-11-26 08:21:55,837 - movie_storage - INFO - Option executed Print statistics
+2024-11-26 08:21:55,837 - movie_storage - INFO - calculating stats started ...
+2024-11-26 08:21:55,837 - utils - INFO - Display stats started ...
+2024-11-26 08:21:55,837 - utils - INFO - displaying stats: ratings
+2024-11-26 08:21:55,837 - utils - INFO - ...Stats printed finished
+2024-11-26 08:21:55,837 - movie_storage - INFO - ... Calculating stats finished
+2024-11-26 08:21:55,837 - utils - INFO - Printing options menu...
+2024-11-26 08:21:55,837 - utils - INFO - ...finished printing options
+2024-11-26 08:22:57,158 - movie_storage - ERROR - Exception occurred:
 Traceback (most recent call last):
   File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
     app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 244, in command_menu_options
-    self.utils.display_menu(self)
-  File "/Users/dda/PycharmProjects/MovieMadness/utils.py", line 85, in display_menu
-    option_data_display = option_data[['DESCRIPTION']]
-                          ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/frame.py", line 4108, in __getitem__
-    indexer = self.columns._get_indexer_strict(key, "columns")[1]
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6200, in _get_indexer_strict
-    self._raise_if_missing(keyarr, indexer, axis_name)
-  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6249, in _raise_if_missing
-    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
-KeyError: "None of [Index(['DESCRIPTION'], dtype='object')] are in the [columns]"
-2024-11-26 06:56:35,819 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 06:56:35,819 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 06:56:35,819 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 06:56:35,819 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 06:56:35,819 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 06:56:59,799 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 06:56:59,800 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 06:56:59,800 - movie_storage - INFO - Database loaded into local
-2024-11-26 06:56:59,800 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 06:56:59,800 - movie_storage - INFO - Context Manager started
-2024-11-26 06:56:59,800 - utils - INFO - Printing options menu...
-2024-11-26 06:56:59,808 - utils - INFO - ...finished printing options
-2024-11-26 06:58:32,942 - movie_storage - ERROR - Exception occurred:
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 246, in command_menu_options
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 165, in command_menu_options
     action = int(input("\n\nWhat do you want to do ?   "))
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
-2024-11-26 06:58:32,945 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 06:58:32,945 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 06:58:32,945 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 06:58:32,945 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 06:58:32,945 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 06:58:33,350 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 06:58:33,350 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 06:58:33,350 - movie_storage - INFO - Database loaded into local
-2024-11-26 06:58:33,350 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 06:58:33,350 - movie_storage - INFO - Context Manager started
-2024-11-26 06:58:33,350 - utils - INFO - Printing options menu...
-2024-11-26 06:58:33,352 - utils - INFO - ...finished printing options
-2024-11-26 07:01:43,793 - movie_storage - ERROR - Exception occurred:
+2024-11-26 08:22:57,161 - movie_storage - INFO - Saving local storage to file ...
+2024-11-26 08:22:57,162 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-26 08:22:57,162 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-26 08:22:57,162 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-26 08:22:57,162 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-26 08:22:57,577 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-26 08:22:57,577 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-26 08:22:57,577 - movie_storage - INFO - Database loaded into local
+2024-11-26 08:22:57,577 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-26 08:22:57,577 - movie_storage - INFO - Context Manager started
+2024-11-26 08:22:57,577 - utils - INFO - Printing options menu...
+2024-11-26 08:22:57,577 - utils - INFO - ...finished printing options
+2024-11-26 08:23:01,458 - movie_storage - INFO - Option executed Print statistics
+2024-11-26 08:23:01,458 - movie_storage - INFO - calculating stats started ...
+2024-11-26 08:23:01,458 - utils - INFO - Display stats started ...
+2024-11-26 08:23:01,458 - utils - INFO - displaying stats: ratings
+2024-11-26 08:23:01,458 - utils - INFO - ...Stats printed finished
+2024-11-26 08:23:01,458 - movie_storage - INFO - ... Calculating stats finished
+2024-11-26 08:23:01,459 - utils - INFO - Printing options menu...
+2024-11-26 08:23:01,459 - utils - INFO - ...finished printing options
+2024-11-26 08:23:30,359 - movie_storage - ERROR - Exception occurred:
 Traceback (most recent call last):
   File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
     app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 246, in command_menu_options
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 165, in command_menu_options
     action = int(input("\n\nWhat do you want to do ?   "))
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
-2024-11-26 07:01:43,797 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 07:01:43,797 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 07:01:43,797 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 07:01:43,797 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 07:01:43,797 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 07:01:44,200 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 07:01:44,200 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 07:01:44,200 - movie_storage - INFO - Database loaded into local
-2024-11-26 07:01:44,200 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 07:01:44,200 - movie_storage - INFO - Context Manager started
-2024-11-26 07:01:44,200 - utils - INFO - Printing options menu...
-2024-11-26 07:01:44,664 - movie_storage - ERROR - Exception occurred: 'Styler' object has no attribute 'render'
+2024-11-26 08:23:30,361 - movie_storage - INFO - Saving local storage to file ...
+2024-11-26 08:23:30,362 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-26 08:23:30,362 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-26 08:23:30,362 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-26 08:23:30,362 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-26 08:23:30,767 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-26 08:23:30,767 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-26 08:23:30,767 - movie_storage - INFO - Database loaded into local
+2024-11-26 08:23:30,767 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-26 08:23:30,767 - movie_storage - INFO - Context Manager started
+2024-11-26 08:23:30,767 - utils - INFO - Printing options menu...
+2024-11-26 08:23:30,767 - utils - INFO - ...finished printing options
+2024-11-26 08:23:33,459 - movie_storage - INFO - Option executed Print statistics
+2024-11-26 08:23:33,459 - movie_storage - INFO - calculating stats started ...
+2024-11-26 08:23:33,460 - utils - INFO - Display stats started ...
+2024-11-26 08:23:33,460 - utils - INFO - displaying stats: ratings
+2024-11-26 08:23:33,460 - utils - INFO - ...Stats printed finished
+2024-11-26 08:23:33,460 - movie_storage - INFO - ... Calculating stats finished
+2024-11-26 08:23:33,460 - utils - INFO - Printing options menu...
+2024-11-26 08:23:33,460 - utils - INFO - ...finished printing options
+2024-11-26 08:23:44,746 - movie_storage - ERROR - Exception occurred:
 Traceback (most recent call last):
   File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
     app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 244, in command_menu_options
-    self.utils.display_menu(self)
-  File "/Users/dda/PycharmProjects/MovieMadness/utils.py", line 87, in display_menu
-    print(option_data_display.render())
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'Styler' object has no attribute 'render'. Did you mean: '_render'?
-2024-11-26 07:01:44,665 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 07:01:44,665 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 07:01:44,665 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 07:01:44,665 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 07:01:44,665 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 07:02:35,317 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 07:02:35,317 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 07:02:35,317 - movie_storage - INFO - Database loaded into local
-2024-11-26 07:02:35,317 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 07:02:35,317 - movie_storage - INFO - Context Manager started
-2024-11-26 07:02:35,317 - utils - INFO - Printing options menu...
-2024-11-26 07:02:35,569 - movie_storage - ERROR - Exception occurred: 'Styler' object has no attribute 'render'
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 244, in command_menu_options
-    self.utils.display_menu(self)
-  File "/Users/dda/PycharmProjects/MovieMadness/utils.py", line 93, in display_menu
-    print(option_data_display.render())
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'Styler' object has no attribute 'render'. Did you mean: '_render'?
-2024-11-26 07:02:35,570 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 07:02:35,570 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 07:02:35,570 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 07:02:35,570 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 07:02:35,570 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 07:04:09,908 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 07:04:09,908 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 07:04:09,908 - movie_storage - INFO - Database loaded into local
-2024-11-26 07:04:09,909 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 07:04:09,909 - movie_storage - INFO - Context Manager started
-2024-11-26 07:04:09,909 - utils - INFO - Printing options menu...
-2024-11-26 07:04:09,915 - utils - INFO - ...finished printing options
-2024-11-26 07:09:56,445 - movie_storage - ERROR - Exception occurred:
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 246, in command_menu_options
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 165, in command_menu_options
     action = int(input("\n\nWhat do you want to do ?   "))
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
-2024-11-26 07:09:56,448 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 07:09:56,450 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 07:09:56,450 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 07:09:56,450 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 07:09:56,450 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 07:09:57,008 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 07:09:57,008 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 07:09:57,008 - movie_storage - INFO - Database loaded into local
-2024-11-26 07:09:57,008 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 07:09:57,008 - movie_storage - INFO - Context Manager started
-2024-11-26 07:09:57,008 - utils - INFO - Printing options menu...
-2024-11-26 07:09:57,320 - utils - INFO - ...finished printing options
-2024-11-26 07:11:35,713 - movie_storage - ERROR - Exception occurred:
+2024-11-26 08:23:44,749 - movie_storage - INFO - Saving local storage to file ...
+2024-11-26 08:23:44,749 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-26 08:23:44,749 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-26 08:23:44,749 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-26 08:23:44,749 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-26 08:23:45,142 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-26 08:23:45,142 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-26 08:23:45,142 - movie_storage - INFO - Database loaded into local
+2024-11-26 08:23:45,142 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-26 08:23:45,142 - movie_storage - INFO - Context Manager started
+2024-11-26 08:23:45,142 - utils - INFO - Printing options menu...
+2024-11-26 08:23:45,142 - utils - INFO - ...finished printing options
+2024-11-26 08:23:50,073 - movie_storage - INFO - Option executed Print statistics
+2024-11-26 08:23:50,074 - movie_storage - INFO - calculating stats started ...
+2024-11-26 08:23:50,074 - utils - INFO - Display stats started ...
+2024-11-26 08:23:50,074 - utils - INFO - displaying stats: ratings
+2024-11-26 08:23:50,074 - utils - INFO - ...Stats printed finished
+2024-11-26 08:23:50,074 - movie_storage - INFO - ... Calculating stats finished
+2024-11-26 08:23:50,074 - utils - INFO - Printing options menu...
+2024-11-26 08:23:50,074 - utils - INFO - ...finished printing options
+2024-11-26 08:24:03,055 - movie_storage - ERROR - Exception occurred:
 Traceback (most recent call last):
   File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
     app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 246, in command_menu_options
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 165, in command_menu_options
     action = int(input("\n\nWhat do you want to do ?   "))
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
-2024-11-26 07:11:35,717 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 07:11:35,718 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 07:11:35,719 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 07:11:35,719 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 07:11:35,719 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 07:11:36,245 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 07:11:36,246 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 07:11:36,246 - movie_storage - INFO - Database loaded into local
-2024-11-26 07:11:36,246 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 07:11:36,246 - movie_storage - INFO - Context Manager started
-2024-11-26 07:11:36,246 - utils - INFO - Printing options menu...
-2024-11-26 07:11:36,257 - utils - INFO - ...finished printing options
-2024-11-26 07:12:22,184 - movie_storage - ERROR - Exception occurred:
+2024-11-26 08:24:03,057 - movie_storage - INFO - Saving local storage to file ...
+2024-11-26 08:24:03,057 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-26 08:24:03,057 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-26 08:24:03,057 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-26 08:24:03,057 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-26 08:24:03,468 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-26 08:24:03,468 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-26 08:24:03,468 - movie_storage - INFO - Database loaded into local
+2024-11-26 08:24:03,468 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-26 08:24:03,468 - movie_storage - INFO - Context Manager started
+2024-11-26 08:24:03,468 - utils - INFO - Printing options menu...
+2024-11-26 08:24:03,468 - utils - INFO - ...finished printing options
+2024-11-26 08:24:05,590 - movie_storage - INFO - Option executed Print statistics
+2024-11-26 08:24:05,590 - movie_storage - INFO - calculating stats started ...
+2024-11-26 08:24:05,590 - utils - INFO - Display stats started ...
+2024-11-26 08:24:05,590 - utils - INFO - displaying stats: ratings
+2024-11-26 08:24:05,591 - utils - INFO - ...Stats printed finished
+2024-11-26 08:24:05,591 - movie_storage - INFO - ... Calculating stats finished
+2024-11-26 08:24:05,591 - utils - INFO - Printing options menu...
+2024-11-26 08:24:05,591 - utils - INFO - ...finished printing options
+2024-11-26 08:24:15,700 - movie_storage - ERROR - Exception occurred:
 Traceback (most recent call last):
   File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
     app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 246, in command_menu_options
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 165, in command_menu_options
     action = int(input("\n\nWhat do you want to do ?   "))
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
-2024-11-26 07:12:22,187 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 07:12:22,189 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 07:12:22,190 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 07:12:22,190 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 07:12:22,190 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 07:12:22,601 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 07:12:22,601 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 07:12:22,601 - movie_storage - INFO - Database loaded into local
-2024-11-26 07:12:22,601 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 07:12:22,601 - movie_storage - INFO - Context Manager started
-2024-11-26 07:12:22,601 - utils - INFO - Printing options menu...
-2024-11-26 07:12:22,603 - utils - INFO - ...finished printing options
-2024-11-26 07:13:39,386 - movie_storage - ERROR - Exception occurred:
+2024-11-26 08:24:15,702 - movie_storage - INFO - Saving local storage to file ...
+2024-11-26 08:24:15,702 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-26 08:24:15,703 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-26 08:24:15,703 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-26 08:24:15,703 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-26 08:24:16,135 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-26 08:24:16,135 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-26 08:24:16,135 - movie_storage - INFO - Database loaded into local
+2024-11-26 08:24:16,135 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-26 08:24:16,135 - movie_storage - INFO - Context Manager started
+2024-11-26 08:24:16,135 - utils - INFO - Printing options menu...
+2024-11-26 08:24:16,135 - utils - INFO - ...finished printing options
+2024-11-26 08:24:18,664 - movie_storage - INFO - Option executed Print statistics
+2024-11-26 08:24:18,668 - movie_storage - INFO - calculating stats started ...
+2024-11-26 08:24:18,668 - utils - INFO - Display stats started ...
+2024-11-26 08:24:18,668 - utils - INFO - displaying stats: ratings
+2024-11-26 08:24:18,668 - utils - INFO - ...Stats printed finished
+2024-11-26 08:24:18,668 - movie_storage - INFO - ... Calculating stats finished
+2024-11-26 08:24:18,668 - utils - INFO - Printing options menu...
+2024-11-26 08:24:18,669 - utils - INFO - ...finished printing options
+2024-11-26 08:24:41,136 - movie_storage - ERROR - Exception occurred:
 Traceback (most recent call last):
   File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
     app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 246, in command_menu_options
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 165, in command_menu_options
     action = int(input("\n\nWhat do you want to do ?   "))
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
-2024-11-26 07:13:39,394 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 07:13:39,394 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 07:13:39,394 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 07:13:39,394 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 07:13:39,394 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 07:13:39,846 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 07:13:39,846 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 07:13:39,846 - movie_storage - INFO - Database loaded into local
-2024-11-26 07:13:39,846 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 07:13:39,846 - movie_storage - INFO - Context Manager started
-2024-11-26 07:13:39,846 - utils - INFO - Printing options menu...
-2024-11-26 07:13:39,848 - utils - INFO - ...finished printing options
-2024-11-26 07:14:55,357 - movie_storage - ERROR - Exception occurred:
+2024-11-26 08:24:41,138 - movie_storage - INFO - Saving local storage to file ...
+2024-11-26 08:24:41,138 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-26 08:24:41,139 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-26 08:24:41,139 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-26 08:24:41,139 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-26 08:24:41,558 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-26 08:24:41,558 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-26 08:24:41,558 - movie_storage - INFO - Database loaded into local
+2024-11-26 08:24:41,558 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-26 08:24:41,558 - movie_storage - INFO - Context Manager started
+2024-11-26 08:24:41,558 - utils - INFO - Printing options menu...
+2024-11-26 08:24:41,558 - utils - INFO - ...finished printing options
+2024-11-26 08:24:44,027 - movie_storage - INFO - Option executed Print statistics
+2024-11-26 08:24:44,027 - movie_storage - INFO - calculating stats started ...
+2024-11-26 08:24:44,027 - utils - INFO - Display stats started ...
+2024-11-26 08:24:44,028 - utils - INFO - displaying stats: ratings
+2024-11-26 08:24:44,028 - utils - INFO - ...Stats printed finished
+2024-11-26 08:24:44,028 - movie_storage - INFO - ... Calculating stats finished
+2024-11-26 08:24:44,028 - utils - INFO - Printing options menu...
+2024-11-26 08:24:44,028 - utils - INFO - ...finished printing options
+2024-11-26 08:25:55,511 - movie_storage - ERROR - Exception occurred:
 Traceback (most recent call last):
   File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
     app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 246, in command_menu_options
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 165, in command_menu_options
     action = int(input("\n\nWhat do you want to do ?   "))
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
-2024-11-26 07:14:55,360 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 07:14:55,360 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 07:14:55,360 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 07:14:55,360 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 07:14:55,360 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 07:14:55,771 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 07:14:55,771 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 07:14:55,771 - movie_storage - INFO - Database loaded into local
-2024-11-26 07:14:55,771 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 07:14:55,771 - movie_storage - INFO - Context Manager started
-2024-11-26 07:14:55,771 - utils - INFO - Printing options menu...
-2024-11-26 07:14:55,773 - utils - INFO - ...finished printing options
-2024-11-26 07:18:07,044 - movie_storage - ERROR - Exception occurred:
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 246, in command_menu_options
-    action = int(input("\n\nWhat do you want to do ?   "))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-KeyboardInterrupt
-2024-11-26 07:18:07,047 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 07:18:07,047 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 07:18:07,047 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 07:18:07,047 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 07:18:07,048 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 07:18:07,455 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 07:18:07,455 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 07:18:07,455 - movie_storage - INFO - Database loaded into local
-2024-11-26 07:18:07,455 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 07:18:07,455 - movie_storage - INFO - Context Manager started
-2024-11-26 07:18:07,455 - utils - INFO - Printing options menu...
-2024-11-26 07:18:07,456 - utils - INFO - ...finished printing options
-2024-11-26 07:25:26,314 - movie_storage - ERROR - Exception occurred:
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 246, in command_menu_options
-    action = int(input("\n\nWhat do you want to do ?   "))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-KeyboardInterrupt
-2024-11-26 07:25:26,318 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 07:25:26,319 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 07:25:26,319 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 07:25:26,319 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 07:25:26,319 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-26 07:25:26,880 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-26 07:25:26,880 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-26 07:25:26,880 - movie_storage - INFO - Database loaded into local
-2024-11-26 07:25:26,880 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-26 07:25:26,880 - movie_storage - INFO - Context Manager started
-2024-11-26 07:25:26,880 - utils - INFO - Printing options menu...
-2024-11-26 07:25:26,886 - utils - INFO - ...finished printing options
-2024-11-26 07:25:30,272 - movie_storage - INFO - Option executed Add new movie
-2024-11-26 07:25:30,273 - movie_storage - INFO - Add Movie started...
-2024-11-26 07:25:30,274 - utils - INFO - starting check_movie_title ...
-2024-11-26 07:25:37,155 - utils - INFO - Movie Title checked for validity Breaking Dawn
-2024-11-26 07:25:37,156 - utils - INFO - ... Title check finished
-2024-11-26 07:25:37,156 - utils - INFO - starting movie_in_db check...
-2024-11-26 07:25:37,156 - utils - INFO - Start check movie date ...
-2024-11-26 07:25:43,998 - utils - INFO - Movie year 1990 is valid.
-2024-11-26 07:25:43,999 - utils - INFO - Start check movie rating ...
-2024-11-26 07:25:47,865 - utils - INFO - Rating checked for validity 9.8
-2024-11-26 07:25:47,865 - utils - INFO - ... Rating check finished
-2024-11-26 07:25:47,865 - movie_storage - INFO - New movie added: Title: Breaking Dawn, Date: 1990, Rating: 9.8
-2024-11-26 07:25:47,866 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 07:25:47,866 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 07:25:47,867 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 07:25:47,867 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 07:25:47,867 - movie_storage - INFO - ... Add movie finished
-2024-11-26 07:25:47,867 - utils - INFO - Printing options menu...
-2024-11-26 07:25:47,872 - utils - INFO - ...finished printing options
-2024-11-26 07:25:51,031 - movie_storage - INFO - Option executed List movies
-2024-11-26 07:25:51,031 - movie_storage - INFO - Listing Movies started
-2024-11-26 07:25:51,032 - utils - INFO - Printing movie data using Pandas...
-2024-11-26 07:25:51,043 - utils - INFO - ...Printing movie data using finished
-2024-11-26 07:25:51,043 - movie_storage - INFO - ... Listing Movies finished
-2024-11-26 07:25:51,043 - utils - INFO - Printing options menu...
-2024-11-26 07:25:51,044 - utils - INFO - ...finished printing options
-2024-11-26 07:26:25,849 - movie_storage - ERROR - Exception occurred:
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 161, in command_menu_options
-    action = int(input("\n\nWhat do you want to do ?   "))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-KeyboardInterrupt
-2024-11-26 07:26:25,851 - movie_storage - INFO - Saving local storage to file ...
-2024-11-26 07:26:25,851 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-26 07:26:25,852 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-26 07:26:25,852 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-26 07:26:25,852 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-26 08:25:55,514 - movie_storage - INFO - Saving local storage to file ...
+2024-11-26 08:25:55,514 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-26 08:25:55,514 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-26 08:25:55,514 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-26 08:25:55,514 - movie_storage - INFO - Context Manager exited. DB saved to: data.json

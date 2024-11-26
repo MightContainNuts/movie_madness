@@ -14,5 +14,9 @@
     "Breaking Dawn": {
         "date": 1990,
         "rating": 9.8
+    },
+    "Ice Age": {
+        "date": 2000,
+        "rating": 8.0
     }
 }

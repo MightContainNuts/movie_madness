@@ -1,12 +1,20 @@
 from logger import setup_logger
 import pandas as pd
 from datetime import datetime
+import statistics
 
 
 class MovieUtils:
+    """
+    utility class, moved out some stuff as it was getting cluttered
+    """
+
     def __init__(self, app):
-        self.logger = setup_logger(__name__)
+        """
+        for initiating logger and passing to all functions.
+        """
         self.app = app
+        self.logger = setup_logger(__name__)
 
     def print_stats(self, movie_stats):
         """
@@ -17,58 +25,38 @@ class MovieUtils:
         """
         self.logger.info("Display stats started ...")
         print("Displaying statistics...")
-        if movie_stats["best_movies"]:
-            df = pd.DataFrame(
-                [
-                    (movie[0], movie[1]["rating"])
-                    for movie in movie_stats["best_movies"]
-                ],
-                columns=["Movie", "Rating"],
-            )
-            print("\n\nBest rated movies:")
-            print("-" * 40)
-            print(df)
-        else:
-            print("No best movies found.")
-            self.logger.error(
-                "displaying stats: No best_movies found %s",
-                movie_stats["best_movies"],
-            )
-        if movie_stats["worst_movies"]:
-            df = pd.DataFrame(
-                [
-                    (movie[0], movie[1]["rating"])
-                    for movie in movie_stats["worst_movies"]
-                ],
-                columns=["Movie", "Rating"],
-            )
-            print("\n\nWorst rated movies:")
-            print("-" * 40)
-            print(df)
-        else:
-            print("No worst movies found.")
-            self.logger.error(
-                "displaying stats: No worst_movies found %s",
-                movie_stats["worst_movies"],
-            )
+        print("\n\nBest rated movies:")
+        print("-" * 30)
+        print("MOVIE".ljust(20), "RATING".ljust(5))
+        for movie in movie_stats["best_movies"]:
+            movie_name = movie[0]
+            movie_rating = movie[1]["rating"]
+            print(f"{movie_name.ljust(20)} {str(movie_rating).ljust(5)}")
 
-        if movie_stats["ratings"]:
-            self.logger.info("displaying stats: ratings")
-            df = pd.DataFrame(movie_stats["ratings"], columns=["Rating"])
-            median_rating = df["Rating"].median()
-            average_rating = df["Rating"].mean()
-            print("\n\nRatings:")
-            print("-" * 40)
-            print("\nMedian ", median_rating)
-            print("Average ", average_rating)
-        else:
-            print("No worst movies found.")
-            self.logger.error(
-                "displaying stats: No ratings found %s", movie_stats["ratings"]
-            )
+        print("\n\nWorst rated movies:")
+        print("-" * 30)
+        print("MOVIE".ljust(20), "RATING".ljust(5))
+        for movie in movie_stats["worst_movies"]:
+            movie_name = movie[0]
+            movie_rating = movie[1]["rating"]
+            print(f"{movie_name.ljust(20)} {str(movie_rating).ljust(5)}")
+
+        ratings = movie_stats["ratings"]
+        self.logger.info("displaying stats: ratings")
+        median_rating = statistics.median(ratings)
+        average_rating = sum(ratings) / len(ratings)
+        print("\n\nRatings:")
+        print("-" * 15)
+        print("Median".ljust(10), f"{median_rating:.2f}".rjust(5))
+        print("Average".ljust(10), f"{average_rating:.2f}".rjust(5))
         self.logger.info("...Stats printed finished")
 
     def print_movie_list(self, db_instance):
+        """
+        print movie list unsorted
+        :param db_instance:
+        :return:
+        """
         self.logger.info("Printing movie data using Pandas...")
         if not db_instance:
             print("No movies available.")
@@ -88,13 +76,35 @@ class MovieUtils:
         self.logger.info("Printing options menu...")
         print("\n\nWelcome to MovieMadness ! - the movie app with meaning!")
         print("-" * 55)
-        option_data = pd.DataFrame.from_dict(app.OPTION_LIST, orient="index")
-        option_data_display = option_data[["DESCRIPTION"]]
-        option_data_display.index.name = "OPTION"
-        print("OPTION".ljust(8), "DESCRIPTION")
+        print("OPTION".ljust(8), "DESCRIPTION".ljust(30))
         print("-" * 55)
-        for index, row in option_data_display.iterrows():
-            print(f"{index:<8} {row['DESCRIPTION']}")
+        for option, details in app.OPTION_LIST.items():
+            print(f"{str(option).ljust(8)} {details['DESCRIPTION'].ljust(30)}")
+
+        self.logger.info("...finished printing options")
+
+    def print_sorted_movies(self, sorted_movies):
+        """
+        print sorted menus
+        :param sorted_movies:
+        :return:
+        """
+        self.logger.info("Printing sorted movies...")
+        print("Movies sorted by rating: Highest first")
+        print("-" * 50)
+        print(
+            "NR.".ljust(5),
+            "MOVIE".ljust(20),
+            "YEAR".ljust(5),
+            "RATING".ljust(5),
+        )
+        for idx, (movie, movie_data) in enumerate(sorted_movies):
+            print(
+                str(idx + 1).ljust(5),
+                movie.ljust(20),
+                str(movie_data["date"]).ljust(5),
+                str(movie_data["rating"]).ljust(10),
+            )
         self.logger.info("...finished printing options")
 
     def check_movie_title(self):
