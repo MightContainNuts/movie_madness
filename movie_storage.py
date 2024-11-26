@@ -1,9 +1,7 @@
 import json
 import sys
-import pandas as pd
-import logging
-import os
-from datetime import datetime
+from logger import setup_logger
+from utils import MovieUtils
 import re
 
 
@@ -16,7 +14,7 @@ class MovieDB:
 
     # magic methods and overrides #
 
-    def __init__(self, logging=logging, MOVIE_DB: str = None) -> None:
+    def __init__(self, MOVIE_DB: str = None) -> None:
         """
         Setup default values for new instance
         :param self: access to class
@@ -42,29 +40,24 @@ class MovieDB:
             },
             5: {
                 "DESCRIPTION": "Print statistics",
-                "FUNCTION": lambda: self.print_stats(),
+                "FUNCTION": lambda: self.display_stats(),
             },
             6: {
                 "DESCRIPTION": "Search for movie",
                 "FUNCTION": lambda: self.search_movie(),
+            },
+            7: {
+                "DESCRIPTION": "List movies by rating",
+                "FUNCTION": lambda: self.sort_movie_rating(),
             },
             0: {
                 "DESCRIPTION": "Exit MovieMadness",
                 "FUNCTION": lambda: self.quit(),
             },
         }
+        self.logger = setup_logger(__name__)
+        self.utils = MovieUtils(self)
 
-        log_dir = os.path.join(os.getcwd(), "logs")
-        os.makedirs(log_dir, exist_ok=True)
-        log_file = os.path.join(log_dir, "app.log")
-
-        self.logger = logging.getLogger(__name__)
-        logging.basicConfig(
-            level=logging.INFO,  # Set default logging level to INFO
-            filename=log_file,  # Logs will be written to this file
-            filemode="a",
-            format="%(asctime)s - %(levelname)s - %(message)s",  # Log format
-        )
         if MOVIE_DB:
             self.MOVIE_DB = MOVIE_DB
         self.logger.info(
@@ -164,92 +157,10 @@ class MovieDB:
             )
         self.logger.info("... saving local_storage to file finished")
 
-    # common functions #
-    def check_movie_title(self):
-        """
-        Checks for valid movie title for the operation
-        :param in_database
-        True, check if title not exist (add movie)
-        False, check if title exist for delete, update
-        :return: valid movie
-        """
-        self.logger.info("starting check_movie_title ...")
-        while True:
-            # Prompt for title
-            movie_title = input(
-                'Enter movie TITLE ("exit" to cancel): '
-            ).strip()
-            if movie_title.lower() == "exit":
-                print("Add movie operation canceled.")
-                self.logger.info("Movie operation cancelled gracefully")
-                return
-            if not movie_title:
-                print("Title cannot be empty. Please try again.")
-                continue
-            break
-        self.logger.info("Movie Title checked for validity %s", movie_title)
-        self.logger.info("... Title check finished")
-        return movie_title
-
-    def check_movie_rating(self):
-        self.logger.info("Start check movie rating ...")
-        while True:
-            movie_rating = input("Enter movie RATING: ").strip()
-            if not movie_rating:
-                print("Rating cannot be empty. Please try again.")
-                continue
-            try:
-                movie_rating = float(movie_rating)
-            except ValueError:
-                print("Rating needs to be a float")
-                continue
-            if not (0 <= movie_rating <= 10):
-                print("Rating needs to be a value between 0 and 10")
-                continue
-            break
-        self.logger.info("Rating checked for validity %s", movie_rating)
-        self.logger.info("... Rating check finished")
-        return movie_rating
-
-    def check_movie_date(self):
-        self.logger.info("Start check movie date ...")
-        current_year = datetime.now().year
-        while True:
-            movie_date = input("Enter new movie DATE (e.g. 1990): ").strip()
-
-            if not movie_date:
-                print("Date cannot be empty. Please try again.")
-                continue
-
-            try:
-                movie_date = int(movie_date)
-            except ValueError as e:
-                print("Invalid input. Date needs to be an integer.")
-                self.logger.error("ValueError on date %s: %s", movie_date, e)
-                continue
-            if 1888 <= movie_date <= current_year:
-                self.logger.info(f"Movie year {movie_date} is valid.")
-                return movie_date
-            else:
-                print(
-                    f"{movie_date} needs to be between 1888 and {current_year}"
-                )
-                self.logger.warning(f"Invalid movie year: {movie_date}")
-
-    def movie_in_db(self, movie: str) -> bool:
-        self.logger.info("starting movie_in_db check...")
-        return movie in self.local_storage
-
     # Command Menu #
-    def display_menu(self):
-        print("\n\nWelcome to MovieMadness ! - the movie app with meaning!")
-        print("-" * 60)
-        for option, option_data in self.OPTION_LIST.items():
-            print(f'{option:>2}: {option_data["DESCRIPTION"]}')
-
     def command_menu_options(self):
         while True:
-            self.display_menu()
+            self.utils.display_menu(self)
             try:
                 action = int(input("\n\nWhat do you want to do ?   "))
             except Exception as e:
@@ -272,21 +183,12 @@ class MovieDB:
         print("Listing movies ...")
         self.logger.info("Listing Movies started")
         if self.local_storage:
-            print("\n\nFilms in database:")
-            print("-" * 65)
-            for movie, movie_data in self.local_storage.items():
-                if self.local_storage:
-                    date = movie_data.get(self.DATE, "N/A")
-                    rating = movie_data.get(self.RATING, "N/A")
-                    print(f"{movie} ({date}): {rating}")
-            print(f"\nTotal films in database: {len(self.local_storage)} ")
-            self.logger.info("List Movies: executed successfully")
+            self.utils.print_movie_list(self.local_storage)
         else:
             self.logger.error(
                 "MovieDB is empty or not loaded correctly: %s", self.MOVIE_DB
             )
         self.logger.info("... Listing Movies finished")
-        return self.MOVIE_DB
 
     def add_movie(self):
         """
@@ -296,10 +198,10 @@ class MovieDB:
         """
         print("Adding Movie ...")
         self.logger.info("Add Movie started...")
-        new_movie_title = self.check_movie_title()
-        if not self.movie_in_db(new_movie_title):
-            new_movie_date = self.check_movie_date()
-            new_movie_rating = self.check_movie_rating()
+        new_movie_title = self.utils.check_movie_title()
+        if not self.utils.movie_in_db(new_movie_title, self.local_storage):
+            new_movie_date = self.utils.check_movie_date()
+            new_movie_rating = self.utils.check_movie_rating()
             # save to local storage
             try:
                 self.local_storage[new_movie_title] = {
@@ -336,8 +238,8 @@ class MovieDB:
         """
         print("Deleting Movie... ")
         self.logger.info("Delete Movie starting...")
-        movie_to_delete = self.check_movie_title()
-        if self.movie_in_db(movie_to_delete):
+        movie_to_delete = self.utils.check_movie_title()
+        if self.utils.movie_in_db(movie_to_delete, self.local_storage):
             print(f"Removing {movie_to_delete} from database... ")
             self.logger.info(
                 "Attempting to remove film from local storage %s",
@@ -373,9 +275,9 @@ class MovieDB:
         """
         print("Updating Movie ...")
         self.logger.info("Starting update_movie")
-        movie_to_update = self.check_movie_title()
-        if self.movie_in_db(movie_to_update):
-            new_rating = self.check_movie_rating()
+        movie_to_update = self.utils.check_movie_title()
+        if self.utils.movie_in_db(movie_to_update, self.local_storage):
+            new_rating = self.utils.check_movie_rating()
             old_rating = self.local_storage[movie_to_update]["rating"]
             try:
                 self.local_storage[movie_to_update]["rating"] = new_rating
@@ -397,7 +299,7 @@ class MovieDB:
         self.save_to_file()
         self.logger.info("... Update Movie finished")
 
-    def calc_stats(self):
+    def display_stats(self):
         self.logger.info("calculating stats started ...")
         movie_stat_dict = {}
         if not self.local_storage:
@@ -414,79 +316,22 @@ class MovieDB:
             for movie in self.local_storage.items()
             if movie[1]["rating"] == max_rating
         ]
-
         movie_stat_dict["worst_movies"] = [
             movie
             for movie in self.local_storage.items()
             if movie[1]["rating"] == min_rating
         ]
+        if movie_stat_dict:
+            self.utils.print_stats(movie_stat_dict)
+        else:
+            print("No data for statistics")
+            self.logger.warning("No data for statistics %s", movie_stat_dict)
         self.logger.info("... Calculating stats finished")
         return movie_stat_dict
 
-    def print_stats(self):
-        """
-        Create local dictionary to capture ratings and best, worst movies
-        display statsL
-        Average rating, Median rating, best movies, worst movies
-        :return: None
-        """
-        self.logger.info("Display stats started ...")
-        print("Displaying statistics...")
-        movie_stats = self.calc_stats()
-        if movie_stats["best_movies"]:
-            df = pd.DataFrame(
-                [
-                    (movie[0], movie[1]["rating"])
-                    for movie in movie_stats["best_movies"]
-                ],
-                columns=["Movie", "Rating"],
-            )
-            print("\n\nBest rated movies:")
-            print("-" * 40)
-            print(df)
-        else:
-            print("No best movies found.")
-            self.logger.error(
-                "displaying stats: No best_movies found %s",
-                movie_stats["best_movies"],
-            )
-        if movie_stats["worst_movies"]:
-            df = pd.DataFrame(
-                [
-                    (movie[0], movie[1]["rating"])
-                    for movie in movie_stats["worst_movies"]
-                ],
-                columns=["Movie", "Rating"],
-            )
-            print("\n\nWorst rated movies:")
-            print("-" * 40)
-            print(df)
-        else:
-            print("No worst movies found.")
-            self.logger.error(
-                "displaying stats: No worst_movies found %s",
-                movie_stats["worst_movies"],
-            )
-
-        if movie_stats["ratings"]:
-            self.logger.info("displaying stats: ratings")
-            df = pd.DataFrame(movie_stats["ratings"], columns=["Rating"])
-            median_rating = df["Rating"].median()
-            average_rating = df["Rating"].mean()
-            print("\n\nRatings:")
-            print("-" * 40)
-            print("\nMedian ", median_rating)
-            print("Average ", average_rating)
-        else:
-            print("No worst movies found.")
-            self.logger.errorinfo(
-                "displaying stats: No ratings found %s", movie_stats["ratings"]
-            )
-        self.logger.info("...Stats printed finished")
-
     def search_movie(self):
         self.logger.info("search movie stats started ...")
-        find_movie = self.check_movie_title()
+        find_movie = self.utils.check_movie_title()
         print(f"Searching for movies matching: {find_movie}")
         try:
             pattern = re.compile(find_movie, re.IGNORECASE)
@@ -507,6 +352,24 @@ class MovieDB:
             self.logger.error(
                 f"Invalid regex search term: {find_movie} - Error: {e}"
             )
+
+    def sort_movie_rating(self):
+        """
+        list movies in order of rating, highest first
+        :return:
+        """
+        self.logger.info("starting to sort movies by rating...")
+        sorted_movies = sorted(
+            self.local_storage.items(),
+            key=lambda x: x[1]["rating"],
+            reverse=True,
+        )
+        if sorted_movies:
+            self.utils.print_sorted_movies(sorted_movies)
+        else:
+            print("No movies in DB")
+            self.logger.warning("No movies in DB %s", self.local_storage)
+        self.logger.info("...finished sort movies by rating")
 
     def quit(self):
         self.logger.info("Quit starting ...")
