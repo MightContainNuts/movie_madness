@@ -339,17 +339,16 @@ class MovieDB:
         self.logger.info("search movie stats started ...")
         find_movie = self.utils.check_movie_title()
         print(f"Searching for movies matching: {find_movie}")
+        matches = {}
         try:
             pattern = re.compile(find_movie, re.IGNORECASE)
             matches = {
-                title: data
-                for title, data in self.local_storage.items()
-                if pattern.search(title)
+                movie: movie_data
+                for movie, movie_data in self.local_storage.items()
+                if pattern.search(movie)
             }
             if matches:
-                print("Found matching movies:")
-                for title, data in matches.items():
-                    print(f"{title} ({data['date']})- : {data['rating']}, ")
+                self.utils.print_movies(matches)
             else:
                 print("No movies found matching your search.")
 
@@ -393,16 +392,14 @@ class MovieDB:
             min_rating = self.utils.check_movie_rating(min_rating=True)
             min_date = self.utils.check_movie_date(min_date=True)
             max_date = self.utils.check_movie_date(max_date=True)
-            for movie, movie_data in self.local_storage.items():
+            filtered_movies = {
+                movie: movie_data
+                for movie, movie_data in self.local_storage.items()
                 if (
                     movie_data["rating"] >= min_rating
                     and min_date <= movie_data["date"] <= max_date
-                ):
-                    print(f"Adding movie: {movie} with data: {movie_data}")
-                    filtered_movies[movie] = {
-                        "date": movie_data["date"],
-                        "rating": movie_data["rating"],
-                    }
+                )
+            }
 
             if filtered_movies:
                 filtered_movies = dict(

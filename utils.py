@@ -27,20 +27,20 @@ class MovieUtils:
         self.logger.info("Display stats started ...")
         print("Displaying statistics...")
         print("\n\nBest rated movies:")
-        print("-" * 30)
-        print("MOVIE".ljust(20), "RATING".ljust(5))
+        print("-" * 70)
+        print("MOVIE".ljust(50), "RATING".ljust(5))
         for movie in movie_stats["best_movies"]:
             movie_name = movie[0]
             movie_rating = movie[1]["rating"]
             print(f"{movie_name.ljust(20)} {str(movie_rating).ljust(5)}")
 
         print("\n\nWorst rated movies:")
-        print("-" * 30)
-        print("MOVIE".ljust(20), "RATING".ljust(5))
+        print("-" * 70)
+        print("MOVIE".ljust(50), "RATING".ljust(5))
         for movie in movie_stats["worst_movies"]:
             movie_name = movie[0]
             movie_rating = movie[1]["rating"]
-            print(f"{movie_name.ljust(20)} {str(movie_rating).ljust(5)}")
+            print(f"{movie_name.ljust(50)} {str(movie_rating).ljust(5)}")
 
         ratings = movie_stats["ratings"]
         self.logger.info("displaying stats: ratings")
@@ -60,9 +60,9 @@ class MovieUtils:
         """
         self.logger.info("Printing options menu...")
         print("\n\nWelcome to MovieMadness ! - the movie app with meaning!")
-        print("-" * 55)
+        print("-" * 70)
         print("OPTION".ljust(8), "DESCRIPTION".ljust(30))
-        print("-" * 55)
+        print("-" * 70)
         for option, details in app.OPTION_LIST.items():
             print(f"{str(option).ljust(8)} {details['DESCRIPTION'].ljust(30)}")
 
@@ -74,20 +74,19 @@ class MovieUtils:
         :param sorted_movies:
         :return:
         """
-        print(sorted_movies)
         self.logger.info("Printing movies...")
         print("Movies sorted by rating: Highest first")
-        print("-" * 50)
+        print("-" * 70)
         print(
             "NR.".ljust(5),
-            "MOVIE".ljust(20),
+            "MOVIE".ljust(50),
             "YEAR".ljust(5),
             "RATING".ljust(5),
         )
         for idx, (movie, movie_data) in enumerate(sorted_movies.items()):
             print(
                 str(idx + 1).ljust(5),
-                movie.ljust(20),
+                movie.ljust(50),
                 str(movie_data["date"]).ljust(5),
                 str(movie_data["rating"]).ljust(10),
             )
