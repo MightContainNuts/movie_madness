@@ -85,7 +85,7 @@ class MovieUtils:
 
         self.logger.info("...finished printing options")
 
-    def print_sorted_movies(self, sorted_movies: dict):
+    def print_sorted_movies(self, sorted_movies: dict[str, dict]):
         """
         print sorted menus
         :param sorted_movies:
@@ -135,13 +135,17 @@ class MovieUtils:
         self.logger.info("... Title check finished")
         return movie_title
 
-    def check_movie_rating(self):
+    def check_movie_rating(self, min_rating=None):
         self.logger.info("Start check movie rating ...")
         while True:
             movie_rating = input("Enter movie RATING: ").strip()
-            if not movie_rating:
+            if not movie_rating and not min_rating:
                 print("Rating cannot be empty. Please try again.")
                 continue
+            elif not movie_rating and min_rating:
+                print("Checking all ratings")
+                self.logger.info("No rating for filtering")
+                movie_rating = 0
             try:
                 movie_rating = float(movie_rating)
             except ValueError:
@@ -155,23 +159,42 @@ class MovieUtils:
         self.logger.info("... Rating check finished")
         return movie_rating
 
-    def check_movie_date(self):
+    def check_movie_date(
+        self, min_date: int = None, max_date: int = None
+    ) -> int:
+        """
+        first movie created in 1888
+        :param min_date: for filter range
+        :param max_date: for filter range
+        :return: valid year a int
+        """
         self.logger.info("Start check movie date ...")
         current_year = datetime.now().year
+        FILM_START = 1888  # historical start of films
         while True:
-            movie_date = input("Enter new movie DATE (e.g. 1990): ").strip()
-
-            if not movie_date:
+            movie_date = input("Enter movie DATE (e.g. 1990): ").strip()
+            if not any([movie_date, min_date, max_date]):
                 print("Date cannot be empty. Please try again.")
                 continue
-
+            elif not movie_date and min_date:
+                print(f"Using {FILM_START} for min date range")
+                self.logger.info(
+                    "Filtering using default value %s", FILM_START
+                )
+                return FILM_START
+            elif not movie_date and max_date:
+                print(f"Using {current_year} for ma date range")
+                self.logger.info(
+                    "Filtering using default value %s", current_year
+                )
+                return current_year
             try:
                 movie_date = int(movie_date)
             except ValueError as e:
                 print("Invalid input. Date needs to be an integer.")
                 self.logger.error("ValueError on date %s: %s", movie_date, e)
                 continue
-            if 1888 <= movie_date <= current_year:
+            if FILM_START <= movie_date <= current_year:
                 self.logger.info(f"Movie year {movie_date} is valid.")
                 return movie_date
             else:

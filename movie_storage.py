@@ -54,6 +54,10 @@ class MovieDB:
                 "DESCRIPTION": "List movies by rating",
                 "FUNCTION": lambda: self.sort_movie_rating(),
             },
+            8: {
+                "DESCRIPTION": "Filter movies by rating and date",
+                "FUNCTION": lambda: self.filter_movies(),
+            },
         }
         self.logger = setup_logger(__name__)
         self.utils = MovieUtils(self)
@@ -370,6 +374,51 @@ class MovieDB:
             print("No movies in DB")
             self.logger.warning("No movies in DB %s", self.local_storage)
         self.logger.info("...finished sort movies by rating")
+
+    def filter_movies(self):
+        """
+        prompt for minimum rating, start year, and end year.
+        return list of movies
+        if prompt empty use limit
+        :return:
+        """
+        self.logger.info("Filtering movies started ...")
+        print("Filtering movies...")
+        filtered_movies = []
+        if self.local_storage:
+            min_rating = self.utils.check_movie_rating(min_rating=True)
+            min_date = self.utils.check_movie_date(min_date=True)
+            max_date = self.utils.check_movie_date(max_date=True)
+            for movie, movie_data in self.local_storage.items():
+                if (
+                    movie_data["rating"] >= min_rating
+                    and min_date <= movie_data["date"] <= max_date
+                ):
+                    details = (
+                        movie,
+                        {
+                            "date": movie_data["date"],
+                            "rating": movie_data["rating"],
+                        },
+                    )
+                filtered_movies.append(details)
+            if filtered_movies:
+                filtered_movies = sorted(
+                    filtered_movies, key=lambda x: x[1]["date"]
+                )
+                self.utils.print_sorted_movies(filtered_movies)
+            else:
+                print("No movies with that criteria")
+                self.logger.warning(
+                    "no filtered movies %s %s %s",
+                    min_rating,
+                    min_date,
+                    max_date,
+                )
+
+        else:
+            print("No films in db to filter!")
+            self.logger.warning("No films to filter %s", self.local_storage)
 
     def quit(self):
         self.logger.info("Quit starting ...")
