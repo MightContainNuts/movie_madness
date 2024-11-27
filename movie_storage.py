@@ -54,6 +54,10 @@ class MovieDB:
                 "DESCRIPTION": "List movies by rating",
                 "FUNCTION": lambda: self.sort_movie_rating(),
             },
+            8: {
+                "DESCRIPTION": "Filter movies by criteria",
+                "FUNCTION": lambda: self.filter_movies(),
+            },
         }
         self.logger = setup_logger(__name__)
         self.utils = MovieUtils(self)
@@ -293,7 +297,9 @@ class MovieDB:
                 old_rating,
                 new_rating,
             )
-            print(f"{movie_to_update}': {old_rating} -> {new_rating}")
+            print(
+                f"{movie_to_update}': {old_rating}->{new_rating}"
+            )  # noqa E501
         else:
             print(f"{movie_to_update} not in DB")
         self.save_to_file()
@@ -370,6 +376,14 @@ class MovieDB:
             print("No movies in DB")
             self.logger.warning("No movies in DB %s", self.local_storage)
         self.logger.info("...finished sort movies by rating")
+
+    def filter_movies(self):
+        """
+        filter a list of movies based on specific criteria
+        minimum rating, start year, and end year
+        :return:
+        """
+        pass
 
     def quit(self):
         self.logger.info("Quit starting ...")

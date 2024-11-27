@@ -64,7 +64,24 @@ class TestMovieDB:
                 "... saving local_storage to file finished"
             )
 
-    def test_list_movies(self):
-        with patch("builtins.open", mock_open(read_data=self.mock_file_data)):
+    def test_list_movies_with_data(self):
+        # Set up test data in local_storage
+        self.db.local_storage = {
+            "Inception": {"date": "2010", "rating": 8.8},
+            "The Matrix": {"date": "1999", "rating": 8.7},
+        }
+
+        # Mock the utils.print_movie_list method
+        with patch.object(
+            self.db.utils, "print_movie_list"
+        ) as mock_print_list:
             self.db.list_movies()
-            pass
+
+            # Verify that print_movie_list was called with the correct data
+            mock_print_list.assert_called_once_with(self.db.local_storage)
+
+            # Check if the appropriate logging calls were made
+            self.mock_logger.info.assert_any_call("Listing Movies started")
+            self.mock_logger.info.assert_any_call(
+                "... Listing Movies finished"
+            )
