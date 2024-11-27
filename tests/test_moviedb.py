@@ -71,10 +71,8 @@ class TestMovieDB:
             "The Matrix": {"date": "1999", "rating": 8.7},
         }
 
-        # Mock the utils.print_movie_list method
-        with patch.object(
-            self.db.utils, "print_movie_list"
-        ) as mock_print_list:
+        # Mock the utils.print_movies method
+        with patch.object(self.db.utils, "print_movies") as mock_print_list:
             self.db.list_movies()
 
             # Verify that print_movie_list was called with the correct data
