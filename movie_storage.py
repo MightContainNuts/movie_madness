@@ -297,7 +297,9 @@ class MovieDB:
                 old_rating,
                 new_rating,
             )
-            print(f"{movie_to_update}': {old_rating} -> {new_rating}")
+            print(
+                f"{movie_to_update}': {old_rating}->{new_rating}"
+            )  # noqa E501
         else:
             print(f"{movie_to_update} not in DB")
         self.save_to_file()
