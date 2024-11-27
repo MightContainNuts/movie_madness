@@ -187,7 +187,7 @@ class MovieDB:
         print("Listing movies ...")
         self.logger.info("Listing Movies started")
         if self.local_storage:
-            self.utils.print_movie_list(self.local_storage)
+            self.utils.print_movies(self.local_storage)
         else:
             self.logger.error(
                 "MovieDB is empty or not loaded correctly: %s", self.MOVIE_DB
@@ -365,13 +365,15 @@ class MovieDB:
         :return:
         """
         self.logger.info("starting to sort movies by rating...")
-        sorted_movies = sorted(
-            self.local_storage.items(),
-            key=lambda x: x[1]["rating"],
-            reverse=True,
+        sorted_movies = dict(
+            sorted(
+                self.local_storage.items(),
+                key=lambda x: x[1]["rating"],
+                reverse=True,
+            )
         )
         if sorted_movies:
-            self.utils.print_sorted_movies(sorted_movies)
+            self.utils.print_movies(sorted_movies)
         else:
             print("No movies in DB")
             self.logger.warning("No movies in DB %s", self.local_storage)
@@ -386,7 +388,7 @@ class MovieDB:
         """
         self.logger.info("Filtering movies started ...")
         print("Filtering movies...")
-        filtered_movies = []
+        filtered_movies = {}
         if self.local_storage:
             min_rating = self.utils.check_movie_rating(min_rating=True)
             min_date = self.utils.check_movie_date(min_date=True)
@@ -396,19 +398,17 @@ class MovieDB:
                     movie_data["rating"] >= min_rating
                     and min_date <= movie_data["date"] <= max_date
                 ):
-                    details = (
-                        movie,
-                        {
-                            "date": movie_data["date"],
-                            "rating": movie_data["rating"],
-                        },
-                    )
-                filtered_movies.append(details)
+                    print(f"Adding movie: {movie} with data: {movie_data}")
+                    filtered_movies[movie] = {
+                        "date": movie_data["date"],
+                        "rating": movie_data["rating"],
+                    }
+
             if filtered_movies:
-                filtered_movies = sorted(
-                    filtered_movies, key=lambda x: x[1]["date"]
+                filtered_movies = dict(
+                    sorted(filtered_movies.items(), key=lambda x: x[1]["date"])
                 )
-                self.utils.print_sorted_movies(filtered_movies)
+                self.utils.print_movies(filtered_movies)
             else:
                 print("No movies with that criteria")
                 self.logger.warning(

@@ -1,0 +1,421 @@
+2024-11-27 05:43:45,458 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-27 05:43:45,458 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-27 05:43:45,458 - movie_storage - INFO - Database loaded into local
+2024-11-27 05:43:45,458 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-27 05:43:45,458 - movie_storage - INFO - Context Manager started
+2024-11-27 05:43:45,458 - utils - INFO - Printing options menu...
+2024-11-27 05:43:45,458 - utils - INFO - ...finished printing options
+2024-11-27 05:43:49,431 - movie_storage - INFO - Option executed List movies
+2024-11-27 05:43:49,432 - movie_storage - INFO - Listing Movies started
+2024-11-27 05:43:49,432 - utils - INFO - Printing movies...
+2024-11-27 05:43:49,432 - movie_storage - ERROR - Exception occurred: too many values to unpack (expected 2)
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 183, in command_menu_options
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 31, in <lambda>
+    "FUNCTION": lambda: self.list_movies(),
+                        ^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 190, in list_movies
+    self.utils.print_movies(self.local_storage)
+  File "/Users/dda/PycharmProjects/MovieMadness/utils.py", line 86, in print_movies
+    for idx, (movie, movie_data) in enumerate(sorted_movies):
+             ^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+2024-11-27 05:43:49,438 - movie_storage - INFO - Saving local storage to file ...
+2024-11-27 05:43:49,439 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-27 05:43:49,439 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-27 05:43:49,439 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-27 05:43:49,439 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-27 05:44:59,464 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-27 05:44:59,465 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-27 05:44:59,465 - movie_storage - INFO - Database loaded into local
+2024-11-27 05:44:59,465 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-27 05:44:59,465 - movie_storage - INFO - Context Manager started
+2024-11-27 05:44:59,465 - utils - INFO - Printing options menu...
+2024-11-27 05:44:59,465 - utils - INFO - ...finished printing options
+2024-11-27 05:45:02,173 - movie_storage - INFO - Option executed List movies
+2024-11-27 05:45:02,173 - movie_storage - INFO - Listing Movies started
+2024-11-27 05:45:02,174 - utils - INFO - Printing movies...
+2024-11-27 05:45:02,174 - movie_storage - ERROR - Exception occurred: too many values to unpack (expected 2)
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 183, in command_menu_options
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 31, in <lambda>
+    "FUNCTION": lambda: self.list_movies(),
+                        ^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 190, in list_movies
+    self.utils.print_movies(self.local_storage)
+  File "/Users/dda/PycharmProjects/MovieMadness/utils.py", line 87, in print_movies
+    for idx, (movie, movie_data) in enumerate(sorted_movies):
+             ^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+2024-11-27 05:45:02,180 - movie_storage - INFO - Saving local storage to file ...
+2024-11-27 05:45:02,181 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-27 05:45:02,181 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-27 05:45:02,181 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-27 05:45:02,181 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-27 05:47:01,383 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-27 05:47:01,383 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-27 05:47:01,383 - movie_storage - INFO - Database loaded into local
+2024-11-27 05:47:01,384 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-27 05:47:01,384 - movie_storage - INFO - Context Manager started
+2024-11-27 05:47:01,384 - utils - INFO - Printing options menu...
+2024-11-27 05:47:01,384 - utils - INFO - ...finished printing options
+2024-11-27 05:47:04,764 - movie_storage - INFO - Option executed List movies
+2024-11-27 05:47:04,765 - movie_storage - INFO - Listing Movies started
+2024-11-27 05:47:04,765 - utils - INFO - Printing movies...
+2024-11-27 05:47:04,765 - utils - INFO - ...finished printing options
+2024-11-27 05:47:04,765 - movie_storage - INFO - ... Listing Movies finished
+2024-11-27 05:47:04,765 - utils - INFO - Printing options menu...
+2024-11-27 05:47:04,765 - utils - INFO - ...finished printing options
+2024-11-27 05:49:26,257 - movie_storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 169, in command_menu_options
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2024-11-27 05:49:26,262 - movie_storage - INFO - Saving local storage to file ...
+2024-11-27 05:49:26,263 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-27 05:49:26,263 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-27 05:49:26,263 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-27 05:49:26,263 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-27 05:49:27,597 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-27 05:49:27,597 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-27 05:49:27,597 - movie_storage - INFO - Database loaded into local
+2024-11-27 05:49:27,597 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-27 05:49:27,597 - movie_storage - INFO - Context Manager started
+2024-11-27 05:49:27,597 - utils - INFO - Printing options menu...
+2024-11-27 05:49:27,597 - utils - INFO - ...finished printing options
+2024-11-27 05:49:31,176 - movie_storage - INFO - Option executed Filter movies by rating and date
+2024-11-27 05:49:31,176 - movie_storage - INFO - Filtering movies started ...
+2024-11-27 05:49:31,176 - utils - INFO - Start check movie rating ...
+2024-11-27 05:49:31,796 - utils - INFO - No rating for filtering
+2024-11-27 05:49:31,796 - utils - INFO - Rating checked for validity 0.0
+2024-11-27 05:49:31,796 - utils - INFO - ... Rating check finished
+2024-11-27 05:49:31,797 - utils - INFO - Start check movie date ...
+2024-11-27 05:49:32,354 - utils - INFO - Filtering using default value 1888
+2024-11-27 05:49:32,354 - utils - INFO - Start check movie date ...
+2024-11-27 05:49:32,921 - utils - INFO - Filtering using default value 2024
+2024-11-27 05:49:32,921 - movie_storage - ERROR - Exception occurred: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 183, in command_menu_options
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 59, in <lambda>
+    "FUNCTION": lambda: self.filter_movies(),
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 404, in filter_movies
+    filtered_movies = sorted(
+                      ^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 405, in <lambda>
+    filtered_movies, key=lambda x: x[1]["date"]
+                                   ~~~~^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+2024-11-27 05:49:32,926 - movie_storage - INFO - Saving local storage to file ...
+2024-11-27 05:49:32,927 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-27 05:49:32,928 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-27 05:49:32,928 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-27 05:49:32,928 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-27 05:50:09,737 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-27 05:50:09,737 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-27 05:50:09,737 - movie_storage - INFO - Database loaded into local
+2024-11-27 05:50:09,737 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-27 05:50:09,737 - movie_storage - INFO - Context Manager started
+2024-11-27 05:50:09,737 - utils - INFO - Printing options menu...
+2024-11-27 05:50:09,737 - utils - INFO - ...finished printing options
+2024-11-27 05:50:13,894 - movie_storage - INFO - Option executed Filter movies by rating and date
+2024-11-27 05:50:13,895 - movie_storage - INFO - Filtering movies started ...
+2024-11-27 05:50:13,895 - utils - INFO - Start check movie rating ...
+2024-11-27 05:50:14,476 - utils - INFO - No rating for filtering
+2024-11-27 05:50:14,477 - utils - INFO - Rating checked for validity 0.0
+2024-11-27 05:50:14,477 - utils - INFO - ... Rating check finished
+2024-11-27 05:50:14,477 - utils - INFO - Start check movie date ...
+2024-11-27 05:50:15,066 - utils - INFO - Filtering using default value 1888
+2024-11-27 05:50:15,067 - utils - INFO - Start check movie date ...
+2024-11-27 05:50:15,894 - utils - INFO - Filtering using default value 2024
+2024-11-27 05:50:15,895 - utils - INFO - Printing movies...
+2024-11-27 05:50:15,896 - movie_storage - ERROR - Exception occurred: 'list' object has no attribute 'items'
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 183, in command_menu_options
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 59, in <lambda>
+    "FUNCTION": lambda: self.filter_movies(),
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 407, in filter_movies
+    self.utils.print_movies(filtered_movies)
+  File "/Users/dda/PycharmProjects/MovieMadness/utils.py", line 87, in print_movies
+    for idx, (movie, movie_data) in enumerate(sorted_movies.items()):
+                                              ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'items'
+2024-11-27 05:50:15,902 - movie_storage - INFO - Saving local storage to file ...
+2024-11-27 05:50:15,903 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-27 05:50:15,903 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-27 05:50:15,903 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-27 05:50:15,903 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-27 05:51:09,532 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-27 05:51:09,532 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-27 05:51:09,533 - movie_storage - INFO - Database loaded into local
+2024-11-27 05:51:09,533 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-27 05:51:09,533 - movie_storage - INFO - Context Manager started
+2024-11-27 05:51:09,533 - utils - INFO - Printing options menu...
+2024-11-27 05:51:09,533 - utils - INFO - ...finished printing options
+2024-11-27 05:51:12,347 - movie_storage - INFO - Option executed List movies
+2024-11-27 05:51:12,347 - movie_storage - INFO - Listing Movies started
+2024-11-27 05:51:12,347 - utils - INFO - Printing movies...
+2024-11-27 05:51:12,348 - utils - INFO - ...finished printing options
+2024-11-27 05:51:12,348 - movie_storage - INFO - ... Listing Movies finished
+2024-11-27 05:51:12,348 - utils - INFO - Printing options menu...
+2024-11-27 05:51:12,348 - utils - INFO - ...finished printing options
+2024-11-27 05:53:02,331 - movie_storage - INFO - Option executed Filter movies by rating and date
+2024-11-27 05:53:02,332 - movie_storage - INFO - Filtering movies started ...
+2024-11-27 05:53:02,333 - utils - INFO - Start check movie rating ...
+2024-11-27 05:53:04,187 - utils - INFO - No rating for filtering
+2024-11-27 05:53:04,187 - utils - INFO - Rating checked for validity 0.0
+2024-11-27 05:53:04,188 - utils - INFO - ... Rating check finished
+2024-11-27 05:53:04,188 - utils - INFO - Start check movie date ...
+2024-11-27 05:53:04,548 - utils - INFO - Filtering using default value 1888
+2024-11-27 05:53:04,548 - utils - INFO - Start check movie date ...
+2024-11-27 05:53:05,439 - utils - INFO - Filtering using default value 2024
+2024-11-27 05:53:05,439 - utils - INFO - Printing movies...
+2024-11-27 05:53:05,439 - movie_storage - ERROR - Exception occurred: 'list' object has no attribute 'items'
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 183, in command_menu_options
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 59, in <lambda>
+    "FUNCTION": lambda: self.filter_movies(),
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 407, in filter_movies
+    self.utils.print_movies(filtered_movies)
+  File "/Users/dda/PycharmProjects/MovieMadness/utils.py", line 87, in print_movies
+    for idx, (movie, movie_data) in enumerate(sorted_movies.items()):
+                                              ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'items'
+2024-11-27 05:53:05,450 - movie_storage - INFO - Saving local storage to file ...
+2024-11-27 05:53:05,450 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-27 05:53:05,451 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-27 05:53:05,451 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-27 05:53:05,451 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-27 05:55:22,226 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-27 05:55:22,226 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-27 05:55:22,226 - movie_storage - INFO - Database loaded into local
+2024-11-27 05:55:22,226 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-27 05:55:22,226 - movie_storage - INFO - Context Manager started
+2024-11-27 05:55:22,226 - utils - INFO - Printing options menu...
+2024-11-27 05:55:22,226 - utils - INFO - ...finished printing options
+2024-11-27 05:55:25,311 - movie_storage - INFO - Option executed Filter movies by rating and date
+2024-11-27 05:55:25,312 - movie_storage - INFO - Filtering movies started ...
+2024-11-27 05:55:25,312 - utils - INFO - Start check movie rating ...
+2024-11-27 05:55:26,186 - utils - INFO - No rating for filtering
+2024-11-27 05:55:26,186 - utils - INFO - Rating checked for validity 0.0
+2024-11-27 05:55:26,186 - utils - INFO - ... Rating check finished
+2024-11-27 05:55:26,186 - utils - INFO - Start check movie date ...
+2024-11-27 05:55:26,779 - utils - INFO - Filtering using default value 1888
+2024-11-27 05:55:26,779 - utils - INFO - Start check movie date ...
+2024-11-27 05:55:28,638 - utils - INFO - Filtering using default value 2024
+2024-11-27 05:55:28,639 - utils - INFO - Printing movies...
+2024-11-27 05:55:28,639 - movie_storage - ERROR - Exception occurred: 'list' object has no attribute 'items'
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 183, in command_menu_options
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 59, in <lambda>
+    "FUNCTION": lambda: self.filter_movies(),
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 408, in filter_movies
+    self.utils.print_movies(filtered_movies)
+  File "/Users/dda/PycharmProjects/MovieMadness/utils.py", line 87, in print_movies
+    for idx, (movie, movie_data) in enumerate(sorted_movies.items()):
+                                              ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'items'
+2024-11-27 05:55:28,645 - movie_storage - INFO - Saving local storage to file ...
+2024-11-27 05:55:28,646 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-27 05:55:28,646 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-27 05:55:28,647 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-27 05:55:28,647 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-27 05:57:55,171 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-27 05:57:55,171 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-27 05:57:55,172 - movie_storage - INFO - Database loaded into local
+2024-11-27 05:57:55,172 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-27 05:57:55,172 - movie_storage - INFO - Context Manager started
+2024-11-27 05:57:55,172 - utils - INFO - Printing options menu...
+2024-11-27 05:57:55,172 - utils - INFO - ...finished printing options
+2024-11-27 05:57:58,480 - movie_storage - INFO - Option executed Filter movies by rating and date
+2024-11-27 05:57:58,480 - movie_storage - INFO - Filtering movies started ...
+2024-11-27 05:57:58,480 - utils - INFO - Start check movie rating ...
+2024-11-27 05:57:59,590 - utils - INFO - No rating for filtering
+2024-11-27 05:57:59,591 - utils - INFO - Rating checked for validity 0.0
+2024-11-27 05:57:59,591 - utils - INFO - ... Rating check finished
+2024-11-27 05:57:59,591 - utils - INFO - Start check movie date ...
+2024-11-27 05:58:00,151 - utils - INFO - Filtering using default value 1888
+2024-11-27 05:58:00,152 - utils - INFO - Start check movie date ...
+2024-11-27 05:58:00,761 - utils - INFO - Filtering using default value 2024
+2024-11-27 05:58:00,761 - utils - INFO - Printing movies...
+2024-11-27 05:58:00,762 - movie_storage - ERROR - Exception occurred: 'list' object has no attribute 'items'
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 183, in command_menu_options
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 59, in <lambda>
+    "FUNCTION": lambda: self.filter_movies(),
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 409, in filter_movies
+    self.utils.print_movies(filtered_movies)
+  File "/Users/dda/PycharmProjects/MovieMadness/utils.py", line 87, in print_movies
+    for idx, (movie, movie_data) in enumerate(sorted_movies.items()):
+                                              ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'items'
+2024-11-27 05:58:00,768 - movie_storage - INFO - Saving local storage to file ...
+2024-11-27 05:58:00,769 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-27 05:58:00,770 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-27 05:58:00,770 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-27 05:58:00,770 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-27 05:58:36,653 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-27 05:58:36,653 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-27 05:58:36,653 - movie_storage - INFO - Database loaded into local
+2024-11-27 05:58:36,653 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-27 05:58:36,653 - movie_storage - INFO - Context Manager started
+2024-11-27 05:58:36,653 - utils - INFO - Printing options menu...
+2024-11-27 05:58:36,653 - utils - INFO - ...finished printing options
+2024-11-27 05:58:38,847 - movie_storage - INFO - Option executed Filter movies by rating and date
+2024-11-27 05:58:38,848 - movie_storage - INFO - Filtering movies started ...
+2024-11-27 05:58:38,848 - utils - INFO - Start check movie rating ...
+2024-11-27 05:58:39,617 - utils - INFO - No rating for filtering
+2024-11-27 05:58:39,618 - utils - INFO - Rating checked for validity 0.0
+2024-11-27 05:58:39,618 - utils - INFO - ... Rating check finished
+2024-11-27 05:58:39,618 - utils - INFO - Start check movie date ...
+2024-11-27 05:58:40,178 - utils - INFO - Filtering using default value 1888
+2024-11-27 05:58:40,178 - utils - INFO - Start check movie date ...
+2024-11-27 05:58:40,723 - utils - INFO - Filtering using default value 2024
+2024-11-27 05:58:40,723 - movie_storage - ERROR - Exception occurred: 0
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 183, in command_menu_options
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 59, in <lambda>
+    "FUNCTION": lambda: self.filter_movies(),
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 406, in filter_movies
+    filtered_movies = sorted(
+                      ^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 407, in <lambda>
+    filtered_movies.items(), key=lambda x: x[1][0]
+                                           ~~~~^^^
+KeyError: 0
+2024-11-27 05:58:40,728 - movie_storage - INFO - Saving local storage to file ...
+2024-11-27 05:58:40,730 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-27 05:58:40,730 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-27 05:58:40,730 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-27 05:58:40,730 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-27 06:00:03,796 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-27 06:00:03,796 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-27 06:00:03,796 - movie_storage - INFO - Database loaded into local
+2024-11-27 06:00:03,796 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-27 06:00:03,796 - movie_storage - INFO - Context Manager started
+2024-11-27 06:00:03,796 - utils - INFO - Printing options menu...
+2024-11-27 06:00:03,796 - utils - INFO - ...finished printing options
+2024-11-27 06:00:05,967 - movie_storage - INFO - Option executed Filter movies by rating and date
+2024-11-27 06:00:05,968 - movie_storage - INFO - Filtering movies started ...
+2024-11-27 06:00:05,968 - utils - INFO - Start check movie rating ...
+2024-11-27 06:00:06,653 - utils - INFO - No rating for filtering
+2024-11-27 06:00:06,654 - utils - INFO - Rating checked for validity 0.0
+2024-11-27 06:00:06,654 - utils - INFO - ... Rating check finished
+2024-11-27 06:00:06,654 - utils - INFO - Start check movie date ...
+2024-11-27 06:00:07,286 - utils - INFO - Filtering using default value 1888
+2024-11-27 06:00:07,286 - utils - INFO - Start check movie date ...
+2024-11-27 06:00:08,028 - utils - INFO - Filtering using default value 2024
+2024-11-27 06:00:08,028 - utils - INFO - Printing movies...
+2024-11-27 06:00:08,028 - movie_storage - ERROR - Exception occurred: 'list' object has no attribute 'items'
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 183, in command_menu_options
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 59, in <lambda>
+    "FUNCTION": lambda: self.filter_movies(),
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 409, in filter_movies
+    self.utils.print_movies(filtered_movies)
+  File "/Users/dda/PycharmProjects/MovieMadness/utils.py", line 87, in print_movies
+    for idx, (movie, movie_data) in enumerate(sorted_movies.items()):
+                                              ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'items'
+2024-11-27 06:00:08,034 - movie_storage - INFO - Saving local storage to file ...
+2024-11-27 06:00:08,035 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-27 06:00:08,036 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-27 06:00:08,036 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-27 06:00:08,036 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-27 06:02:45,748 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-27 06:02:45,748 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-27 06:02:45,748 - movie_storage - INFO - Database loaded into local
+2024-11-27 06:02:45,748 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-27 06:02:45,748 - movie_storage - INFO - Context Manager started
+2024-11-27 06:02:45,748 - utils - INFO - Printing options menu...
+2024-11-27 06:02:45,748 - utils - INFO - ...finished printing options
+2024-11-27 06:02:48,393 - movie_storage - INFO - Option executed Filter movies by rating and date
+2024-11-27 06:02:48,394 - movie_storage - INFO - Filtering movies started ...
+2024-11-27 06:02:48,394 - utils - INFO - Start check movie rating ...
+2024-11-27 06:02:49,410 - utils - INFO - No rating for filtering
+2024-11-27 06:02:49,411 - utils - INFO - Rating checked for validity 0.0
+2024-11-27 06:02:49,411 - utils - INFO - ... Rating check finished
+2024-11-27 06:02:49,411 - utils - INFO - Start check movie date ...
+2024-11-27 06:02:50,200 - utils - INFO - Filtering using default value 1888
+2024-11-27 06:02:50,201 - utils - INFO - Start check movie date ...
+2024-11-27 06:02:50,835 - utils - INFO - Filtering using default value 2024
+2024-11-27 06:02:50,835 - utils - INFO - Printing movies...
+2024-11-27 06:02:50,835 - utils - INFO - ...finished printing options
+2024-11-27 06:02:50,835 - utils - INFO - Printing options menu...
+2024-11-27 06:02:50,835 - utils - INFO - ...finished printing options
+2024-11-27 06:03:17,797 - movie_storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 169, in command_menu_options
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2024-11-27 06:03:17,800 - movie_storage - INFO - Saving local storage to file ...
+2024-11-27 06:03:17,801 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-27 06:03:17,801 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-27 06:03:17,801 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-27 06:03:17,801 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-11-27 06:03:18,911 - movie_storage - INFO - New Instance of MovieDB started
+2024-11-27 06:03:18,912 - movie_storage - INFO - loading file to local_storage started ...
+2024-11-27 06:03:18,912 - movie_storage - INFO - Database loaded into local
+2024-11-27 06:03:18,912 - movie_storage - INFO - ... loading file to local_storage finished
+2024-11-27 06:03:18,912 - movie_storage - INFO - Context Manager started
+2024-11-27 06:03:18,912 - utils - INFO - Printing options menu...
+2024-11-27 06:03:18,912 - utils - INFO - ...finished printing options
+2024-11-27 06:03:27,934 - movie_storage - INFO - Option executed List movies by rating
+2024-11-27 06:03:27,934 - movie_storage - INFO - starting to sort movies by rating...
+2024-11-27 06:03:27,934 - utils - INFO - Printing movies...
+2024-11-27 06:03:27,935 - utils - INFO - ...finished printing options
+2024-11-27 06:03:27,935 - movie_storage - INFO - ...finished sort movies by rating
+2024-11-27 06:03:27,935 - utils - INFO - Printing options menu...
+2024-11-27 06:03:27,935 - utils - INFO - ...finished printing options
+2024-11-27 06:03:39,066 - movie_storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
+    app.command_menu_options()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 169, in command_menu_options
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2024-11-27 06:03:39,069 - movie_storage - INFO - Saving local storage to file ...
+2024-11-27 06:03:39,069 - movie_storage - INFO - Movie DB saved to file: data.json
+2024-11-27 06:03:39,070 - movie_storage - INFO - Assertion checked: Remote is synced with Local
+2024-11-27 06:03:39,070 - movie_storage - INFO - ... saving local_storage to file finished
+2024-11-27 06:03:39,070 - movie_storage - INFO - Context Manager exited. DB saved to: data.json

@@ -1,6 +1,5 @@
 from __future__ import annotations
 from logger import setup_logger
-import pandas as pd
 from datetime import datetime
 
 import statistics
@@ -53,22 +52,6 @@ class MovieUtils:
         print("Average".ljust(10), f"{average_rating:.2f}".rjust(5))
         self.logger.info("...Stats printed finished")
 
-    def print_movie_list(self, db_instance: dict[str, dict]):
-        """
-        print movie list unsorted
-        :param db_instance:
-        :return:
-        """
-        self.logger.info("Printing movie data using Pandas...")
-        if not db_instance:
-            print("No movies available.")
-        else:
-            print("\nMovies in the database:")
-            movie_data = pd.DataFrame.from_dict(db_instance, orient="index")
-            movie_data = movie_data[["date", "rating"]].fillna("N/A")
-            print(movie_data)
-            self.logger.info("...Printing movie data using finished")
-
     def display_menu(self, app: "MovieDB"):  # noqa F821
         """
         Struggling with pandas, but it's a learning process.
@@ -85,13 +68,14 @@ class MovieUtils:
 
         self.logger.info("...finished printing options")
 
-    def print_sorted_movies(self, sorted_movies: dict[str, dict]):
+    def print_movies(self, sorted_movies: dict[str, dict]):
         """
         print sorted menus
         :param sorted_movies:
         :return:
         """
-        self.logger.info("Printing sorted movies...")
+        print(sorted_movies)
+        self.logger.info("Printing movies...")
         print("Movies sorted by rating: Highest first")
         print("-" * 50)
         print(
@@ -100,7 +84,7 @@ class MovieUtils:
             "YEAR".ljust(5),
             "RATING".ljust(5),
         )
-        for idx, (movie, movie_data) in enumerate(sorted_movies):
+        for idx, (movie, movie_data) in enumerate(sorted_movies.items()):
             print(
                 str(idx + 1).ljust(5),
                 movie.ljust(20),
@@ -183,7 +167,7 @@ class MovieUtils:
                 )
                 return FILM_START
             elif not movie_date and max_date:
-                print(f"Using {current_year} for ma date range")
+                print(f"Using {current_year} for max date range")
                 self.logger.info(
                     "Filtering using default value %s", current_year
                 )
