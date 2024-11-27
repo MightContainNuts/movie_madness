@@ -1,10 +1,10 @@
 {
     "Inception": {
-        "date": "2016",
+        "date": 2016,
         "rating": 9.3
     },
     "The Thing": {
-        "date": "1997",
+        "date": 1997,
         "rating": 9.0
     },
     "Twilight": {
