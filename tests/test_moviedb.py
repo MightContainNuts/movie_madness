@@ -8,7 +8,10 @@ import importlib
 sys.path.insert(
     0, os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 )
+
+
 MovieDB = importlib.import_module("movie_storage").MovieDB
+MovieUtils = importlib.import_module("utils").MovieUtils
 
 
 test_data = {
@@ -35,6 +38,7 @@ class TestMovieDB:
         self.db.MOVIE_DB = self.mock_movie_db
         self.db.logger = self.mock_logger
         self.db.local_storage = test_data
+        self.utils = MovieUtils(self.db)
 
     def test_load_success(self):
         # Mock the open function to read the mock file data
@@ -83,3 +87,7 @@ class TestMovieDB:
             self.mock_logger.info.assert_any_call(
                 "... Listing Movies finished"
             )
+
+    def test_check_movie_title(self, mocker, capsys):
+
+        pass

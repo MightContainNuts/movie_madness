@@ -167,13 +167,17 @@ class MovieDB:
             self.utils.display_menu(self)
             try:
                 action = int(input("\n\nWhat do you want to do ?   "))
-            except Exception as e:
+            except ValueError as e:
+                print(
+                    f"invalid option, choose an option between 0 and {len(self.OPTION_LIST) - 1}"  # noqa E501
+                )
                 self.logger.error("Ooops. invalid option chosen  %s", e)
+                continue
 
             if (
                 isinstance(action, int)
                 and action >= 0
-                and action in self.OPTION_LIST
+                and action <= len(self.OPTION_LIST)
             ):
                 func = self.OPTION_LIST[action]["FUNCTION"]
                 self.logger.info(
@@ -181,6 +185,8 @@ class MovieDB:
                     self.OPTION_LIST[action]["DESCRIPTION"],
                 )
                 func()
+            else:
+                continue
 
     # Movie commands options #
     def list_movies(self):

@@ -107,10 +107,11 @@ class MovieUtils:
                 'Enter movie TITLE ("exit" to cancel): '
             ).strip()
             if movie_title.lower() == "exit":
-                print("Add movie operation canceled.")
+                print("Movie operation canceled.")
                 self.logger.info("Movie operation cancelled gracefully")
                 return
             if not movie_title:
+                self.logger.info("Movie title empty")
                 print("Title cannot be empty. Please try again.")
                 continue
             break
