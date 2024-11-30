@@ -59,6 +59,7 @@ class MovieDB:
                 "FUNCTION": lambda: self.filter_movies(),
             },
         }
+        self.local_storage = {}
         self.logger = setup_logger(__name__)
         self.utils = MovieUtils(self)
 

@@ -18,5 +18,9 @@
     "Ice Age": {
         "date": 2000,
         "rating": 8.0
+    },
+    "Starman": {
+        "date": 1998,
+        "rating": 8.5
     }
 }
