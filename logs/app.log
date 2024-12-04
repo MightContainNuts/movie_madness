@@ -275,3 +275,20 @@ KeyboardInterrupt
 2024-11-30 13:55:44,335 - movie_storage - INFO - Assertion checked: Remote is synced with Local
 2024-11-30 13:55:44,335 - movie_storage - INFO - ... saving local_storage to file finished
 2024-11-30 13:55:44,335 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
+2024-12-04 19:25:51,572 - movie_storage - INFO - New Instance of MovieDB started
+2024-12-04 19:25:51,573 - movie_storage - INFO - loading file to local_storage started ...
+2024-12-04 19:25:51,573 - movie_storage - INFO - Database loaded into local
+2024-12-04 19:25:51,573 - movie_storage - INFO - ... loading file to local_storage finished
+2024-12-04 19:25:51,573 - movie_storage - INFO - Context Manager started
+2024-12-04 19:25:51,573 - utils - INFO - Printing options menu...
+2024-12-04 19:25:51,573 - utils - INFO - ...finished printing options
+2024-12-04 19:26:12,164 - movie_storage - INFO - Option executed List movies
+2024-12-04 19:26:12,166 - movie_storage - INFO - Listing Movies started
+2024-12-04 19:26:12,166 - utils - INFO - Printing movies...
+2024-12-04 19:26:12,166 - utils - INFO - ...finished printing options
+2024-12-04 19:26:12,166 - movie_storage - INFO - ... Listing Movies finished
+2024-12-04 19:26:12,166 - utils - INFO - Printing options menu...
+2024-12-04 19:26:12,166 - utils - INFO - ...finished printing options
+2024-12-04 19:26:16,148 - movie_storage - INFO - Option executed Add new movie
+2024-12-04 19:26:16,148 - movie_storage - INFO - Add Movie started...
+2024-12-04 19:26:16,149 - utils - INFO - starting check_movie_title ...
