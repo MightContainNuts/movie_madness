@@ -2,13 +2,13 @@ from istorage import IStorage
 from logger import setup_logger
 from utils import MovieUtils
 
-from typing import override, TextIO, Self
+from typing import override, TextIO, Self, Tuple
 import json
 
 
 class StorageJson(IStorage):
 
-    local_storage = {}
+    local_storage: dict[str, dict[str, Tuple[int, float]]] = {}
     TITLE = "title"
     DATE = "date"
     RATING = "rating"

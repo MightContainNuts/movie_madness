@@ -1,6 +1,7 @@
 from __future__ import annotations
 from logger import setup_logger
 from datetime import datetime
+from typing import Optional
 
 import statistics
 
@@ -52,9 +53,8 @@ class MovieUtils:
         print("Average".ljust(10), f"{average_rating:.2f}".rjust(5))
         self.logger.info("...Stats printed finished")
 
-    def display_menu(self, app: "MovieApp"):  # noqa F821
+    def display_menu(self, app):  # app:MovieApp
         """
-        Struggling with pandas, but it's a learning process.
         :param app instance of MovieApp class:
         :return:
         """
@@ -146,7 +146,7 @@ class MovieUtils:
         return movie_rating
 
     def check_movie_date(
-        self, min_date: int = None, max_date: int = None
+        self, min_date: Optional[str] = None, max_date: Optional[str] = None
     ) -> int:
         """
         first movie created in 1888
