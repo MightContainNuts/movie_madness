@@ -30,7 +30,7 @@ class StorageJson(IStorage):
         setup routine on initialisation
         :return:
         """
-        self.load_to_local()
+        self._load_to_local()
         self.logger.info("Context Manager started")
         return self
 
@@ -49,71 +49,12 @@ class StorageJson(IStorage):
                 exc_value,
                 exc_info=(exc_type, exc_value, traceback),
             )
-            self.save_to_file()
+            self._save_to_file()
             self.logger.info(
                 "Context Manager exited. DB saved to: %s", self.json_storage
             )
 
     # DB File handling #
-
-    def load_to_local(self) -> None:
-        self.logger.info("loading file to local_storage started ...")
-        self.local_storage.clear()
-        try:
-            with open(self.json_storage, "r") as handle:
-                # Use json.load() to load the data from the file
-                self.local_storage = json.load(handle)
-            if not self.local_storage:  # Check if dictionary is empty
-                self.logger.warning(
-                    "Remote database exists but is empty: %s",
-                    self.json_storage,
-                )
-            else:
-                self.logger.info("Database loaded into local")
-        except FileNotFoundError:
-            self.logger.error("DB File not found: %s", self.json_storage)
-        except json.JSONDecodeError:
-            self.logger.error(
-                "Error decoding JSON in the file: %s", self.json_storage
-            )
-        except Exception as e:
-            self.logger.error(
-                "Yikes, something went wrong: %s", e, exc_info=True
-            )
-        self.logger.info("... loading file to local_storage finished")
-
-    def save_to_file(self) -> None:
-        self.logger.info("Saving local storage to file ...")
-        try:
-            if self.json_storage is not None:
-                write_handle: TextIO
-                with open(self.json_storage, "w") as write_handle:
-                    json.dump(self.local_storage, write_handle, indent=4)
-                self.logger.info(
-                    "Movie DB saved to file: %s", self.json_storage
-                )
-                # Assertion check: Re-read the file to verify contents
-                with open(self.json_storage, "r") as read_handle:
-                    file_contents = json.load(read_handle)
-                if file_contents == self.local_storage:
-                    self.logger.info(
-                        "Assertion checked: Remote is synced with Local"
-                    )
-                else:
-                    self.logger.error(
-                        "Assertion failed: Remote is not synced with Local!"
-                    )
-            else:
-                self.logger.warning(
-                    "Movie DB path is None; skipping save operation"
-                )
-        except FileNotFoundError:
-            self.logger.error("DB File not found: %s", self.json_storage)
-        except Exception as e:
-            self.logger.error(
-                "Yikes, something went wrong: %s", e, exc_info=True
-            )
-        self.logger.info("... saving local_storage to file finished")
 
     @override
     def list_movies(self):
@@ -154,7 +95,7 @@ class StorageJson(IStorage):
                     new_movie_rating,
                 )
                 # sync file
-                self.save_to_file()
+                self._save_to_file()
                 print(f"'{new_movie_title}' has been successfully added.")
             except Exception as e:
                 self.logger.error(
@@ -204,7 +145,7 @@ class StorageJson(IStorage):
                 )
         else:
             print(f"{movie_to_delete} not in DB")
-        self.save_to_file()
+        self._save_to_file()
         self.logger.info("... Delete Movie finished")
 
     @override
@@ -239,5 +180,64 @@ class StorageJson(IStorage):
             )  # noqa E501
         else:
             print(f"{movie_to_update} not in DB")
-        self.save_to_file()
+        self._save_to_file()
         self.logger.info("... Update Movie finished")
+
+    def _load_to_local(self) -> None:
+        self.logger.info("loading file to local_storage started ...")
+        self.local_storage.clear()
+        try:
+            with open(self.json_storage, "r") as handle:
+                # Use json.load() to load the data from the file
+                self.local_storage = json.load(handle)
+            if not self.local_storage:  # Check if dictionary is empty
+                self.logger.warning(
+                    "Remote database exists but is empty: %s",
+                    self.json_storage,
+                )
+            else:
+                self.logger.info("Database loaded into local")
+        except FileNotFoundError:
+            self.logger.error("DB File not found: %s", self.json_storage)
+        except json.JSONDecodeError:
+            self.logger.error(
+                "Error decoding JSON in the file: %s", self.json_storage
+            )
+        except Exception as e:
+            self.logger.error(
+                "Yikes, something went wrong: %s", e, exc_info=True
+            )
+        self.logger.info("... loading file to local_storage finished")
+
+    def _save_to_file(self) -> None:
+        self.logger.info("Saving local storage to file ...")
+        try:
+            if self.json_storage is not None:
+                write_handle: TextIO
+                with open(self.json_storage, "w") as write_handle:
+                    json.dump(self.local_storage, write_handle, indent=4)
+                self.logger.info(
+                    "Movie DB saved to file: %s", self.json_storage
+                )
+                # Assertion check: Re-read the file to verify contents
+                with open(self.json_storage, "r") as read_handle:
+                    file_contents = json.load(read_handle)
+                if file_contents == self.local_storage:
+                    self.logger.info(
+                        "Assertion checked: Remote is synced with Local"
+                    )
+                else:
+                    self.logger.error(
+                        "Assertion failed: Remote is not synced with Local!"
+                    )
+            else:
+                self.logger.warning(
+                    "Movie DB path is None; skipping save operation"
+                )
+        except FileNotFoundError:
+            self.logger.error("DB File not found: %s", self.json_storage)
+        except Exception as e:
+            self.logger.error(
+                "Yikes, something went wrong: %s", e, exc_info=True
+            )
+        self.logger.info("... saving local_storage to file finished")

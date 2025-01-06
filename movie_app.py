@@ -206,7 +206,6 @@ class MovieApp:
     def quit(self):
         self.logger.info("Quit starting ...")
         print("Exiting MovieMadness...")
-        self.storage.save_to_file()
         self.logger.info("Program terminating...")
         print("Bye!!")
         self.logger.info("... quit finished")

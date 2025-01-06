@@ -1,135 +1,97 @@
-2025-01-06 17:57:31,252 - storage - INFO - loading file to local_storage started ...
-2025-01-06 17:57:31,252 - storage - INFO - Database loaded into local
-2025-01-06 17:57:31,252 - storage - INFO - ... loading file to local_storage finished
-2025-01-06 17:57:31,252 - storage - INFO - Context Manager started
-2025-01-06 17:57:31,252 - storage - ERROR - Exception occurred: name 'movie_db' is not defined
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 7, in main
-    app = MovieApp(storage)
-          ^^^^^^^^^^^^^^^^^
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 60, in __init__
-    if movie_db:
-       ^^^^^^^^
-NameError: name 'movie_db' is not defined
-2025-01-06 17:57:31,255 - storage - INFO - Saving local storage to file ...
-2025-01-06 17:57:31,256 - storage - INFO - Movie DB saved to file: movies.json
-2025-01-06 17:57:31,257 - storage - INFO - Assertion checked: Remote is synced with Local
-2025-01-06 17:57:31,257 - storage - INFO - ... saving local_storage to file finished
-2025-01-06 17:57:31,257 - storage - INFO - Context Manager exited. DB saved to: movies.json
-2025-01-06 17:58:15,108 - storage - INFO - loading file to local_storage started ...
-2025-01-06 17:58:15,109 - storage - INFO - Database loaded into local
-2025-01-06 17:58:15,109 - storage - INFO - ... loading file to local_storage finished
-2025-01-06 17:58:15,109 - storage - INFO - Context Manager started
-2025-01-06 17:58:15,109 - movie_app - INFO - New Instance of MovieApp started
-2025-01-06 17:58:15,109 - utils - INFO - Printing options menu...
-2025-01-06 17:58:15,109 - utils - INFO - ...finished printing options
-2025-01-06 17:58:17,373 - movie_app - INFO - Option executed List movies
-2025-01-06 17:58:17,373 - storage - INFO - Listing Movies started
-2025-01-06 17:58:17,374 - utils - INFO - Printing movies...
-2025-01-06 17:58:17,374 - utils - INFO - ...finished printing options
-2025-01-06 17:58:17,374 - storage - INFO - ... Listing Movies finished
-2025-01-06 17:58:17,374 - utils - INFO - Printing options menu...
-2025-01-06 17:58:17,374 - utils - INFO - ...finished printing options
-2025-01-06 17:58:37,499 - movie_app - INFO - Option executed Add new movie
-2025-01-06 17:58:37,501 - storage - INFO - Add Movie started...
-2025-01-06 17:58:37,501 - utils - INFO - starting check_movie_title ...
-2025-01-06 17:58:43,797 - utils - INFO - Movie Title checked for validity War of the worlds
-2025-01-06 17:58:43,798 - utils - INFO - ... Title check finished
-2025-01-06 17:58:43,798 - utils - INFO - starting movie_in_db check...
-2025-01-06 17:58:43,798 - utils - INFO - Start check movie date ...
-2025-01-06 17:58:48,727 - utils - INFO - Movie year 2006 is valid.
-2025-01-06 17:58:48,728 - utils - INFO - Start check movie rating ...
-2025-01-06 17:58:52,944 - utils - INFO - Rating checked for validity 8.9
-2025-01-06 17:58:52,946 - utils - INFO - ... Rating check finished
-2025-01-06 17:58:52,946 - storage - INFO - New movie added: Title: War of the worlds, Date: 2006, Rating: 8.9
-2025-01-06 17:58:52,946 - storage - INFO - Saving local storage to file ...
-2025-01-06 17:58:52,948 - storage - INFO - Movie DB saved to file: movies.json
-2025-01-06 17:58:52,948 - storage - INFO - Assertion checked: Remote is synced with Local
-2025-01-06 17:58:52,948 - storage - INFO - ... saving local_storage to file finished
-2025-01-06 17:58:52,949 - storage - INFO - ... Add movie finished
-2025-01-06 17:58:52,949 - utils - INFO - Printing options menu...
-2025-01-06 17:58:52,949 - utils - INFO - ...finished printing options
-2025-01-06 17:59:01,999 - movie_app - INFO - Option executed List movies
-2025-01-06 17:59:02,000 - storage - INFO - Listing Movies started
-2025-01-06 17:59:02,001 - utils - INFO - Printing movies...
-2025-01-06 17:59:02,001 - utils - INFO - ...finished printing options
-2025-01-06 17:59:02,001 - storage - INFO - ... Listing Movies finished
-2025-01-06 17:59:02,001 - utils - INFO - Printing options menu...
-2025-01-06 17:59:02,001 - utils - INFO - ...finished printing options
-2025-01-06 17:59:11,394 - movie_app - INFO - Option executed Print statistics
-2025-01-06 17:59:11,395 - movie_app - INFO - calculating stats started ...
-2025-01-06 17:59:11,395 - utils - INFO - Display stats started ...
-2025-01-06 17:59:11,395 - utils - INFO - displaying stats: ratings
-2025-01-06 17:59:11,396 - utils - INFO - ...Stats printed finished
-2025-01-06 17:59:11,396 - movie_app - INFO - ... Calculating stats finished
-2025-01-06 17:59:11,396 - utils - INFO - Printing options menu...
-2025-01-06 17:59:11,396 - utils - INFO - ...finished printing options
-2025-01-06 17:59:20,346 - movie_app - INFO - Option executed Search for movie
-2025-01-06 17:59:20,351 - movie_app - INFO - search movie stats started ...
-2025-01-06 17:59:20,351 - utils - INFO - starting check_movie_title ...
-2025-01-06 17:59:21,879 - utils - INFO - Movie Title checked for validity a
-2025-01-06 17:59:21,879 - utils - INFO - ... Title check finished
-2025-01-06 17:59:21,891 - utils - INFO - Printing movies...
-2025-01-06 17:59:21,892 - utils - INFO - ...finished printing options
-2025-01-06 17:59:21,892 - utils - INFO - Printing options menu...
-2025-01-06 17:59:21,892 - utils - INFO - ...finished printing options
-2025-01-06 17:59:27,659 - movie_app - INFO - Option executed List movies by rating
-2025-01-06 17:59:27,660 - movie_app - INFO - starting to sort movies by rating...
-2025-01-06 17:59:27,660 - utils - INFO - Printing movies...
-2025-01-06 17:59:27,660 - utils - INFO - ...finished printing options
-2025-01-06 17:59:27,660 - movie_app - INFO - ...finished sort movies by rating
-2025-01-06 17:59:27,661 - utils - INFO - Printing options menu...
-2025-01-06 17:59:27,661 - utils - INFO - ...finished printing options
-2025-01-06 17:59:30,068 - movie_app - INFO - Option executed Filter movies by rating and date
-2025-01-06 17:59:30,069 - movie_app - INFO - Filtering movies started ...
-2025-01-06 17:59:30,069 - utils - INFO - Start check movie rating ...
-2025-01-06 17:59:34,425 - utils - INFO - Rating checked for validity 5.0
-2025-01-06 17:59:34,425 - utils - INFO - ... Rating check finished
-2025-01-06 17:59:34,425 - utils - INFO - Start check movie date ...
-2025-01-06 17:59:35,929 - utils - INFO - Filtering using default value 1888
-2025-01-06 17:59:35,930 - utils - INFO - Start check movie date ...
-2025-01-06 17:59:36,925 - utils - INFO - Filtering using default value 2025
-2025-01-06 17:59:36,925 - utils - INFO - Printing movies...
-2025-01-06 17:59:36,925 - utils - INFO - ...finished printing options
-2025-01-06 17:59:36,925 - utils - INFO - Printing options menu...
-2025-01-06 17:59:36,925 - utils - INFO - ...finished printing options
-2025-01-06 18:02:40,047 - storage - ERROR - Exception occurred:
+2025-01-06 18:19:15,550 - storage - INFO - loading file to local_storage started ...
+2025-01-06 18:19:15,550 - storage - ERROR - DB File not found: movies.json
+2025-01-06 18:19:15,550 - storage - INFO - ... loading file to local_storage finished
+2025-01-06 18:19:15,550 - storage - INFO - Context Manager started
+2025-01-06 18:19:15,550 - movie_app - INFO - New Instance of MovieApp started
+2025-01-06 18:19:15,550 - utils - INFO - Printing options menu...
+2025-01-06 18:19:15,550 - utils - INFO - ...finished printing options
+2025-01-06 18:19:25,948 - movie_app - INFO - Option executed List movies
+2025-01-06 18:19:25,949 - storage - INFO - Listing Movies started
+2025-01-06 18:19:25,949 - storage - ERROR - MovieApp is empty or not loaded correctly: movies.json
+2025-01-06 18:19:25,949 - storage - INFO - ... Listing Movies finished
+2025-01-06 18:19:25,949 - utils - INFO - Printing options menu...
+2025-01-06 18:19:25,950 - utils - INFO - ...finished printing options
+2025-01-06 18:19:52,577 - storage - ERROR - Exception occurred:
 Traceback (most recent call last):
   File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 8, in main
     app.run()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 72, in run
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 67, in run
     action = int(input("\n\nWhat do you want to do ?   "))
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
-2025-01-06 18:02:40,051 - storage - INFO - Saving local storage to file ...
-2025-01-06 18:02:40,052 - storage - INFO - Movie DB saved to file: movies.json
-2025-01-06 18:02:40,052 - storage - INFO - Assertion checked: Remote is synced with Local
-2025-01-06 18:02:40,052 - storage - INFO - ... saving local_storage to file finished
-2025-01-06 18:02:40,052 - storage - INFO - Context Manager exited. DB saved to: movies.json
-2025-01-06 18:02:43,970 - storage - INFO - loading file to local_storage started ...
-2025-01-06 18:02:43,970 - storage - INFO - Database loaded into local
-2025-01-06 18:02:43,970 - storage - INFO - ... loading file to local_storage finished
-2025-01-06 18:02:43,970 - storage - INFO - Context Manager started
-2025-01-06 18:02:43,970 - movie_app - INFO - New Instance of MovieApp started
-2025-01-06 18:02:43,970 - utils - INFO - Printing options menu...
-2025-01-06 18:02:43,970 - utils - INFO - ...finished printing options
-2025-01-06 18:02:46,233 - movie_app - INFO - Option executed List movies
-2025-01-06 18:02:46,233 - storage - INFO - Listing Movies started
-2025-01-06 18:02:46,233 - utils - INFO - Printing movies...
-2025-01-06 18:02:46,233 - utils - INFO - ...finished printing options
-2025-01-06 18:02:46,233 - storage - INFO - ... Listing Movies finished
-2025-01-06 18:02:46,233 - utils - INFO - Printing options menu...
-2025-01-06 18:02:46,233 - utils - INFO - ...finished printing options
-2025-01-06 18:03:16,844 - storage - ERROR - Exception occurred:
+2025-01-06 18:19:52,582 - storage - INFO - Saving local storage to file ...
+2025-01-06 18:19:52,582 - storage - INFO - Movie DB saved to file: movies.json
+2025-01-06 18:19:52,582 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-06 18:19:52,582 - storage - INFO - ... saving local_storage to file finished
+2025-01-06 18:19:52,582 - storage - INFO - Context Manager exited. DB saved to: movies.json
+2025-01-06 18:19:54,396 - storage - INFO - loading file to local_storage started ...
+2025-01-06 18:19:54,396 - storage - ERROR - DB File not found: storage\movies.json
+2025-01-06 18:19:54,396 - storage - INFO - ... loading file to local_storage finished
+2025-01-06 18:19:54,396 - storage - INFO - Context Manager started
+2025-01-06 18:19:54,396 - movie_app - INFO - New Instance of MovieApp started
+2025-01-06 18:19:54,396 - utils - INFO - Printing options menu...
+2025-01-06 18:19:54,396 - utils - INFO - ...finished printing options
+2025-01-06 18:19:56,454 - movie_app - INFO - Option executed List movies
+2025-01-06 18:19:56,454 - storage - INFO - Listing Movies started
+2025-01-06 18:19:56,454 - storage - ERROR - MovieApp is empty or not loaded correctly: storage\movies.json
+2025-01-06 18:19:56,454 - storage - INFO - ... Listing Movies finished
+2025-01-06 18:19:56,454 - utils - INFO - Printing options menu...
+2025-01-06 18:19:56,454 - utils - INFO - ...finished printing options
+2025-01-06 18:29:59,868 - storage - ERROR - Exception occurred:
 Traceback (most recent call last):
   File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 8, in main
-    app.run()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 69, in run
+    storage_json = storage_dir 'movies.json'
+            ^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 67, in run
     action = int(input("\n\nWhat do you want to do ?   "))
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
-2025-01-06 18:03:16,853 - storage - INFO - Saving local storage to file ...
-2025-01-06 18:03:16,854 - storage - INFO - Movie DB saved to file: movies.json
-2025-01-06 18:03:16,854 - storage - INFO - Assertion checked: Remote is synced with Local
-2025-01-06 18:03:16,854 - storage - INFO - ... saving local_storage to file finished
-2025-01-06 18:03:16,854 - storage - INFO - Context Manager exited. DB saved to: movies.json
+2025-01-06 18:29:59,898 - storage - INFO - Saving local storage to file ...
+2025-01-06 18:29:59,904 - storage - INFO - Movie DB saved to file: storage\movies.json
+2025-01-06 18:29:59,905 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-06 18:29:59,905 - storage - INFO - ... saving local_storage to file finished
+2025-01-06 18:29:59,905 - storage - INFO - Context Manager exited. DB saved to: storage\movies.json
+2025-01-06 18:30:00,650 - storage - INFO - loading file to local_storage started ...
+2025-01-06 18:30:00,650 - storage - INFO - Database loaded into local
+2025-01-06 18:30:00,650 - storage - INFO - ... loading file to local_storage finished
+2025-01-06 18:30:00,651 - storage - INFO - Context Manager started
+2025-01-06 18:30:00,651 - movie_app - INFO - New Instance of MovieApp started
+2025-01-06 18:30:00,651 - utils - INFO - Printing options menu...
+2025-01-06 18:30:00,651 - utils - INFO - ...finished printing options
+2025-01-06 18:30:03,993 - movie_app - INFO - Option executed List movies
+2025-01-06 18:30:03,997 - storage - INFO - Listing Movies started
+2025-01-06 18:30:03,997 - utils - INFO - Printing movies...
+2025-01-06 18:30:03,998 - utils - INFO - ...finished printing options
+2025-01-06 18:30:03,998 - storage - INFO - ... Listing Movies finished
+2025-01-06 18:30:03,998 - utils - INFO - Printing options menu...
+2025-01-06 18:30:03,998 - utils - INFO - ...finished printing options
+2025-01-06 18:30:15,422 - movie_app - INFO - Option executed Update Movie rating
+2025-01-06 18:30:15,423 - storage - INFO - Starting update_movie
+2025-01-06 18:30:15,424 - utils - INFO - starting check_movie_title ...
+2025-01-06 18:30:18,529 - utils - INFO - Movie Title checked for validity Jaws
+2025-01-06 18:30:18,530 - utils - INFO - ... Title check finished
+2025-01-06 18:30:18,530 - utils - INFO - starting movie_in_db check...
+2025-01-06 18:30:18,530 - utils - INFO - Start check movie rating ...
+2025-01-06 18:30:20,830 - utils - INFO - Rating checked for validity 5.0
+2025-01-06 18:30:20,831 - utils - INFO - ... Rating check finished
+2025-01-06 18:30:20,831 - storage - INFO - Film Jaws : rating updated from 8.0 to 5.0
+2025-01-06 18:30:20,831 - storage - INFO - Saving local storage to file ...
+2025-01-06 18:30:20,839 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.json
+2025-01-06 18:30:20,840 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-06 18:30:20,840 - storage - INFO - ... saving local_storage to file finished
+2025-01-06 18:30:20,840 - storage - INFO - ... Update Movie finished
+2025-01-06 18:30:20,840 - utils - INFO - Printing options menu...
+2025-01-06 18:30:20,840 - utils - INFO - ...finished printing options
+2025-01-06 18:30:35,098 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 67, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-06 18:30:35,104 - storage - INFO - Saving local storage to file ...
+2025-01-06 18:30:35,105 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.json
+2025-01-06 18:30:35,105 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-06 18:30:35,105 - storage - INFO - ... saving local_storage to file finished
+2025-01-06 18:30:35,105 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.json

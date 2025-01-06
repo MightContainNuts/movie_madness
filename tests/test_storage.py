@@ -8,7 +8,7 @@ class TestStorage:
     test_json_storage = StorageJson(JSON_DATA)
 
     def test_load_to_local(self):
-        self.test_json_storage.load_to_local()
+        self.test_json_storage._load_to_local()
         for key, value in self.test_json_storage.local_storage.items():
             print(key, value)
         assert self.test_json_storage.local_storage  # Check if it's not empty

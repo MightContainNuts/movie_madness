@@ -43,7 +43,7 @@ class TestMovieDB:
     def test_load_success(self):
         # Mock the open function to read the mock file data
         with patch("builtins.open", mock_open(read_data=self.mock_file_data)):
-            self.db.load_to_local()
+            self.db._load_to_local()
 
         # Verify the local_storage is updated
         assert self.db.local_storage == {
@@ -58,7 +58,7 @@ class TestMovieDB:
         with patch("builtins.open", mock_open()) as mock_file, patch(
             "logger.setup_logger", return_value=self.mock_logger
         ):
-            self.db.save_to_file()
+            self.db._save_to_file()
             mock_file.assert_any_call(self.mock_movie_db, "w")
             mock_file.assert_any_call(self.mock_movie_db, "r")
             mock_file().write.assert_called_once_with(
