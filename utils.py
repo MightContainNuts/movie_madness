@@ -52,10 +52,10 @@ class MovieUtils:
         print("Average".ljust(10), f"{average_rating:.2f}".rjust(5))
         self.logger.info("...Stats printed finished")
 
-    def display_menu(self, app: "MovieDB"):  # noqa F821
+    def display_menu(self, app: "MovieApp"):  # noqa F821
         """
         Struggling with pandas, but it's a learning process.
-        :param app instance of MovieDB class:
+        :param app instance of MovieApp class:
         :return:
         """
         self.logger.info("Printing options menu...")
@@ -83,9 +83,11 @@ class MovieUtils:
             "YEAR".ljust(5),
             "RATING".ljust(5),
         )
-        for idx, (movie, movie_data) in enumerate(sorted_movies.items()):
+        for idx, (movie, movie_data) in enumerate(
+            sorted_movies.items(), start=1
+        ):
             print(
-                str(idx + 1).ljust(5),
+                str(idx).ljust(5),
                 movie.ljust(50),
                 str(movie_data["date"]).ljust(5),
                 str(movie_data["rating"]).ljust(10),

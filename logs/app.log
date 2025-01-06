@@ -1,294 +1,135 @@
-2024-11-30 12:30:57,607 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-30 12:30:57,607 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-30 12:30:57,608 - movie_storage - INFO - Database loaded into local
-2024-11-30 12:30:57,608 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-30 12:30:57,608 - movie_storage - INFO - Context Manager started
-2024-11-30 12:30:57,608 - utils - INFO - Printing options menu...
-2024-11-30 12:30:57,608 - utils - INFO - ...finished printing options
-2024-11-30 12:30:59,261 - movie_storage - ERROR - Exception occurred: unsupported operand type(s) for +: 'dict' and 'int'
+2025-01-06 17:57:31,252 - storage - INFO - loading file to local_storage started ...
+2025-01-06 17:57:31,252 - storage - INFO - Database loaded into local
+2025-01-06 17:57:31,252 - storage - INFO - ... loading file to local_storage finished
+2025-01-06 17:57:31,252 - storage - INFO - Context Manager started
+2025-01-06 17:57:31,252 - storage - ERROR - Exception occurred: name 'movie_db' is not defined
 Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 169, in command_menu_options
-    action = int(input("\n\nWhat do you want to do ?   "))
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ValueError: invalid literal for int() with base 10: 'f'
-
-During handling of the above exception, another exception occurred:
-
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 7, in main
+    app = MovieApp(storage)
+          ^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 60, in __init__
+    if movie_db:
+       ^^^^^^^^
+NameError: name 'movie_db' is not defined
+2025-01-06 17:57:31,255 - storage - INFO - Saving local storage to file ...
+2025-01-06 17:57:31,256 - storage - INFO - Movie DB saved to file: movies.json
+2025-01-06 17:57:31,257 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-06 17:57:31,257 - storage - INFO - ... saving local_storage to file finished
+2025-01-06 17:57:31,257 - storage - INFO - Context Manager exited. DB saved to: movies.json
+2025-01-06 17:58:15,108 - storage - INFO - loading file to local_storage started ...
+2025-01-06 17:58:15,109 - storage - INFO - Database loaded into local
+2025-01-06 17:58:15,109 - storage - INFO - ... loading file to local_storage finished
+2025-01-06 17:58:15,109 - storage - INFO - Context Manager started
+2025-01-06 17:58:15,109 - movie_app - INFO - New Instance of MovieApp started
+2025-01-06 17:58:15,109 - utils - INFO - Printing options menu...
+2025-01-06 17:58:15,109 - utils - INFO - ...finished printing options
+2025-01-06 17:58:17,373 - movie_app - INFO - Option executed List movies
+2025-01-06 17:58:17,373 - storage - INFO - Listing Movies started
+2025-01-06 17:58:17,374 - utils - INFO - Printing movies...
+2025-01-06 17:58:17,374 - utils - INFO - ...finished printing options
+2025-01-06 17:58:17,374 - storage - INFO - ... Listing Movies finished
+2025-01-06 17:58:17,374 - utils - INFO - Printing options menu...
+2025-01-06 17:58:17,374 - utils - INFO - ...finished printing options
+2025-01-06 17:58:37,499 - movie_app - INFO - Option executed Add new movie
+2025-01-06 17:58:37,501 - storage - INFO - Add Movie started...
+2025-01-06 17:58:37,501 - utils - INFO - starting check_movie_title ...
+2025-01-06 17:58:43,797 - utils - INFO - Movie Title checked for validity War of the worlds
+2025-01-06 17:58:43,798 - utils - INFO - ... Title check finished
+2025-01-06 17:58:43,798 - utils - INFO - starting movie_in_db check...
+2025-01-06 17:58:43,798 - utils - INFO - Start check movie date ...
+2025-01-06 17:58:48,727 - utils - INFO - Movie year 2006 is valid.
+2025-01-06 17:58:48,728 - utils - INFO - Start check movie rating ...
+2025-01-06 17:58:52,944 - utils - INFO - Rating checked for validity 8.9
+2025-01-06 17:58:52,946 - utils - INFO - ... Rating check finished
+2025-01-06 17:58:52,946 - storage - INFO - New movie added: Title: War of the worlds, Date: 2006, Rating: 8.9
+2025-01-06 17:58:52,946 - storage - INFO - Saving local storage to file ...
+2025-01-06 17:58:52,948 - storage - INFO - Movie DB saved to file: movies.json
+2025-01-06 17:58:52,948 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-06 17:58:52,948 - storage - INFO - ... saving local_storage to file finished
+2025-01-06 17:58:52,949 - storage - INFO - ... Add movie finished
+2025-01-06 17:58:52,949 - utils - INFO - Printing options menu...
+2025-01-06 17:58:52,949 - utils - INFO - ...finished printing options
+2025-01-06 17:59:01,999 - movie_app - INFO - Option executed List movies
+2025-01-06 17:59:02,000 - storage - INFO - Listing Movies started
+2025-01-06 17:59:02,001 - utils - INFO - Printing movies...
+2025-01-06 17:59:02,001 - utils - INFO - ...finished printing options
+2025-01-06 17:59:02,001 - storage - INFO - ... Listing Movies finished
+2025-01-06 17:59:02,001 - utils - INFO - Printing options menu...
+2025-01-06 17:59:02,001 - utils - INFO - ...finished printing options
+2025-01-06 17:59:11,394 - movie_app - INFO - Option executed Print statistics
+2025-01-06 17:59:11,395 - movie_app - INFO - calculating stats started ...
+2025-01-06 17:59:11,395 - utils - INFO - Display stats started ...
+2025-01-06 17:59:11,395 - utils - INFO - displaying stats: ratings
+2025-01-06 17:59:11,396 - utils - INFO - ...Stats printed finished
+2025-01-06 17:59:11,396 - movie_app - INFO - ... Calculating stats finished
+2025-01-06 17:59:11,396 - utils - INFO - Printing options menu...
+2025-01-06 17:59:11,396 - utils - INFO - ...finished printing options
+2025-01-06 17:59:20,346 - movie_app - INFO - Option executed Search for movie
+2025-01-06 17:59:20,351 - movie_app - INFO - search movie stats started ...
+2025-01-06 17:59:20,351 - utils - INFO - starting check_movie_title ...
+2025-01-06 17:59:21,879 - utils - INFO - Movie Title checked for validity a
+2025-01-06 17:59:21,879 - utils - INFO - ... Title check finished
+2025-01-06 17:59:21,891 - utils - INFO - Printing movies...
+2025-01-06 17:59:21,892 - utils - INFO - ...finished printing options
+2025-01-06 17:59:21,892 - utils - INFO - Printing options menu...
+2025-01-06 17:59:21,892 - utils - INFO - ...finished printing options
+2025-01-06 17:59:27,659 - movie_app - INFO - Option executed List movies by rating
+2025-01-06 17:59:27,660 - movie_app - INFO - starting to sort movies by rating...
+2025-01-06 17:59:27,660 - utils - INFO - Printing movies...
+2025-01-06 17:59:27,660 - utils - INFO - ...finished printing options
+2025-01-06 17:59:27,660 - movie_app - INFO - ...finished sort movies by rating
+2025-01-06 17:59:27,661 - utils - INFO - Printing options menu...
+2025-01-06 17:59:27,661 - utils - INFO - ...finished printing options
+2025-01-06 17:59:30,068 - movie_app - INFO - Option executed Filter movies by rating and date
+2025-01-06 17:59:30,069 - movie_app - INFO - Filtering movies started ...
+2025-01-06 17:59:30,069 - utils - INFO - Start check movie rating ...
+2025-01-06 17:59:34,425 - utils - INFO - Rating checked for validity 5.0
+2025-01-06 17:59:34,425 - utils - INFO - ... Rating check finished
+2025-01-06 17:59:34,425 - utils - INFO - Start check movie date ...
+2025-01-06 17:59:35,929 - utils - INFO - Filtering using default value 1888
+2025-01-06 17:59:35,930 - utils - INFO - Start check movie date ...
+2025-01-06 17:59:36,925 - utils - INFO - Filtering using default value 2025
+2025-01-06 17:59:36,925 - utils - INFO - Printing movies...
+2025-01-06 17:59:36,925 - utils - INFO - ...finished printing options
+2025-01-06 17:59:36,925 - utils - INFO - Printing options menu...
+2025-01-06 17:59:36,925 - utils - INFO - ...finished printing options
+2025-01-06 18:02:40,047 - storage - ERROR - Exception occurred:
 Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 171, in command_menu_options
-    print(f"invalid option, choose an option between 0 and {len(self.OPTION_LIST +1)}")
-                                                                ~~~~~~~~~~~~~~~~~^~
-TypeError: unsupported operand type(s) for +: 'dict' and 'int'
-2024-11-30 12:30:59,269 - movie_storage - INFO - Saving local storage to file ...
-2024-11-30 12:30:59,269 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-30 12:30:59,270 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-30 12:30:59,270 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-30 12:30:59,270 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-30 12:31:31,952 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-30 12:31:31,952 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-30 12:31:31,952 - movie_storage - INFO - Database loaded into local
-2024-11-30 12:31:31,952 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-30 12:31:31,953 - movie_storage - INFO - Context Manager started
-2024-11-30 12:31:31,953 - utils - INFO - Printing options menu...
-2024-11-30 12:31:31,953 - utils - INFO - ...finished printing options
-2024-11-30 12:31:35,498 - movie_storage - INFO - Option executed List movies by rating
-2024-11-30 12:31:35,498 - movie_storage - INFO - starting to sort movies by rating...
-2024-11-30 12:31:35,498 - utils - INFO - Printing movies...
-2024-11-30 12:31:35,498 - utils - INFO - ...finished printing options
-2024-11-30 12:31:35,498 - movie_storage - INFO - ...finished sort movies by rating
-2024-11-30 12:31:35,498 - utils - INFO - Printing options menu...
-2024-11-30 12:31:35,498 - utils - INFO - ...finished printing options
-2024-11-30 12:31:47,166 - movie_storage - ERROR - Exception occurred:
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 169, in command_menu_options
-    action = int(input("\n\nWhat do you want to do ?   "))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-KeyboardInterrupt
-2024-11-30 12:31:47,169 - movie_storage - INFO - Saving local storage to file ...
-2024-11-30 12:31:47,170 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-30 12:31:47,170 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-30 12:31:47,170 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-30 12:31:47,170 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-30 12:35:57,155 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-30 12:35:57,155 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-30 12:35:57,156 - movie_storage - INFO - Database loaded into local
-2024-11-30 12:35:57,156 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-30 12:35:57,156 - movie_storage - INFO - Context Manager started
-2024-11-30 12:35:57,156 - utils - INFO - Printing options menu...
-2024-11-30 12:35:57,156 - utils - INFO - ...finished printing options
-2024-11-30 12:36:00,392 - movie_storage - ERROR - Exception occurred: unsupported operand type(s) for +: 'dict' and 'int'
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 169, in command_menu_options
-    action = int(input("\n\nWhat do you want to do ?   "))
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ValueError: invalid literal for int() with base 10: 'f'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 171, in command_menu_options
-    print(f"invalid option, choose an option between 0 and {len(self.OPTION_LIST +1)}")
-                                                                ~~~~~~~~~~~~~~~~~^~
-TypeError: unsupported operand type(s) for +: 'dict' and 'int'
-2024-11-30 12:36:00,397 - movie_storage - INFO - Saving local storage to file ...
-2024-11-30 12:36:00,399 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-30 12:36:00,399 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-30 12:36:00,399 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-30 12:36:00,399 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-30 12:36:22,487 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-30 12:36:22,487 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-30 12:36:22,488 - movie_storage - INFO - Database loaded into local
-2024-11-30 12:36:22,488 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-30 12:36:22,488 - movie_storage - INFO - Context Manager started
-2024-11-30 12:36:22,488 - utils - INFO - Printing options menu...
-2024-11-30 12:36:22,488 - utils - INFO - ...finished printing options
-2024-11-30 12:36:25,181 - movie_storage - ERROR - Ooops. invalid option chosen  invalid literal for int() with base 10: 'fg'
-2024-11-30 12:36:25,181 - movie_storage - ERROR - Exception occurred: cannot access local variable 'action' where it is not associated with a value
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 174, in command_menu_options
-    if not (isinstance(action, int) and
-                       ^^^^^^
-UnboundLocalError: cannot access local variable 'action' where it is not associated with a value
-2024-11-30 12:36:25,184 - movie_storage - INFO - Saving local storage to file ...
-2024-11-30 12:36:25,186 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-30 12:36:25,186 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-30 12:36:25,186 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-30 12:36:25,186 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-30 12:37:29,359 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-30 12:37:29,359 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-30 12:37:29,359 - movie_storage - INFO - Database loaded into local
-2024-11-30 12:37:29,359 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-30 12:37:29,359 - movie_storage - INFO - Context Manager started
-2024-11-30 12:37:29,359 - utils - INFO - Printing options menu...
-2024-11-30 12:37:29,359 - utils - INFO - ...finished printing options
-2024-11-30 12:37:32,230 - movie_storage - ERROR - Ooops. invalid option chosen  invalid literal for int() with base 10: 'f'
-2024-11-30 12:37:32,230 - movie_storage - ERROR - Exception occurred: cannot access local variable 'action' where it is not associated with a value
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 174, in command_menu_options
-    if not (isinstance(action, int) and
-                       ^^^^^^
-UnboundLocalError: cannot access local variable 'action' where it is not associated with a value
-2024-11-30 12:37:32,235 - movie_storage - INFO - Saving local storage to file ...
-2024-11-30 12:37:32,236 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-30 12:37:32,236 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-30 12:37:32,236 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-30 12:37:32,236 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-30 12:37:55,475 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-30 12:37:55,475 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-30 12:37:55,475 - movie_storage - INFO - Database loaded into local
-2024-11-30 12:37:55,475 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-30 12:37:55,475 - movie_storage - INFO - Context Manager started
-2024-11-30 12:37:55,475 - utils - INFO - Printing options menu...
-2024-11-30 12:37:55,475 - utils - INFO - ...finished printing options
-2024-11-30 12:37:57,139 - movie_storage - ERROR - Ooops. invalid option chosen  invalid literal for int() with base 10: 'f'
-2024-11-30 12:37:57,140 - utils - INFO - Printing options menu...
-2024-11-30 12:37:57,140 - utils - INFO - ...finished printing options
-2024-11-30 12:38:04,436 - movie_storage - ERROR - Ooops. invalid option chosen  invalid literal for int() with base 10: 'dfd'
-2024-11-30 12:38:04,438 - utils - INFO - Printing options menu...
-2024-11-30 12:38:04,438 - utils - INFO - ...finished printing options
-2024-11-30 12:38:08,097 - utils - INFO - Printing options menu...
-2024-11-30 12:38:08,097 - utils - INFO - ...finished printing options
-2024-11-30 12:38:22,947 - utils - INFO - Printing options menu...
-2024-11-30 12:38:22,948 - utils - INFO - ...finished printing options
-2024-11-30 12:38:53,871 - movie_storage - ERROR - Exception occurred:
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 169, in command_menu_options
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 8, in main
+    app.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 72, in run
     action = int(input("\n\nWhat do you want to do ?   "))
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
-2024-11-30 12:38:53,874 - movie_storage - INFO - Saving local storage to file ...
-2024-11-30 12:38:53,875 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-30 12:38:53,875 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-30 12:38:53,875 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-30 12:38:53,875 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-30 12:38:54,847 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-30 12:38:54,847 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-30 12:38:54,848 - movie_storage - INFO - Database loaded into local
-2024-11-30 12:38:54,848 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-30 12:38:54,848 - movie_storage - INFO - Context Manager started
-2024-11-30 12:38:54,848 - utils - INFO - Printing options menu...
-2024-11-30 12:38:54,848 - utils - INFO - ...finished printing options
-2024-11-30 12:38:58,578 - movie_storage - ERROR - Ooops. invalid option chosen  invalid literal for int() with base 10: 'fr'
-2024-11-30 12:38:58,579 - utils - INFO - Printing options menu...
-2024-11-30 12:38:58,580 - utils - INFO - ...finished printing options
-2024-11-30 12:39:01,191 - movie_storage - INFO - Option executed Print statistics
-2024-11-30 12:39:01,191 - movie_storage - INFO - calculating stats started ...
-2024-11-30 12:39:01,191 - utils - INFO - Display stats started ...
-2024-11-30 12:39:01,191 - utils - INFO - displaying stats: ratings
-2024-11-30 12:39:01,192 - utils - INFO - ...Stats printed finished
-2024-11-30 12:39:01,192 - movie_storage - INFO - ... Calculating stats finished
-2024-11-30 12:39:01,192 - utils - INFO - Printing options menu...
-2024-11-30 12:39:01,192 - utils - INFO - ...finished printing options
-2024-11-30 12:39:08,618 - movie_storage - INFO - Option executed Filter movies by rating and date
-2024-11-30 12:39:08,618 - movie_storage - INFO - Filtering movies started ...
-2024-11-30 12:39:08,619 - utils - INFO - Start check movie rating ...
-2024-11-30 12:39:10,043 - utils - INFO - No rating for filtering
-2024-11-30 12:39:10,043 - utils - INFO - Rating checked for validity 0.0
-2024-11-30 12:39:10,044 - utils - INFO - ... Rating check finished
-2024-11-30 12:39:10,044 - utils - INFO - Start check movie date ...
-2024-11-30 12:39:11,170 - utils - INFO - Filtering using default value 1888
-2024-11-30 12:39:11,170 - utils - INFO - Start check movie date ...
-2024-11-30 12:39:13,181 - utils - INFO - Filtering using default value 2024
-2024-11-30 12:39:13,182 - utils - INFO - Printing movies...
-2024-11-30 12:39:13,182 - utils - INFO - ...finished printing options
-2024-11-30 12:39:13,182 - utils - INFO - Printing options menu...
-2024-11-30 12:39:13,182 - utils - INFO - ...finished printing options
-2024-11-30 12:39:20,152 - movie_storage - ERROR - Exception occurred:
+2025-01-06 18:02:40,051 - storage - INFO - Saving local storage to file ...
+2025-01-06 18:02:40,052 - storage - INFO - Movie DB saved to file: movies.json
+2025-01-06 18:02:40,052 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-06 18:02:40,052 - storage - INFO - ... saving local_storage to file finished
+2025-01-06 18:02:40,052 - storage - INFO - Context Manager exited. DB saved to: movies.json
+2025-01-06 18:02:43,970 - storage - INFO - loading file to local_storage started ...
+2025-01-06 18:02:43,970 - storage - INFO - Database loaded into local
+2025-01-06 18:02:43,970 - storage - INFO - ... loading file to local_storage finished
+2025-01-06 18:02:43,970 - storage - INFO - Context Manager started
+2025-01-06 18:02:43,970 - movie_app - INFO - New Instance of MovieApp started
+2025-01-06 18:02:43,970 - utils - INFO - Printing options menu...
+2025-01-06 18:02:43,970 - utils - INFO - ...finished printing options
+2025-01-06 18:02:46,233 - movie_app - INFO - Option executed List movies
+2025-01-06 18:02:46,233 - storage - INFO - Listing Movies started
+2025-01-06 18:02:46,233 - utils - INFO - Printing movies...
+2025-01-06 18:02:46,233 - utils - INFO - ...finished printing options
+2025-01-06 18:02:46,233 - storage - INFO - ... Listing Movies finished
+2025-01-06 18:02:46,233 - utils - INFO - Printing options menu...
+2025-01-06 18:02:46,233 - utils - INFO - ...finished printing options
+2025-01-06 18:03:16,844 - storage - ERROR - Exception occurred:
 Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 169, in command_menu_options
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 8, in main
+    app.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 69, in run
     action = int(input("\n\nWhat do you want to do ?   "))
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
-2024-11-30 12:39:20,155 - movie_storage - INFO - Saving local storage to file ...
-2024-11-30 12:39:20,155 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-30 12:39:20,155 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-30 12:39:20,155 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-30 12:39:20,155 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-11-30 13:49:47,479 - movie_storage - INFO - New Instance of MovieDB started
-2024-11-30 13:49:47,479 - movie_storage - INFO - loading file to local_storage started ...
-2024-11-30 13:49:47,479 - movie_storage - INFO - Database loaded into local
-2024-11-30 13:49:47,479 - movie_storage - INFO - ... loading file to local_storage finished
-2024-11-30 13:49:47,479 - movie_storage - INFO - Context Manager started
-2024-11-30 13:49:47,479 - utils - INFO - Printing options menu...
-2024-11-30 13:49:47,479 - utils - INFO - ...finished printing options
-2024-11-30 13:49:50,575 - movie_storage - INFO - Option executed Add new movie
-2024-11-30 13:49:50,576 - movie_storage - INFO - Add Movie started...
-2024-11-30 13:49:50,576 - utils - INFO - starting check_movie_title ...
-2024-11-30 13:49:59,775 - utils - INFO - Movie Title checked for validity Starman
-2024-11-30 13:49:59,775 - utils - INFO - ... Title check finished
-2024-11-30 13:49:59,775 - utils - INFO - starting movie_in_db check...
-2024-11-30 13:49:59,775 - utils - INFO - Start check movie date ...
-2024-11-30 13:50:03,554 - utils - INFO - Movie year 1998 is valid.
-2024-11-30 13:50:03,555 - utils - INFO - Start check movie rating ...
-2024-11-30 13:50:05,992 - utils - INFO - Rating checked for validity 8.5
-2024-11-30 13:50:05,994 - utils - INFO - ... Rating check finished
-2024-11-30 13:50:05,994 - movie_storage - INFO - New movie added: Title: Starman, Date: 1998, Rating: 8.5
-2024-11-30 13:50:05,994 - movie_storage - INFO - Saving local storage to file ...
-2024-11-30 13:50:05,995 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-30 13:50:05,996 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-30 13:50:05,996 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-30 13:50:05,996 - movie_storage - INFO - ... Add movie finished
-2024-11-30 13:50:05,996 - utils - INFO - Printing options menu...
-2024-11-30 13:50:05,996 - utils - INFO - ...finished printing options
-2024-11-30 13:50:10,217 - movie_storage - INFO - Option executed Print statistics
-2024-11-30 13:50:10,217 - movie_storage - INFO - calculating stats started ...
-2024-11-30 13:50:10,217 - utils - INFO - Display stats started ...
-2024-11-30 13:50:10,217 - utils - INFO - displaying stats: ratings
-2024-11-30 13:50:10,217 - utils - INFO - ...Stats printed finished
-2024-11-30 13:50:10,217 - movie_storage - INFO - ... Calculating stats finished
-2024-11-30 13:50:10,217 - utils - INFO - Printing options menu...
-2024-11-30 13:50:10,218 - utils - INFO - ...finished printing options
-2024-11-30 13:50:21,185 - movie_storage - INFO - Option executed List movies
-2024-11-30 13:50:21,186 - movie_storage - INFO - Listing Movies started
-2024-11-30 13:50:21,186 - utils - INFO - Printing movies...
-2024-11-30 13:50:21,187 - utils - INFO - ...finished printing options
-2024-11-30 13:50:21,187 - movie_storage - INFO - ... Listing Movies finished
-2024-11-30 13:50:21,187 - utils - INFO - Printing options menu...
-2024-11-30 13:50:21,187 - utils - INFO - ...finished printing options
-2024-11-30 13:51:00,254 - movie_storage - INFO - Option executed List movies by rating
-2024-11-30 13:51:00,255 - movie_storage - INFO - starting to sort movies by rating...
-2024-11-30 13:51:00,256 - utils - INFO - Printing movies...
-2024-11-30 13:51:00,256 - utils - INFO - ...finished printing options
-2024-11-30 13:51:00,256 - movie_storage - INFO - ...finished sort movies by rating
-2024-11-30 13:51:00,256 - utils - INFO - Printing options menu...
-2024-11-30 13:51:00,256 - utils - INFO - ...finished printing options
-2024-11-30 13:51:13,871 - movie_storage - INFO - Option executed Search for movie
-2024-11-30 13:51:13,872 - movie_storage - INFO - search movie stats started ...
-2024-11-30 13:51:13,872 - utils - INFO - starting check_movie_title ...
-2024-11-30 13:51:18,027 - utils - INFO - Movie Title checked for validity life
-2024-11-30 13:51:18,027 - utils - INFO - ... Title check finished
-2024-11-30 13:51:18,028 - utils - INFO - Printing options menu...
-2024-11-30 13:51:18,028 - utils - INFO - ...finished printing options
-2024-11-30 13:51:26,176 - movie_storage - INFO - Option executed Search for movie
-2024-11-30 13:51:26,177 - movie_storage - INFO - search movie stats started ...
-2024-11-30 13:51:26,177 - utils - INFO - starting check_movie_title ...
-2024-11-30 13:51:30,314 - utils - INFO - Movie Title checked for validity t
-2024-11-30 13:51:30,315 - utils - INFO - ... Title check finished
-2024-11-30 13:51:30,315 - utils - INFO - Printing movies...
-2024-11-30 13:51:30,316 - utils - INFO - ...finished printing options
-2024-11-30 13:51:30,316 - utils - INFO - Printing options menu...
-2024-11-30 13:51:30,316 - utils - INFO - ...finished printing options
-2024-11-30 13:55:44,329 - movie_storage - ERROR - Exception occurred:
-Traceback (most recent call last):
-  File "/Users/dda/PycharmProjects/MovieMadness/movies.py", line 6, in main
-    app.command_menu_options()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_storage.py", line 170, in command_menu_options
-    action = int(input("\n\nWhat do you want to do ?   "))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-KeyboardInterrupt
-2024-11-30 13:55:44,334 - movie_storage - INFO - Saving local storage to file ...
-2024-11-30 13:55:44,335 - movie_storage - INFO - Movie DB saved to file: data.json
-2024-11-30 13:55:44,335 - movie_storage - INFO - Assertion checked: Remote is synced with Local
-2024-11-30 13:55:44,335 - movie_storage - INFO - ... saving local_storage to file finished
-2024-11-30 13:55:44,335 - movie_storage - INFO - Context Manager exited. DB saved to: data.json
-2024-12-04 19:25:51,572 - movie_storage - INFO - New Instance of MovieDB started
-2024-12-04 19:25:51,573 - movie_storage - INFO - loading file to local_storage started ...
-2024-12-04 19:25:51,573 - movie_storage - INFO - Database loaded into local
-2024-12-04 19:25:51,573 - movie_storage - INFO - ... loading file to local_storage finished
-2024-12-04 19:25:51,573 - movie_storage - INFO - Context Manager started
-2024-12-04 19:25:51,573 - utils - INFO - Printing options menu...
-2024-12-04 19:25:51,573 - utils - INFO - ...finished printing options
-2024-12-04 19:26:12,164 - movie_storage - INFO - Option executed List movies
-2024-12-04 19:26:12,166 - movie_storage - INFO - Listing Movies started
-2024-12-04 19:26:12,166 - utils - INFO - Printing movies...
-2024-12-04 19:26:12,166 - utils - INFO - ...finished printing options
-2024-12-04 19:26:12,166 - movie_storage - INFO - ... Listing Movies finished
-2024-12-04 19:26:12,166 - utils - INFO - Printing options menu...
-2024-12-04 19:26:12,166 - utils - INFO - ...finished printing options
-2024-12-04 19:26:16,148 - movie_storage - INFO - Option executed Add new movie
-2024-12-04 19:26:16,148 - movie_storage - INFO - Add Movie started...
-2024-12-04 19:26:16,149 - utils - INFO - starting check_movie_title ...
+2025-01-06 18:03:16,853 - storage - INFO - Saving local storage to file ...
+2025-01-06 18:03:16,854 - storage - INFO - Movie DB saved to file: movies.json
+2025-01-06 18:03:16,854 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-06 18:03:16,854 - storage - INFO - ... saving local_storage to file finished
+2025-01-06 18:03:16,854 - storage - INFO - Context Manager exited. DB saved to: movies.json

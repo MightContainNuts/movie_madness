@@ -33,9 +33,9 @@ class TestMovieDB:
         self.mock_file_data = '{"movie": {"date": "2020", "rating": 8.5}}'
         self.mock_movie_db = "test.json"
 
-        # Create an instance of MovieDB to test
+        # Create an instance of MovieApp to test
         self.db = MovieDB()
-        self.db.MOVIE_DB = self.mock_movie_db
+        self.db.movie_db = self.mock_movie_db
         self.db.logger = self.mock_logger
         self.db.local_storage = test_data
         self.utils = MovieUtils(self.db)
