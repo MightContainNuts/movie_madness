@@ -6,5 +6,9 @@
     "War of the worlds": {
         "date": 2006,
         "rating": 8.9
+    },
+    "Inception": {
+        "date": 2015,
+        "rating": 8.6
     }
 }

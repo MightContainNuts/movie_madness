@@ -1,196 +1,33 @@
-from istorage import IStorage
-from logger import setup_logger
-from utils import MovieUtils
+import csv
 
-from typing import override, TextIO, Self, Tuple
+from istorage import IStorage, File
+
+
+from typing import override, TextIO
 import json
 
 
 class StorageJson(IStorage):
-
-    local_storage: dict[str, dict[str, Tuple[int, float]]] = {}
-    TITLE = "title"
-    DATE = "date"
-    RATING = "rating"
-
-    def __init__(self, json_storage):
-        self.utils = MovieUtils(self)
-        self.logger = setup_logger(__name__)
-        self.json_storage = json_storage
+    def __init__(self, storage):
+        super().__init__(storage)
+        self.json_storage = storage
 
     def __repr__(self) -> str:
         """
         string rep of class stuff
         :return: name of database used
         """
-        return f"<MovieDatabase(db_path='{self.json_storage} using JSON')>"
-
-    def __enter__(self) -> Self:
-        """
-        setup routine on initialisation
-        :return:
-        """
-        self._load_to_local()
-        self.logger.info("Context Manager started")
-        return self
-
-    def __exit__(self, exc_type, exc_value, traceback):
-        """
-        tear down, added logger, excepts in case of sad path
-        :param exc_type
-        :param exc_value:
-        :param traceback:
-        :param logger:
-        :return:
-        """
-        if exc_type:
-            self.logger.error(
-                "Exception occurred: %s",
-                exc_value,
-                exc_info=(exc_type, exc_value, traceback),
-            )
-            self._save_to_file()
-            self.logger.info(
-                "Context Manager exited. DB saved to: %s", self.json_storage
-            )
+        return f"<MovieDatabase(db_path='{self.json_storage} using JSON Storage')>"  # noqa E501
 
     # DB File handling #
 
-    @override
-    def list_movies(self):
-        print("Listing movies ...")
-        self.logger.info("Listing Movies started")
-        if self.local_storage:
-            self.utils.print_movies(self.local_storage)
-        else:
-            self.logger.error(
-                "MovieApp is empty or not loaded correctly: %s",
-                self.json_storage,
-            )
-        self.logger.info("... Listing Movies finished")
-
-    @override
-    def add_movie(self):
-        """
-        Adds a movie to the movies database.
-        Loads the information from the JSON file, add the movie,
-        and saves it. The function doesn't need to validate the input.
-        """
-        print("Adding Movie ...")
-        self.logger.info("Add Movie started...")
-        new_movie_title = self.utils.check_movie_title()
-        if not self.utils.movie_in_db(new_movie_title, self.local_storage):
-            new_movie_date = self.utils.check_movie_date()
-            new_movie_rating = self.utils.check_movie_rating()
-            # save to local storage
-            try:
-                self.local_storage[new_movie_title] = {
-                    self.DATE: new_movie_date,
-                    self.RATING: new_movie_rating,
-                }
-                self.logger.info(
-                    "New movie added: Title: %s, Date: %s, Rating: %s",
-                    new_movie_title,
-                    new_movie_date,
-                    new_movie_rating,
-                )
-                # sync file
-                self._save_to_file()
-                print(f"'{new_movie_title}' has been successfully added.")
-            except Exception as e:
-                self.logger.error(
-                    "An error occurred while saving the movie: %s",
-                    e,
-                    exc_info=True,
-                )
-                print(
-                    "Error occurred while saving the movie. Please try again."
-                )
-        else:
-            print("Movie exists in db")
-        self.logger.info("... Add movie finished")
-
-    @override
-    def delete_movie(self):
-        """
-        Deletes a movie from the movies database.
-        Loads the information from the JSON file, deletes the movie,
-        and saves it. The function doesn't need to validate the input.
-        """
-        print("Deleting Movie... ")
-        self.logger.info("Delete Movie starting...")
-        movie_to_delete = self.utils.check_movie_title()
-        if self.utils.movie_in_db(movie_to_delete, self.local_storage):
-            print(f"Removing {movie_to_delete} from database... ")
-            self.logger.info(
-                "Attempting to remove film from local storage %s",
-                movie_to_delete,
-            )
-            try:
-                del self.local_storage[movie_to_delete]
-                print(f"Movie deleted. '{movie_to_delete}'")
-                self.logger.info(
-                    "Film removed successfully: %s", movie_to_delete
-                )
-            except KeyError:
-                print(f"Unexpected error: '{movie_to_delete}' was not found.")
-                self.logger.error(
-                    "KeyError: Failed to remove film '%s' - film not found.",
-                    movie_to_delete,
-                )
-            except Exception as e:
-                print(f"An error occurred while removing the movie: {e}")
-                self.logger.error(
-                    "Unexpected error while removing film: %s", e
-                )
-        else:
-            print(f"{movie_to_delete} not in DB")
-        self._save_to_file()
-        self.logger.info("... Delete Movie finished")
-
-    @override
-    def update_movie(self):
-        """
-        Updates a movie from the movies database.
-        Loads the information from the JSON file, updates the movie,
-        and saves it. The function doesn't need to validate the input.
-        """
-        print("Updating Movie ...")
-        self.logger.info("Starting update_movie")
-        movie_to_update = self.utils.check_movie_title()
-        if self.utils.movie_in_db(movie_to_update, self.local_storage):
-            new_rating = self.utils.check_movie_rating()
-            old_rating = self.local_storage[movie_to_update]["rating"]
-            try:
-                self.local_storage[movie_to_update]["rating"] = new_rating
-            except Exception as e:
-                self.logger.error(
-                    "Unexpected error while updating rating: %s",
-                    e,
-                    exc_info=True,
-                )
-            self.logger.info(
-                "Film %s : rating updated from %s to %s",
-                movie_to_update,
-                old_rating,
-                new_rating,
-            )
-            print(
-                f"{movie_to_update}': {old_rating}->{new_rating}"
-            )  # noqa E501
-        else:
-            print(f"{movie_to_update} not in DB")
-        self._save_to_file()
-        self.logger.info("... Update Movie finished")
-
     def _load_to_local(self) -> None:
-        self.logger.info("loading file to local_storage started ...")
+        self.logger.info("loading json file to local_storage started ...")
         self.local_storage.clear()
         try:
             with open(self.json_storage, "r") as handle:
-                # Use json.load() to load the data from the file
                 self.local_storage = json.load(handle)
-            if not self.local_storage:  # Check if dictionary is empty
+            if not self.local_storage:
                 self.logger.warning(
                     "Remote database exists but is empty: %s",
                     self.json_storage,
@@ -241,3 +78,158 @@ class StorageJson(IStorage):
                 "Yikes, something went wrong: %s", e, exc_info=True
             )
         self.logger.info("... saving local_storage to file finished")
+
+
+class StorageCsv(IStorage):
+    def __init__(self, storage: File):
+        super().__init__(storage)
+        self.csv_storage = storage
+
+    def __repr__(self) -> str:
+        """
+        string rep of class stuff
+        :return: name of database used
+        """
+        return f"<MovieDatabase(db_path='{self.csv_storage} using CSV File')>"
+
+    # DB File handling #
+
+    @override
+    def _load_to_local(self) -> None:
+        """
+        overrides abstract. loads csv file and converts to dict
+        :return:
+        :rtype:
+        """
+        self.logger.info("loading csv file to local_storage started ...")
+        try:
+            with open(self.csv_storage, "r", encoding="utf-8") as handle:
+                csv_reader = csv.reader(handle)
+                csv_rows = list(csv_reader)
+                for row in csv_rows:
+                    self.logger.info(f"Found: {row}")
+                self.local_storage = self._convert_csv_to_dict(csv_rows)
+            if not self.local_storage:
+                self.logger.warning(
+                    "Remote database exists but is empty: %s",
+                    self.csv_storage,
+                )
+            else:
+                self.logger.info("Database loaded into local")
+        except FileNotFoundError:
+            self.logger.error("DB File not found: %s", self.csv_storage)
+        except Exception as e:
+            self.logger.error(
+                "Yikes, something went wrong: %s", e, exc_info=True
+            )
+        self.logger.info("... loading file to local_storage finished")
+
+    @override
+    def _save_to_file(self) -> None:
+        """
+        overrides the abstract - changed to write to csv files
+        :return:
+        :rtype:
+        """
+        self.logger.info("Saving local storage to CSV file ...")
+        try:
+            if self.csv_storage is not None:
+                with open(
+                    self.csv_storage, "w", newline="", encoding="utf-8"
+                ) as write_handle:
+                    csv_writer = csv.writer(write_handle)
+                    for key, value in self.local_storage.items():
+                        csv_writer.writerow(
+                            [key, value["date"], value["rating"]]
+                        )
+                self.logger.info(
+                    "Movie DB saved to file: %s", self.csv_storage
+                )
+                self._is_remote_equal_local()
+            else:
+                self.logger.warning(
+                    "Movie DB path is None; skipping save operation"
+                )
+        except FileNotFoundError:
+            self.logger.error("DB File not found: %s", self.csv_storage)
+        except Exception as e:
+            self.logger.error(
+                "Yikes, something went wrong: %s", e, exc_info=True
+            )
+        self.logger.info("... saving local_storage to file finished")
+
+    def _convert_csv_to_dict(self, csv_rows: list[list[str]]) -> dict:
+        """
+        Converts CSV content into a dictionary format.
+        Each row should follow the format: title, year, rating
+        """
+        storage_dict = {}
+        for row in csv_rows:
+            if len(row) != 3:
+                self.logger.warning(
+                    f"Skipping row with incorrect number of fields: {row}"
+                )
+                continue  # Skip rows with the wrong number of fields
+
+            title, date, rating = row
+
+            title = title.strip()
+            date = date.strip()
+            rating = rating.strip()
+
+            if not title:
+                self.logger.warning(f"Skipping row with empty title: {row}")
+                continue
+
+            try:
+                date = int(date)
+                rating = float(rating)
+
+                storage_dict[title] = {
+                    "date": date,
+                    "rating": rating,
+                }
+            except ValueError as e:
+                self.logger.warning(
+                    f"Skipping row due to error in conversion: {row} | Error: {e}"  # noqa E501
+                )
+
+        return storage_dict
+
+    def _is_remote_equal_local(self) -> bool:
+        """
+        check if remote and local are synced after saving
+        :return:
+        :rtype:
+        """
+        try:
+            with open(self.csv_storage, "r", encoding="utf-8") as read_handle:
+                csv_reader = csv.reader(read_handle)
+                reloaded_storage = self._convert_csv_to_dict(csv_reader)
+
+            self.logger.info(
+                "Local Storage before saving: %s", self.local_storage
+            )
+            self.logger.info(
+                "Reloaded Storage after reading: %s", reloaded_storage
+            )
+
+            if reloaded_storage == self.local_storage:
+                self.logger.info(
+                    "Assertion checked: Remote is synced with Local"
+                )
+                return True
+            else:
+                self.logger.error(
+                    "Assertion failed: Remote is not synced with Local!"
+                )
+                self.logger.debug("Local storage: %s", self.local_storage)
+                self.logger.debug("Reloaded storage: %s", reloaded_storage)
+                return False
+        except Exception as e:
+            self.logger.error(
+                "Error occurred while comparing remote and local: %s",
+                e,
+                exc_info=True,
+            )
+            return False

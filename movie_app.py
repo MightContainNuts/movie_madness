@@ -2,12 +2,12 @@ import sys
 
 from logger import setup_logger
 from utils import MovieUtils
-from storage import StorageJson
+from storage import IStorage
 import re
 
 
 class MovieApp:
-    def __init__(self, storage: StorageJson = None) -> None:
+    def __init__(self, storage: IStorage = None) -> None:
         """
         Setup default values for new instance
         :param self: access to class
