@@ -1,10 +1,11 @@
 from storage import StorageJson
-import os
+from pathlib import Path
 
 
 class TestStorage:
 
-    JSON_DATA = os.path.join(os.path.dirname(__file__), "..", "movies.json")
+    JSON_DATA = Path(".") / "storage" / "test_data.json"
+    print(JSON_DATA)
     test_json_storage = StorageJson(JSON_DATA)
 
     def test_load_to_local(self):
@@ -13,11 +14,8 @@ class TestStorage:
             print(key, value)
         assert self.test_json_storage.local_storage  # Check if it's not empty
         assert (
-            "Gone with the Wind" in self.test_json_storage.local_storage
+            "Inception" in self.test_json_storage.local_storage
         )  # Check if a specific movie is present
         assert (
-            self.test_json_storage.local_storage["Gone with the Wind"][
-                "rating"
-            ]
-            == 8.8
+            self.test_json_storage.local_storage["The Thing"]["rating"] == 9.0
         )
