@@ -140,7 +140,12 @@ class StorageCsv(IStorage):
                     csv_writer = csv.writer(write_handle)
                     for key, value in self.local_storage.items():
                         csv_writer.writerow(
-                            [key, value["date"], value["rating"]]
+                            [
+                                key,
+                                value["date"],
+                                value["rating"],
+                                value["poster_url"],
+                            ]
                         )
                 self.logger.info(
                     "Movie DB saved to file: %s", self.csv_storage
@@ -165,17 +170,18 @@ class StorageCsv(IStorage):
         """
         storage_dict = {}
         for row in csv_rows:
-            if len(row) != 3:
+            if len(row) != 4:
                 self.logger.warning(
                     f"Skipping row with incorrect number of fields: {row}"
                 )
                 continue  # Skip rows with the wrong number of fields
 
-            title, date, rating = row
+            title, date, rating, poster_url = row
 
             title = title.strip()
             date = date.strip()
             rating = rating.strip()
+            poster_url = poster_url.strip()
 
             if not title:
                 self.logger.warning(f"Skipping row with empty title: {row}")
@@ -188,6 +194,7 @@ class StorageCsv(IStorage):
                 storage_dict[title] = {
                     "date": date,
                     "rating": rating,
+                    "poster_url": poster_url,
                 }
             except ValueError as e:
                 self.logger.warning(

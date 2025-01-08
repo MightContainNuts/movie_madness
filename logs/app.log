@@ -1,161 +1,404 @@
-2025-01-07 15:09:16,889 - storage - INFO - loading csv file to local_storage started ...
-2025-01-07 15:09:16,889 - storage - INFO - Found: ['jaws', '1983', '4.0']
-2025-01-07 15:09:16,890 - storage - INFO - Found: ['Inception', '2000', '8.9']
-2025-01-07 15:09:16,890 - storage - INFO - Found: ['The One', '2002', '5.6']
-2025-01-07 15:09:16,890 - storage - INFO - Database loaded into local
-2025-01-07 15:09:16,890 - storage - INFO - ... loading file to local_storage finished
-2025-01-07 15:09:16,890 - storage - INFO - Context Manager started
-2025-01-07 15:09:16,890 - movie_app - INFO - New Instance of MovieApp started
-2025-01-07 15:09:16,890 - utils - INFO - Printing options menu...
-2025-01-07 15:09:16,890 - utils - INFO - ...finished printing options
-2025-01-07 15:09:34,038 - movie_app - INFO - Option executed List movies
-2025-01-07 15:09:34,040 - storage - INFO - Listing Movies started
-2025-01-07 15:09:34,041 - utils - INFO - Printing movies...
-2025-01-07 15:09:34,044 - utils - INFO - ...finished printing options
-2025-01-07 15:09:34,045 - storage - INFO - ... Listing Movies finished
-2025-01-07 15:09:34,045 - utils - INFO - Printing options menu...
-2025-01-07 15:09:34,046 - utils - INFO - ...finished printing options
-2025-01-07 15:09:44,339 - movie_app - INFO - Option executed Update Movie rating
-2025-01-07 15:09:44,340 - storage - INFO - Starting update_movie
-2025-01-07 15:09:44,341 - utils - INFO - starting check_movie_title ...
-2025-01-07 15:09:46,595 - utils - INFO - Movie Title checked for validity jaws
-2025-01-07 15:09:46,595 - utils - INFO - ... Title check finished
-2025-01-07 15:09:46,596 - utils - INFO - starting movie_in_db check...
-2025-01-07 15:09:46,596 - utils - INFO - Start check movie rating ...
-2025-01-07 15:09:48,474 - utils - INFO - Rating checked for validity 8.0
-2025-01-07 15:09:48,478 - utils - INFO - ... Rating check finished
-2025-01-07 15:09:48,478 - storage - INFO - Film jaws : rating updated from 4.0 to 8.0
-2025-01-07 15:09:48,478 - storage - INFO - Saving local storage to CSV file ...
-2025-01-07 15:09:48,480 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
-2025-01-07 15:09:48,481 - storage - INFO - Local Storage before saving: {'jaws': {'date': 1983, 'rating': 8.0}, 'Inception': {'date': 2000, 'rating': 8.9}, 'The One': {'date': 2002, 'rating': 5.6}}
-2025-01-07 15:09:48,481 - storage - INFO - Reloaded Storage after reading: {'jaws': {'date': 1983, 'rating': 8.0}, 'Inception': {'date': 2000, 'rating': 8.9}, 'The One': {'date': 2002, 'rating': 5.6}}
-2025-01-07 15:09:48,481 - storage - INFO - Assertion checked: Remote is synced with Local
-2025-01-07 15:09:48,481 - storage - INFO - ... saving local_storage to file finished
-2025-01-07 15:09:48,481 - storage - INFO - ... Update Movie finished
-2025-01-07 15:09:48,481 - utils - INFO - Printing options menu...
-2025-01-07 15:09:48,481 - utils - INFO - ...finished printing options
-2025-01-07 15:10:10,155 - movie_app - INFO - Option executed Exit MovieMadness
-2025-01-07 15:10:10,156 - movie_app - INFO - Quit starting ...
-2025-01-07 15:10:10,157 - movie_app - INFO - Program terminating...
-2025-01-07 15:10:10,157 - movie_app - INFO - ... quit finished
-2025-01-07 15:10:10,157 - storage - ERROR - Exception occurred:
+2025-01-08 15:26:58,181 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 15:26:58,181 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 15:26:58,181 - storage - INFO - Database loaded into local
+2025-01-08 15:26:58,181 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 15:26:58,181 - storage - INFO - Context Manager started
+2025-01-08 15:26:58,181 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 15:26:58,181 - utils - INFO - Printing options menu...
+2025-01-08 15:26:58,181 - utils - INFO - ...finished printing options
+2025-01-08 15:27:00,741 - movie_app - INFO - Option executed Add new movie
+2025-01-08 15:27:00,742 - storage - INFO - Add Movie started...
+2025-01-08 15:27:00,742 - utils - INFO - starting check_movie_title ...
+2025-01-08 15:27:03,848 - utils - INFO - Movie Title checked for validity batman
+2025-01-08 15:27:03,848 - utils - INFO - ... Title check finished
+2025-01-08 15:27:03,849 - omdb_api - INFO - Retrieving batman from OMDB
+2025-01-08 15:27:03,968 - storage - ERROR - Exception occurred: 'NoneType' object is not subscriptable
 Traceback (most recent call last):
   File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
-    app.run()
+    app1.run()
   File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 83, in run
     func()
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 23, in <lambda>
-    "FUNCTION": lambda: self.quit(),
-                        ^^^^^^^^^^^
-  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 212, in quit
-    sys.exit()
-SystemExit
-2025-01-07 15:10:10,160 - storage - INFO - Saving local storage to CSV file ...
-2025-01-07 15:10:10,162 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
-2025-01-07 15:10:10,163 - storage - INFO - Local Storage before saving: {'jaws': {'date': 1983, 'rating': 8.0}, 'Inception': {'date': 2000, 'rating': 8.9}, 'The One': {'date': 2002, 'rating': 5.6}}
-2025-01-07 15:10:10,164 - storage - INFO - Reloaded Storage after reading: {'jaws': {'date': 1983, 'rating': 8.0}, 'Inception': {'date': 2000, 'rating': 8.9}, 'The One': {'date': 2002, 'rating': 5.6}}
-2025-01-07 15:10:10,164 - storage - INFO - Assertion checked: Remote is synced with Local
-2025-01-07 15:10:10,164 - storage - INFO - ... saving local_storage to file finished
-2025-01-07 15:10:10,164 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
-2025-01-07 15:22:30,013 - storage - INFO - loading csv file to local_storage started ...
-2025-01-07 15:22:30,014 - storage - INFO - Found: ['jaws', '1983', '8.0']
-2025-01-07 15:22:30,014 - storage - INFO - Found: ['Inception', '2000', '8.9']
-2025-01-07 15:22:30,014 - storage - INFO - Found: ['The One', '2002', '5.6']
-2025-01-07 15:22:30,014 - storage - INFO - Database loaded into local
-2025-01-07 15:22:30,014 - storage - INFO - ... loading file to local_storage finished
-2025-01-07 15:22:30,014 - storage - INFO - Context Manager started
-2025-01-07 15:22:30,014 - movie_app - INFO - New Instance of MovieApp started
-2025-01-07 15:22:30,014 - utils - INFO - Printing options menu...
-2025-01-07 15:22:30,014 - utils - INFO - ...finished printing options
-2025-01-07 15:22:32,472 - movie_app - INFO - Option executed List movies
-2025-01-07 15:22:32,472 - storage - INFO - Listing Movies started
-2025-01-07 15:22:32,472 - utils - INFO - Printing movies...
-2025-01-07 15:22:32,473 - utils - INFO - ...finished printing options
-2025-01-07 15:22:32,473 - storage - INFO - ... Listing Movies finished
-2025-01-07 15:22:32,473 - utils - INFO - Printing options menu...
-2025-01-07 15:22:32,473 - utils - INFO - ...finished printing options
-2025-01-07 15:22:35,486 - movie_app - INFO - Option executed Update Movie rating
-2025-01-07 15:22:35,487 - storage - INFO - Starting update_movie
-2025-01-07 15:22:35,487 - utils - INFO - starting check_movie_title ...
-2025-01-07 15:22:37,931 - utils - INFO - Movie Title checked for validity jaws
-2025-01-07 15:22:37,932 - utils - INFO - ... Title check finished
-2025-01-07 15:22:37,932 - utils - INFO - starting movie_in_db check...
-2025-01-07 15:22:37,932 - utils - INFO - Start check movie rating ...
-2025-01-07 15:22:39,647 - utils - INFO - Rating checked for validity 9.0
-2025-01-07 15:22:39,648 - utils - INFO - ... Rating check finished
-2025-01-07 15:22:39,648 - storage - INFO - Film jaws : rating updated from 8.0 to 9.0
-2025-01-07 15:22:39,648 - storage - INFO - Saving local storage to CSV file ...
-2025-01-07 15:22:39,650 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
-2025-01-07 15:22:39,651 - storage - INFO - Local Storage before saving: {'jaws': {'date': 1983, 'rating': 9.0}, 'Inception': {'date': 2000, 'rating': 8.9}, 'The One': {'date': 2002, 'rating': 5.6}}
-2025-01-07 15:22:39,651 - storage - INFO - Reloaded Storage after reading: {'jaws': {'date': 1983, 'rating': 9.0}, 'Inception': {'date': 2000, 'rating': 8.9}, 'The One': {'date': 2002, 'rating': 5.6}}
-2025-01-07 15:22:39,651 - storage - INFO - Assertion checked: Remote is synced with Local
-2025-01-07 15:22:39,651 - storage - INFO - ... saving local_storage to file finished
-2025-01-07 15:22:39,651 - storage - INFO - ... Update Movie finished
-2025-01-07 15:22:39,651 - utils - INFO - Printing options menu...
-2025-01-07 15:22:39,651 - utils - INFO - ...finished printing options
-2025-01-07 15:24:02,282 - storage - ERROR - Exception occurred:
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 31, in <lambda>
+    "FUNCTION": lambda: self.storage.add_movie_from_omdb(),
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/istorage.py", line 75, in add_movie_from_omdb
+    new_movie_title = movie_to_add[self.TITLE]
+                      ~~~~~~~~~~~~^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+2025-01-08 15:27:03,969 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 15:27:03,970 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:27:03,970 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 15:27:03,970 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 15:27:03,970 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 15:27:03,970 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 15:27:03,970 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:27:47,797 - __main__ - INFO - Retrieving batman from OMDB
+2025-01-08 15:28:43,645 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 15:28:43,645 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 15:28:43,645 - storage - INFO - Database loaded into local
+2025-01-08 15:28:43,645 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 15:28:43,645 - storage - INFO - Context Manager started
+2025-01-08 15:28:43,645 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 15:28:43,645 - utils - INFO - Printing options menu...
+2025-01-08 15:28:43,645 - utils - INFO - ...finished printing options
+2025-01-08 15:28:46,295 - movie_app - INFO - Option executed Add new movie
+2025-01-08 15:28:46,296 - storage - INFO - Add Movie started...
+2025-01-08 15:28:46,296 - utils - INFO - starting check_movie_title ...
+2025-01-08 15:28:49,601 - utils - INFO - Movie Title checked for validity batman
+2025-01-08 15:28:49,601 - utils - INFO - ... Title check finished
+2025-01-08 15:28:49,602 - omdb_api - INFO - Retrieving batman from OMDB
+2025-01-08 15:28:49,699 - storage - ERROR - Exception occurred: 'NoneType' object is not subscriptable
 Traceback (most recent call last):
   File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
-    app.run()
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 83, in run
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 31, in <lambda>
+    "FUNCTION": lambda: self.storage.add_movie_from_omdb(),
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/istorage.py", line 75, in add_movie_from_omdb
+    new_movie_title = movie_to_add[self.TITLE]
+                      ~~~~~~~~~~~~^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+2025-01-08 15:28:49,699 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 15:28:49,699 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:28:49,700 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 15:28:49,700 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 15:28:49,700 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 15:28:49,700 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 15:28:49,700 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:31:50,261 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 15:31:50,262 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 15:31:50,262 - storage - INFO - Database loaded into local
+2025-01-08 15:31:50,262 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 15:31:50,262 - storage - INFO - Context Manager started
+2025-01-08 15:31:50,262 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 15:31:50,262 - utils - INFO - Printing options menu...
+2025-01-08 15:31:50,262 - utils - INFO - ...finished printing options
+2025-01-08 15:31:52,343 - movie_app - INFO - Option executed Add new movie
+2025-01-08 15:31:52,344 - storage - INFO - Add Movie started...
+2025-01-08 15:31:52,344 - utils - INFO - starting check_movie_title ...
+2025-01-08 15:31:56,890 - utils - INFO - Movie Title checked for validity batman
+2025-01-08 15:31:56,890 - utils - INFO - ... Title check finished
+2025-01-08 15:31:56,892 - omdb_api - INFO - Retrieving batman from OMDB
+2025-01-08 15:31:57,019 - storage - ERROR - Exception occurred: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 83, in run
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 31, in <lambda>
+    "FUNCTION": lambda: self.storage.add_movie_from_omdb(),
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/istorage.py", line 75, in add_movie_from_omdb
+    new_movie_title = movie_to_add[self.TITLE]
+                      ~~~~~~~~~~~~^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+2025-01-08 15:31:57,020 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 15:31:57,021 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:31:57,021 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 15:31:57,021 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 15:31:57,021 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 15:31:57,021 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 15:31:57,021 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:35:11,621 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 15:35:11,625 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 15:35:11,625 - storage - INFO - Database loaded into local
+2025-01-08 15:35:11,625 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 15:35:11,625 - storage - INFO - Context Manager started
+2025-01-08 15:35:11,625 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 15:35:11,625 - utils - INFO - Printing options menu...
+2025-01-08 15:35:11,625 - utils - INFO - ...finished printing options
+2025-01-08 15:35:14,677 - movie_app - INFO - Option executed Add new movie
+2025-01-08 15:35:14,679 - storage - INFO - Add Movie started...
+2025-01-08 15:35:14,679 - utils - INFO - starting check_movie_title ...
+2025-01-08 15:35:18,443 - utils - INFO - Movie Title checked for validity batman
+2025-01-08 15:35:18,444 - utils - INFO - ... Title check finished
+2025-01-08 15:35:18,446 - omdb_api - INFO - Retrieving batman from OMDB
+2025-01-08 15:35:18,590 - omdb_api - WARNING - Title not found in imbdb batman
+2025-01-08 15:35:18,591 - storage - ERROR - Exception occurred: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 83, in run
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 31, in <lambda>
+    "FUNCTION": lambda: self.storage.add_movie_from_omdb(),
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/istorage.py", line 75, in add_movie_from_omdb
+    new_movie_title = movie_to_add[self.TITLE]
+                      ~~~~~~~~~~~~^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+2025-01-08 15:35:18,595 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 15:35:18,595 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:35:18,596 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 15:35:18,596 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 15:35:18,596 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 15:35:18,596 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 15:35:18,596 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:37:21,827 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 15:37:21,828 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 15:37:21,828 - storage - INFO - Database loaded into local
+2025-01-08 15:37:21,828 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 15:37:21,828 - storage - INFO - Context Manager started
+2025-01-08 15:37:21,828 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 15:37:21,828 - utils - INFO - Printing options menu...
+2025-01-08 15:37:21,828 - utils - INFO - ...finished printing options
+2025-01-08 15:37:25,965 - movie_app - INFO - Option executed Add new movie
+2025-01-08 15:37:25,967 - storage - INFO - Add Movie started...
+2025-01-08 15:37:25,967 - utils - INFO - starting check_movie_title ...
+2025-01-08 15:37:28,989 - utils - INFO - Movie Title checked for validity batman
+2025-01-08 15:37:28,989 - utils - INFO - ... Title check finished
+2025-01-08 15:37:28,991 - omdb_api - INFO - Retrieving batman from OMDB
+2025-01-08 15:37:29,097 - omdb_api - INFO - Movie data retrieved for Batman
+2025-01-08 15:37:29,098 - utils - INFO - starting movie_in_db check...
+2025-01-08 15:37:29,098 - storage - INFO - ... Add movie finished
+2025-01-08 15:37:29,098 - utils - INFO - Printing options menu...
+2025-01-08 15:37:29,098 - utils - INFO - ...finished printing options
+2025-01-08 15:42:09,250 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
   File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 67, in run
     action = int(input("\n\nWhat do you want to do ?   "))
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
-2025-01-07 15:24:02,286 - storage - INFO - Saving local storage to CSV file ...
-2025-01-07 15:24:02,286 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
-2025-01-07 15:24:02,286 - storage - INFO - Local Storage before saving: {'jaws': {'date': 1983, 'rating': 9.0}, 'Inception': {'date': 2000, 'rating': 8.9}, 'The One': {'date': 2002, 'rating': 5.6}}
-2025-01-07 15:24:02,286 - storage - INFO - Reloaded Storage after reading: {'jaws': {'date': 1983, 'rating': 9.0}, 'Inception': {'date': 2000, 'rating': 8.9}, 'The One': {'date': 2002, 'rating': 5.6}}
-2025-01-07 15:24:02,287 - storage - INFO - Assertion checked: Remote is synced with Local
-2025-01-07 15:24:02,287 - storage - INFO - ... saving local_storage to file finished
-2025-01-07 15:24:02,287 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
-2025-01-07 15:24:28,356 - storage - INFO - loading csv file to local_storage started ...
-2025-01-07 15:24:28,356 - storage - INFO - Found: ['jaws', '1983', '9.0']
-2025-01-07 15:24:28,356 - storage - INFO - Found: ['Inception', '2000', '8.9']
-2025-01-07 15:24:28,356 - storage - INFO - Found: ['The One', '2002', '5.6']
-2025-01-07 15:24:28,356 - storage - INFO - Database loaded into local
-2025-01-07 15:24:28,356 - storage - INFO - ... loading file to local_storage finished
-2025-01-07 15:24:28,356 - storage - INFO - Context Manager started
-2025-01-07 15:24:28,357 - movie_app - INFO - New Instance of MovieApp started
-2025-01-07 15:24:28,357 - utils - INFO - Printing options menu...
-2025-01-07 15:24:28,357 - utils - INFO - ...finished printing options
-2025-01-07 15:24:30,401 - movie_app - INFO - Option executed List movies
-2025-01-07 15:24:30,401 - storage - INFO - Listing Movies started
-2025-01-07 15:24:30,401 - utils - INFO - Printing movies...
-2025-01-07 15:24:30,402 - utils - INFO - ...finished printing options
-2025-01-07 15:24:30,402 - storage - INFO - ... Listing Movies finished
-2025-01-07 15:24:30,402 - utils - INFO - Printing options menu...
-2025-01-07 15:24:30,402 - utils - INFO - ...finished printing options
-2025-01-07 15:24:34,979 - movie_app - INFO - Option executed Update Movie rating
-2025-01-07 15:24:34,981 - storage - INFO - Starting update_movie
-2025-01-07 15:24:34,981 - utils - INFO - starting check_movie_title ...
-2025-01-07 15:24:36,666 - utils - INFO - Movie Title checked for validity jaws
-2025-01-07 15:24:36,666 - utils - INFO - ... Title check finished
-2025-01-07 15:24:36,666 - utils - INFO - starting movie_in_db check...
-2025-01-07 15:24:36,666 - utils - INFO - Start check movie rating ...
-2025-01-07 15:24:37,437 - utils - INFO - Rating checked for validity 5.0
-2025-01-07 15:24:37,438 - utils - INFO - ... Rating check finished
-2025-01-07 15:24:37,438 - storage - INFO - Film jaws : rating updated from 9.0 to 5.0
-2025-01-07 15:24:37,438 - storage - INFO - Saving local storage to CSV file ...
-2025-01-07 15:24:37,439 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
-2025-01-07 15:24:37,439 - storage - INFO - Local Storage before saving: {'jaws': {'date': 1983, 'rating': 5.0}, 'Inception': {'date': 2000, 'rating': 8.9}, 'The One': {'date': 2002, 'rating': 5.6}}
-2025-01-07 15:24:37,439 - storage - INFO - Reloaded Storage after reading: {'jaws': {'date': 1983, 'rating': 5.0}, 'Inception': {'date': 2000, 'rating': 8.9}, 'The One': {'date': 2002, 'rating': 5.6}}
-2025-01-07 15:24:37,440 - storage - INFO - Assertion checked: Remote is synced with Local
-2025-01-07 15:24:37,440 - storage - INFO - ... saving local_storage to file finished
-2025-01-07 15:24:37,440 - storage - INFO - ... Update Movie finished
-2025-01-07 15:24:37,440 - utils - INFO - Printing options menu...
-2025-01-07 15:24:37,440 - utils - INFO - ...finished printing options
-2025-01-07 15:25:00,021 - storage - ERROR - Exception occurred:
+2025-01-08 15:42:09,252 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 15:42:09,253 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:42:09,253 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 15:42:09,253 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 15:42:09,253 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 15:42:09,253 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 15:42:09,254 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:42:09,904 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 15:42:09,904 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 15:42:09,904 - storage - INFO - Database loaded into local
+2025-01-08 15:42:09,904 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 15:42:09,904 - storage - INFO - Context Manager started
+2025-01-08 15:42:09,904 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 15:42:09,904 - utils - INFO - Printing options menu...
+2025-01-08 15:42:09,904 - utils - INFO - ...finished printing options
+2025-01-08 15:42:13,778 - movie_app - INFO - Option executed List movies
+2025-01-08 15:42:13,779 - storage - INFO - Listing Movies started
+2025-01-08 15:42:13,780 - utils - INFO - Printing movies...
+2025-01-08 15:42:13,780 - utils - INFO - ...finished printing options
+2025-01-08 15:42:13,780 - storage - INFO - ... Listing Movies finished
+2025-01-08 15:42:13,780 - utils - INFO - Printing options menu...
+2025-01-08 15:42:13,780 - utils - INFO - ...finished printing options
+2025-01-08 15:42:20,351 - movie_app - INFO - Option executed Add new movie
+2025-01-08 15:42:20,352 - storage - INFO - Add Movie started...
+2025-01-08 15:42:20,352 - utils - INFO - starting check_movie_title ...
+2025-01-08 15:42:23,247 - utils - INFO - Movie Title checked for validity batman
+2025-01-08 15:42:23,247 - utils - INFO - ... Title check finished
+2025-01-08 15:42:23,248 - omdb_api - INFO - Retrieving batman from OMDB
+2025-01-08 15:42:23,377 - storage - ERROR - Exception occurred: 'Response' object is not subscriptable
 Traceback (most recent call last):
   File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
-    app.run()
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 83, in run
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 31, in <lambda>
+    "FUNCTION": lambda: self.storage.add_movie_from_omdb(),
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/istorage.py", line 74, in add_movie_from_omdb
+    movie_to_add = app._get_movie_data()
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/omdb_api.py", line 25, in _get_movie_data
+    if response['Title']:
+       ~~~~~~~~^^^^^^^^^
+TypeError: 'Response' object is not subscriptable
+2025-01-08 15:42:23,382 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 15:42:23,383 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:42:23,383 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 15:42:23,383 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 15:42:23,383 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 15:42:23,384 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 15:42:23,384 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:42:54,940 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 15:42:54,941 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 15:42:54,941 - storage - INFO - Database loaded into local
+2025-01-08 15:42:54,941 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 15:42:54,941 - storage - INFO - Context Manager started
+2025-01-08 15:42:54,941 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 15:42:54,941 - utils - INFO - Printing options menu...
+2025-01-08 15:42:54,941 - utils - INFO - ...finished printing options
+2025-01-08 15:42:57,144 - movie_app - INFO - Option executed Add new movie
+2025-01-08 15:42:57,144 - storage - INFO - Add Movie started...
+2025-01-08 15:42:57,145 - utils - INFO - starting check_movie_title ...
+2025-01-08 15:42:59,973 - utils - INFO - Movie Title checked for validity batman
+2025-01-08 15:42:59,973 - utils - INFO - ... Title check finished
+2025-01-08 15:42:59,974 - omdb_api - INFO - Retrieving batman from OMDB
+2025-01-08 15:43:00,058 - omdb_api - INFO - Movie data retrieved for Batman
+2025-01-08 15:43:00,059 - utils - INFO - starting movie_in_db check...
+2025-01-08 15:43:00,059 - storage - INFO - ... Add movie finished
+2025-01-08 15:43:00,059 - utils - INFO - Printing options menu...
+2025-01-08 15:43:00,059 - utils - INFO - ...finished printing options
+2025-01-08 15:43:05,343 - movie_app - INFO - Option executed Add new movie
+2025-01-08 15:43:05,344 - storage - INFO - Add Movie started...
+2025-01-08 15:43:05,344 - utils - INFO - starting check_movie_title ...
+2025-01-08 15:43:09,202 - utils - INFO - Movie Title checked for validity iception
+2025-01-08 15:43:09,203 - utils - INFO - ... Title check finished
+2025-01-08 15:43:09,203 - omdb_api - INFO - Retrieving iception from OMDB
+2025-01-08 15:43:09,296 - omdb_api - WARNING - Title missing or incorrect
+2025-01-08 15:43:09,297 - storage - ERROR - Exception occurred: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 83, in run
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 31, in <lambda>
+    "FUNCTION": lambda: self.storage.add_movie_from_omdb(),
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/istorage.py", line 75, in add_movie_from_omdb
+    new_movie_title = movie_to_add[self.TITLE]
+                      ~~~~~~~~~~~~^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+2025-01-08 15:43:09,301 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 15:43:09,302 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:43:09,302 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 15:43:09,302 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 15:43:09,302 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 15:43:09,302 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 15:43:09,302 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:48:06,307 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 15:48:06,307 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 15:48:06,307 - storage - INFO - Database loaded into local
+2025-01-08 15:48:06,307 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 15:48:06,307 - storage - INFO - Context Manager started
+2025-01-08 15:48:06,308 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 15:48:06,308 - utils - INFO - Printing options menu...
+2025-01-08 15:48:06,308 - utils - INFO - ...finished printing options
+2025-01-08 15:48:08,951 - movie_app - INFO - Option executed Add new movie
+2025-01-08 15:48:08,955 - storage - INFO - Add Movie started...
+2025-01-08 15:48:08,955 - utils - INFO - starting check_movie_title ...
+2025-01-08 15:48:12,275 - utils - INFO - Movie Title checked for validity iception
+2025-01-08 15:48:12,276 - utils - INFO - ... Title check finished
+2025-01-08 15:48:12,278 - omdb_api - INFO - Retrieving iception from OMDB
+2025-01-08 15:48:12,369 - omdb_api - WARNING - Title missing or incorrect
+2025-01-08 15:48:12,370 - utils - INFO - Printing options menu...
+2025-01-08 15:48:12,370 - utils - INFO - ...finished printing options
+2025-01-08 15:48:24,459 - movie_app - INFO - Option executed List movies
+2025-01-08 15:48:24,460 - storage - INFO - Listing Movies started
+2025-01-08 15:48:24,461 - utils - INFO - Printing movies...
+2025-01-08 15:48:24,461 - utils - INFO - ...finished printing options
+2025-01-08 15:48:24,461 - storage - INFO - ... Listing Movies finished
+2025-01-08 15:48:24,461 - utils - INFO - Printing options menu...
+2025-01-08 15:48:24,461 - utils - INFO - ...finished printing options
+2025-01-08 15:49:40,431 - movie_app - INFO - Option executed Add new movie
+2025-01-08 15:49:40,433 - storage - INFO - Add Movie started...
+2025-01-08 15:49:40,433 - utils - INFO - starting check_movie_title ...
+2025-01-08 15:49:43,913 - utils - INFO - Movie Title checked for validity inception
+2025-01-08 15:49:43,913 - utils - INFO - ... Title check finished
+2025-01-08 15:49:43,914 - omdb_api - INFO - Retrieving inception from OMDB
+2025-01-08 15:49:44,027 - omdb_api - INFO - Movie data retrieved for Inception
+2025-01-08 15:49:44,028 - utils - INFO - starting movie_in_db check...
+2025-01-08 15:49:44,028 - storage - INFO - New movie added: Title: Inception, Date: 2010, Rating: 8.8, URL: https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg
+2025-01-08 15:49:44,028 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 15:49:44,030 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:49:44,037 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 15:49:44,037 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 15:49:44,037 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 15:49:44,037 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 15:49:44,037 - storage - INFO - ... Add movie finished
+2025-01-08 15:49:44,037 - utils - INFO - Printing options menu...
+2025-01-08 15:49:44,037 - utils - INFO - ...finished printing options
+2025-01-08 15:50:46,022 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
   File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 67, in run
     action = int(input("\n\nWhat do you want to do ?   "))
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
-2025-01-07 15:25:00,023 - storage - INFO - Saving local storage to CSV file ...
-2025-01-07 15:25:00,023 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
-2025-01-07 15:25:00,024 - storage - INFO - Local Storage before saving: {'jaws': {'date': 1983, 'rating': 5.0}, 'Inception': {'date': 2000, 'rating': 8.9}, 'The One': {'date': 2002, 'rating': 5.6}}
-2025-01-07 15:25:00,024 - storage - INFO - Reloaded Storage after reading: {'jaws': {'date': 1983, 'rating': 5.0}, 'Inception': {'date': 2000, 'rating': 8.9}, 'The One': {'date': 2002, 'rating': 5.6}}
-2025-01-07 15:25:00,024 - storage - INFO - Assertion checked: Remote is synced with Local
-2025-01-07 15:25:00,024 - storage - INFO - ... saving local_storage to file finished
-2025-01-07 15:25:00,024 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:50:46,032 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 15:50:46,033 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:50:46,033 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 15:50:46,033 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 15:50:46,033 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 15:50:46,033 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 15:50:46,033 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:50:54,256 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 15:50:54,257 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 15:50:54,257 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 15:50:54,257 - storage - INFO - Database loaded into local
+2025-01-08 15:50:54,257 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 15:50:54,257 - storage - INFO - Context Manager started
+2025-01-08 15:50:54,257 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 15:50:54,257 - utils - INFO - Printing options menu...
+2025-01-08 15:50:54,257 - utils - INFO - ...finished printing options
+2025-01-08 15:50:56,385 - movie_app - INFO - Option executed List movies
+2025-01-08 15:50:56,388 - storage - INFO - Listing Movies started
+2025-01-08 15:50:56,388 - utils - INFO - Printing movies...
+2025-01-08 15:50:56,388 - utils - INFO - ...finished printing options
+2025-01-08 15:50:56,388 - storage - INFO - ... Listing Movies finished
+2025-01-08 15:50:56,388 - utils - INFO - Printing options menu...
+2025-01-08 15:50:56,388 - utils - INFO - ...finished printing options
+2025-01-08 15:54:10,682 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 67, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 15:54:10,689 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 15:54:10,690 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:54:10,690 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 15:54:10,690 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 15:54:10,690 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 15:54:10,690 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 15:54:10,690 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:54:18,932 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 15:54:18,932 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 15:54:18,932 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 15:54:18,932 - storage - INFO - Database loaded into local
+2025-01-08 15:54:18,932 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 15:54:18,932 - storage - INFO - Context Manager started
+2025-01-08 15:54:18,932 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 15:54:18,932 - utils - INFO - Printing options menu...
+2025-01-08 15:54:18,932 - utils - INFO - ...finished printing options
+2025-01-08 15:54:25,231 - movie_app - INFO - Option executed Update Movie rating - not in use!!
+2025-01-08 15:54:25,232 - utils - INFO - Printing options menu...
+2025-01-08 15:54:25,232 - utils - INFO - ...finished printing options
+2025-01-08 15:56:50,113 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 67, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 15:56:50,123 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 15:56:50,124 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:56:50,124 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 15:56:50,124 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 15:56:50,124 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 15:56:50,124 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 15:56:50,124 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:56:55,220 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 15:56:55,220 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 15:56:55,220 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 15:56:55,220 - storage - INFO - Database loaded into local
+2025-01-08 15:56:55,220 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 15:56:55,220 - storage - INFO - Context Manager started
+2025-01-08 15:56:55,221 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 15:56:55,221 - utils - INFO - Printing options menu...
+2025-01-08 15:56:55,221 - utils - INFO - ...finished printing options
+2025-01-08 15:57:05,034 - movie_app - INFO - Option executed Update Movie rating - disabled!
+2025-01-08 15:57:05,037 - utils - INFO - Printing options menu...
+2025-01-08 15:57:05,037 - utils - INFO - ...finished printing options
+2025-01-08 15:57:19,076 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 67, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 15:57:19,078 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 15:57:19,079 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 15:57:19,079 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 15:57:19,079 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 15:57:19,079 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 15:57:19,079 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 15:57:19,079 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
