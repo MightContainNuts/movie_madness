@@ -82,6 +82,7 @@ class MovieUtils:
             "MOVIE".ljust(50),
             "YEAR".ljust(5),
             "RATING".ljust(5),
+            "POSTER URL".ljust(30),
         )
         for idx, (movie, movie_data) in enumerate(
             sorted_movies.items(), start=1
@@ -91,6 +92,7 @@ class MovieUtils:
                 movie.ljust(50),
                 str(movie_data["date"]).ljust(5),
                 str(movie_data["rating"]).ljust(10),
+                str(movie_data["poster_url"]).ljust(30),
             )
         self.logger.info("...finished printing options")
 

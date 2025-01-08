@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 from typing import Self
 from logger import setup_logger
 from utils import MovieUtils
+from omdb_api import MovieDB_API
 
 LocalStorage = dict[str, dict[str, int | float]]
 File = str
@@ -11,6 +12,7 @@ class IStorage(ABC):
     TITLE = "title"
     DATE = "date"
     RATING = "rating"
+    POSTER_URL = "poster_url"
 
     def __init__(self, storage_file: File):
         self.local_storage: LocalStorage = {}
@@ -59,7 +61,7 @@ class IStorage(ABC):
             )
         self.logger.info("... Listing Movies finished")
 
-    def add_movie(self):
+    def add_movie_from_omdb(self):
         """
         Adds a movie to the movies database.
         Loads the information from the JSON file, add the movie,
@@ -68,36 +70,46 @@ class IStorage(ABC):
         print("Adding Movie ...")
         self.logger.info("Add Movie started...")
         new_movie_title = self.utils.check_movie_title()
-        if not self.utils.movie_in_db(new_movie_title, self.local_storage):
-            new_movie_date = self.utils.check_movie_date()
-            new_movie_rating = self.utils.check_movie_rating()
-            # save to local storage
-            try:
-                self.local_storage[new_movie_title] = {
-                    self.DATE: new_movie_date,
-                    self.RATING: new_movie_rating,
-                }
-                self.logger.info(
-                    "New movie added: Title: %s, Date: %s, Rating: %s",
-                    new_movie_title,
-                    new_movie_date,
-                    new_movie_rating,
-                )
-                # sync file
-                self._save_to_file()
-                print(f"'{new_movie_title}' has been successfully added.")
-            except Exception as e:
-                self.logger.error(
-                    "An error occurred while saving the movie: %s",
-                    e,
-                    exc_info=True,
-                )
-                print(
-                    "Error occurred while saving the movie. Please try again."
-                )
-        else:
-            print("Movie exists in db")
-        self.logger.info("... Add movie finished")
+        app = MovieDB_API(new_movie_title)
+        movie_to_add = app._get_movie_data()
+        if movie_to_add:
+            new_movie_title = movie_to_add[self.TITLE]
+
+            if not self.utils.movie_in_db(new_movie_title, self.local_storage):
+                new_movie_title = movie_to_add[self.TITLE]
+                new_movie_date = movie_to_add[self.DATE]
+                new_movie_rating = movie_to_add[self.RATING]
+                new_poster_url = movie_to_add[self.POSTER_URL]
+
+                # save to local storage
+                try:
+                    self.local_storage[new_movie_title] = {
+                        self.DATE: new_movie_date,
+                        self.RATING: new_movie_rating,
+                        self.POSTER_URL: new_poster_url,
+                    }
+                    self.logger.info(
+                        "New movie added: Title: %s, Date: %s, Rating: %s, URL: %s",  # noqa E501
+                        new_movie_title,
+                        new_movie_date,
+                        new_movie_rating,
+                        new_poster_url,
+                    )
+                    # sync file
+                    self._save_to_file()
+                    print(f"'{new_movie_title}' has been successfully added.")
+                except Exception as e:
+                    self.logger.error(
+                        "An error occurred while saving the movie: %s",
+                        e,
+                        exc_info=True,
+                    )
+                    print(
+                        "Error occurred while saving the movie. Please retry."
+                    )
+            else:
+                print("Movie exists in db")
+            self.logger.info("... Add movie finished")
 
     def delete_movie(self):
         """
