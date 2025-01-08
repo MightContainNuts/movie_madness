@@ -2,7 +2,7 @@ import sys
 
 from logger import setup_logger
 from utils import MovieUtils
-from data import IStorage
+from storage import IStorage
 import re
 
 

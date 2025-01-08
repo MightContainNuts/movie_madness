@@ -933,3 +933,34 @@ SystemExit
 2025-01-08 17:51:19,839 - storage - INFO - Assertion checked: Remote is synced with Local
 2025-01-08 17:51:19,839 - storage - INFO - ... saving local_storage to file finished
 2025-01-08 17:51:19,839 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 20:35:45,049 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 20:35:45,050 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 20:35:45,050 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 20:35:45,050 - storage - INFO - Database loaded into local
+2025-01-08 20:35:45,050 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 20:35:45,050 - storage - INFO - Context Manager started
+2025-01-08 20:35:45,050 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 20:35:45,050 - utils - INFO - Printing options menu...
+2025-01-08 20:35:45,050 - utils - INFO - ...finished printing options
+2025-01-08 20:35:47,333 - movie_app - INFO - Option executed List movies
+2025-01-08 20:35:47,333 - storage - INFO - Listing Movies started
+2025-01-08 20:35:47,334 - utils - INFO - Printing movies...
+2025-01-08 20:35:47,334 - utils - INFO - ...finished printing options
+2025-01-08 20:35:47,334 - storage - INFO - ... Listing Movies finished
+2025-01-08 20:35:47,334 - utils - INFO - Printing options menu...
+2025-01-08 20:35:47,334 - utils - INFO - ...finished printing options
+2025-01-08 20:35:52,081 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 60, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 20:35:52,082 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 20:35:52,082 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/movies.csv
+2025-01-08 20:35:52,082 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 20:35:52,082 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 20:35:52,082 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 20:35:52,082 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 20:35:52,082 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/data/movies.csv
