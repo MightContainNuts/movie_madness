@@ -11,6 +11,11 @@ class MovieDB_API:
         self.movie_name = movie_name
 
     def _get_movie_data(self) -> dict:
+        """
+        gets movie data in json from omdb api
+        :return:
+        :rtype:
+        """
         self.logger.info(f"Retrieving {self.movie_name} from OMDB")
 
         try:
@@ -42,6 +47,13 @@ class MovieDB_API:
             self.logger.warning("Title missing or incorrect ", e)
 
     def _validate_movie_year(self, date: str) -> int:
+        """
+        validates movie year, casts as int
+        :param date:
+        :type date:
+        :return: int - year or 0
+        :rtype:
+        """
         try:
             return int(date)
         except ValueError:
@@ -51,6 +63,13 @@ class MovieDB_API:
             return 0
 
     def _validate_movie_rating(self, rating: list) -> float:
+        """
+        parses rating and returns as float
+        :param rating:
+        :type rating:
+        :return:
+        :rtype:
+        """
         imbdb_rating = 0
         if rating:
             imbdb_rating = rating[0]["Value"].split("/")[0]
