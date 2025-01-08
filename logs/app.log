@@ -933,3 +933,79 @@ SystemExit
 2025-01-08 17:51:19,839 - storage - INFO - Assertion checked: Remote is synced with Local
 2025-01-08 17:51:19,839 - storage - INFO - ... saving local_storage to file finished
 2025-01-08 17:51:19,839 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:55:59,803 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 17:55:59,803 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 17:55:59,803 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 17:55:59,803 - storage - INFO - Database loaded into local
+2025-01-08 17:55:59,803 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 17:55:59,803 - storage - INFO - Context Manager started
+2025-01-08 17:55:59,804 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 17:55:59,804 - utils - INFO - Printing options menu...
+2025-01-08 17:55:59,804 - utils - INFO - ...finished printing options
+2025-01-08 17:56:02,909 - movie_app - INFO - Option executed Generate web page
+2025-01-08 17:56:02,909 - storage - INFO - starting to generate content for grid
+2025-01-08 17:56:02,909 - storage - INFO - New contents created for Web
+2025-01-08 17:56:02,909 - storage - INFO - Replacing placeholder with grid contents
+2025-01-08 17:56:02,911 - utils - INFO - Printing options menu...
+2025-01-08 17:56:02,911 - utils - INFO - ...finished printing options
+2025-01-08 17:57:18,623 - movie_app - INFO - Option executed List movies
+2025-01-08 17:57:18,625 - storage - INFO - Listing Movies started
+2025-01-08 17:57:18,626 - utils - INFO - Printing movies...
+2025-01-08 17:57:18,626 - utils - INFO - ...finished printing options
+2025-01-08 17:57:18,626 - storage - INFO - ... Listing Movies finished
+2025-01-08 17:57:18,626 - utils - INFO - Printing options menu...
+2025-01-08 17:57:18,626 - utils - INFO - ...finished printing options
+2025-01-08 17:57:23,946 - movie_app - INFO - Option executed Add new movie
+2025-01-08 17:57:23,947 - storage - INFO - Add Movie started...
+2025-01-08 17:57:23,947 - utils - INFO - starting check_movie_title ...
+2025-01-08 17:57:27,157 - utils - INFO - Movie Title checked for validity jaws
+2025-01-08 17:57:27,158 - utils - INFO - ... Title check finished
+2025-01-08 17:57:27,160 - omdb_api - INFO - Retrieving jaws from OMDB
+2025-01-08 17:57:27,674 - omdb_api - INFO - Movie data retrieved for Jaws
+2025-01-08 17:57:27,675 - utils - INFO - starting movie_in_db check...
+2025-01-08 17:57:27,675 - storage - INFO - New movie added: Title: Jaws, Date: 1975, Rating: 8.1, URL: https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg
+2025-01-08 17:57:27,675 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 17:57:27,676 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:57:27,676 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}, 'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 17:57:27,676 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}, 'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 17:57:27,676 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 17:57:27,676 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 17:57:27,676 - storage - INFO - ... Add movie finished
+2025-01-08 17:57:27,676 - utils - INFO - Printing options menu...
+2025-01-08 17:57:27,676 - utils - INFO - ...finished printing options
+2025-01-08 17:57:32,758 - movie_app - INFO - Option executed List movies
+2025-01-08 17:57:32,758 - storage - INFO - Listing Movies started
+2025-01-08 17:57:32,758 - utils - INFO - Printing movies...
+2025-01-08 17:57:32,759 - utils - INFO - ...finished printing options
+2025-01-08 17:57:32,759 - storage - INFO - ... Listing Movies finished
+2025-01-08 17:57:32,759 - utils - INFO - Printing options menu...
+2025-01-08 17:57:32,759 - utils - INFO - ...finished printing options
+2025-01-08 17:57:40,468 - movie_app - INFO - Option executed Print statistics
+2025-01-08 17:57:40,469 - movie_app - INFO - calculating stats started ...
+2025-01-08 17:57:40,470 - utils - INFO - Display stats started ...
+2025-01-08 17:57:40,470 - utils - INFO - displaying stats: ratings
+2025-01-08 17:57:40,471 - utils - INFO - ...Stats printed finished
+2025-01-08 17:57:40,471 - movie_app - INFO - ... Calculating stats finished
+2025-01-08 17:57:40,471 - utils - INFO - Printing options menu...
+2025-01-08 17:57:40,471 - utils - INFO - ...finished printing options
+2025-01-08 17:57:46,595 - movie_app - INFO - Option executed Generate web page
+2025-01-08 17:57:46,595 - storage - INFO - starting to generate content for grid
+2025-01-08 17:57:46,595 - storage - INFO - New contents created for Web
+2025-01-08 17:57:46,595 - storage - INFO - Replacing placeholder with grid contents
+2025-01-08 17:57:46,597 - utils - INFO - Printing options menu...
+2025-01-08 17:57:46,597 - utils - INFO - ...finished printing options
+2025-01-08 17:57:50,640 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 17:57:50,642 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 17:57:50,642 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:57:50,642 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}, 'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 17:57:50,642 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}, 'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 17:57:50,642 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 17:57:50,642 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 17:57:50,642 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv

@@ -242,7 +242,7 @@ class IStorage(ABC):
         else:
             self.logger.warning("Local storage empty, no text generated")
 
-    def _inject_contents_into_web_template(self, movie_grid) -> str:
+    def _inject_contents_into_web_template(self, movie_grid) -> Path:
         """
         replace placeholder with generated content
         :return:
@@ -261,9 +261,7 @@ class IStorage(ABC):
                 TARGET, "w"
             ) as write_handle:
                 contents = read_handle.read()
-                print(contents)
                 new_contents = re.sub(search_pattern, movie_grid, contents)
-                print(new_contents)
                 write_handle.write(new_contents)
                 return TARGET
         except IOError:
