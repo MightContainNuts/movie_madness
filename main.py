@@ -1,8 +1,8 @@
 from movie_app import MovieApp
-from storage import StorageJson, StorageCsv
+from data import StorageJson, StorageCsv
 from pathlib import Path
 
-storage_dir = Path(__file__).resolve().parent / "storage"
+storage_dir = Path(__file__).resolve().parent / "data"
 storage_dir.mkdir(parents=True, exist_ok=True)
 
 storage_json = storage_dir / "movies.json"

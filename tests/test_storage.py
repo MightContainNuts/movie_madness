@@ -4,7 +4,7 @@ from pathlib import Path
 
 class TestStorage:
 
-    JSON_DATA = Path(".") / "storage" / "test_data.json"
+    JSON_DATA = Path(".") / "data" / "test_data.json"
     print(JSON_DATA)
     test_json_storage = StorageJson(JSON_DATA)
 
