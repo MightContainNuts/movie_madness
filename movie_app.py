@@ -56,6 +56,10 @@ class MovieApp:
                 "DESCRIPTION": "Filter movies by rating and date",
                 "FUNCTION": lambda: self.filter_movies(),
             },
+            9: {
+                "DESCRIPTION": "Generate web page",
+                "FUNCTION": lambda: storage.generate_web_page(),
+            },
         }
         self.logger.info(
             "New Instance of MovieApp started",

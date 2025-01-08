@@ -1,8 +1,10 @@
+import re
 from abc import ABC, abstractmethod
 from typing import Self
 from logger import setup_logger
 from utils import MovieUtils
 from omdb_api import MovieDB_API
+from pathlib import Path
 
 LocalStorage = dict[str, dict[str, int | float]]
 File = str
@@ -182,6 +184,11 @@ class IStorage(ABC):
         self._save_to_file()
         self.logger.info("... Update Movie finished")
 
+    def generate_web_page(self):
+        movie_grid = self._generate_contents_for_webpage()
+        url = self._inject_contents_into_web_template(movie_grid)
+        print(f"Web Page created at {url}")
+
     @abstractmethod
     def _load_to_local(self) -> None:
         """
@@ -201,3 +208,67 @@ class IStorage(ABC):
         :rtype:
         """
         pass
+
+    def _generate_contents_for_webpage(self) -> str:
+        """
+        get movies from storage and populate html template
+        :return:
+        :rtype:
+        """
+        self.logger.info("starting to generate content for grid")
+        contents: str = ""
+        if self.local_storage:
+            for movie in self.local_storage.items():
+                movie_title, movie_stats = movie
+                poster_url = movie_stats["poster_url"]
+                movie_date = movie_stats["date"]
+                img = f'<img class="movie-poster" src="{poster_url}"/>'
+                movie = f'<div class="movie-title">{movie_title}</div>'
+                date = f'<div class="movie-year">{movie_date}</div>'
+
+                item = f"""
+            <li>
+                <div class="movie">
+                    {img}
+                    {movie}
+                    {date}
+                </div>
+            </li>"""
+
+                contents += item
+            self.logger.info("New contents created for Web")
+            return contents
+
+        else:
+            self.logger.warning("Local storage empty, no text generated")
+
+    def _inject_contents_into_web_template(self, movie_grid) -> str:
+        """
+        replace placeholder with generated content
+        :return:
+        :rtype:
+        """
+
+        self.logger.info("Replacing placeholder with grid contents")
+        DIR = Path(".") / "_static"
+        TEMPLATE = DIR / "index_template.html"
+        TARGET = DIR / "index.html"
+
+        search_pattern = r"__TEMPLATE_MOVIE_GRID__"
+
+        try:
+            with open(TEMPLATE, "r") as read_handle, open(
+                TARGET, "w"
+            ) as write_handle:
+                contents = read_handle.read()
+                print(contents)
+                new_contents = re.sub(search_pattern, movie_grid, contents)
+                print(new_contents)
+                write_handle.write(new_contents)
+                return TARGET
+        except IOError:
+            print("error on writing new contents to file")
+            self.logger.error("IO Error on file handling")
+        except re.error:
+            print("Error with the regular expression.")
+            self.logger.error("RE Error on file handling")

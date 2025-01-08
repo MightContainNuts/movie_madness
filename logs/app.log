@@ -402,3 +402,534 @@ KeyboardInterrupt
 2025-01-08 15:57:19,079 - storage - INFO - Assertion checked: Remote is synced with Local
 2025-01-08 15:57:19,079 - storage - INFO - ... saving local_storage to file finished
 2025-01-08 15:57:19,079 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 16:05:48,778 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 16:05:48,778 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 16:05:48,778 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 16:05:48,778 - storage - INFO - Database loaded into local
+2025-01-08 16:05:48,778 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 16:05:48,778 - storage - INFO - Context Manager started
+2025-01-08 16:05:48,778 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 16:05:48,778 - utils - INFO - Printing options menu...
+2025-01-08 16:05:48,778 - utils - INFO - ...finished printing options
+2025-01-08 16:45:07,815 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 69, in run
+    def run(self):
+
+KeyboardInterrupt
+2025-01-08 16:45:07,885 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 16:45:07,887 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 16:45:07,888 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 16:45:07,888 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 16:45:07,888 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 16:45:07,888 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 16:45:07,888 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 16:45:08,993 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 16:45:08,993 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 16:45:08,993 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 16:45:08,993 - storage - INFO - Database loaded into local
+2025-01-08 16:45:08,993 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 16:45:08,993 - storage - INFO - Context Manager started
+2025-01-08 16:45:08,993 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 16:45:08,993 - utils - INFO - Printing options menu...
+2025-01-08 16:45:08,993 - utils - INFO - ...finished printing options
+2025-01-08 16:45:13,372 - movie_app - INFO - Option executed Generate web page
+2025-01-08 16:45:13,374 - movie_app - INFO - Filtering movies started ...
+2025-01-08 16:45:13,374 - utils - INFO - Start check movie rating ...
+2025-01-08 16:45:19,945 - utils - INFO - Rating checked for validity 6.0
+2025-01-08 16:45:19,946 - utils - INFO - ... Rating check finished
+2025-01-08 16:45:19,946 - utils - INFO - Start check movie date ...
+2025-01-08 16:45:21,692 - utils - INFO - Filtering using default value 1888
+2025-01-08 16:45:21,694 - utils - INFO - Start check movie date ...
+2025-01-08 16:45:22,672 - utils - INFO - Filtering using default value 2025
+2025-01-08 16:45:22,672 - utils - INFO - Printing movies...
+2025-01-08 16:45:22,673 - utils - INFO - ...finished printing options
+2025-01-08 16:45:22,673 - utils - INFO - Printing options menu...
+2025-01-08 16:45:22,673 - utils - INFO - ...finished printing options
+2025-01-08 16:46:09,201 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 16:46:09,206 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 16:46:09,207 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 16:46:09,207 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 16:46:09,207 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 16:46:09,207 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 16:46:09,207 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 16:46:09,207 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 16:46:09,775 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 16:46:09,775 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 16:46:09,775 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 16:46:09,775 - storage - INFO - Database loaded into local
+2025-01-08 16:46:09,775 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 16:46:09,775 - storage - INFO - Context Manager started
+2025-01-08 16:46:09,775 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 16:46:09,775 - utils - INFO - Printing options menu...
+2025-01-08 16:46:09,775 - utils - INFO - ...finished printing options
+2025-01-08 16:46:12,654 - movie_app - INFO - Option executed Generate web page
+2025-01-08 16:46:12,656 - utils - INFO - Printing options menu...
+2025-01-08 16:46:12,656 - utils - INFO - ...finished printing options
+2025-01-08 16:47:36,071 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 16:47:36,088 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 16:47:36,089 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 16:47:36,089 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 16:47:36,090 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 16:47:36,090 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 16:47:36,090 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 16:47:36,090 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 16:47:37,141 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 16:47:37,141 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 16:47:37,141 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 16:47:37,141 - storage - INFO - Database loaded into local
+2025-01-08 16:47:37,141 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 16:47:37,141 - storage - INFO - Context Manager started
+2025-01-08 16:47:37,141 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 16:47:37,141 - utils - INFO - Printing options menu...
+2025-01-08 16:47:37,141 - utils - INFO - ...finished printing options
+2025-01-08 16:47:40,156 - movie_app - INFO - Option executed Generate web page
+2025-01-08 16:47:40,159 - utils - INFO - Printing options menu...
+2025-01-08 16:47:40,159 - utils - INFO - ...finished printing options
+2025-01-08 16:49:40,475 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 16:49:40,510 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 16:49:40,514 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 16:49:40,515 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 16:49:40,515 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 16:49:40,515 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 16:49:40,516 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 16:49:40,516 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 16:49:41,731 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 16:49:41,732 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 16:49:41,732 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 16:49:41,732 - storage - INFO - Database loaded into local
+2025-01-08 16:49:41,732 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 16:49:41,732 - storage - INFO - Context Manager started
+2025-01-08 16:49:41,732 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 16:49:41,732 - utils - INFO - Printing options menu...
+2025-01-08 16:49:41,732 - utils - INFO - ...finished printing options
+2025-01-08 16:49:44,245 - movie_app - INFO - Option executed Generate web page
+2025-01-08 16:49:44,249 - utils - INFO - Printing options menu...
+2025-01-08 16:49:44,249 - utils - INFO - ...finished printing options
+2025-01-08 16:51:14,891 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 16:51:14,897 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 16:51:14,897 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 16:51:14,898 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 16:51:14,898 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 16:51:14,898 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 16:51:14,898 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 16:51:14,898 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 16:51:15,694 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 16:51:15,695 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 16:51:15,695 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 16:51:15,695 - storage - INFO - Database loaded into local
+2025-01-08 16:51:15,695 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 16:51:15,695 - storage - INFO - Context Manager started
+2025-01-08 16:51:15,695 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 16:51:15,695 - utils - INFO - Printing options menu...
+2025-01-08 16:51:15,695 - utils - INFO - ...finished printing options
+2025-01-08 16:51:19,810 - movie_app - INFO - Option executed Generate web page
+2025-01-08 16:51:19,812 - utils - INFO - Printing options menu...
+2025-01-08 16:51:19,812 - utils - INFO - ...finished printing options
+2025-01-08 16:52:14,415 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 16:52:14,421 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 16:52:14,421 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 16:52:14,422 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 16:52:14,422 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 16:52:14,422 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 16:52:14,422 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 16:52:14,422 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 16:52:15,059 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 16:52:15,059 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 16:52:15,059 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 16:52:15,059 - storage - INFO - Database loaded into local
+2025-01-08 16:52:15,059 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 16:52:15,059 - storage - INFO - Context Manager started
+2025-01-08 16:52:15,059 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 16:52:15,059 - utils - INFO - Printing options menu...
+2025-01-08 16:52:15,059 - utils - INFO - ...finished printing options
+2025-01-08 16:52:17,722 - movie_app - INFO - Option executed Generate web page
+2025-01-08 16:52:17,728 - utils - INFO - Printing options menu...
+2025-01-08 16:52:17,728 - utils - INFO - ...finished printing options
+2025-01-08 16:58:57,685 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 16:58:57,717 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 16:58:57,720 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 16:58:57,721 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 16:58:57,721 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 16:58:57,721 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 16:58:57,721 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 16:58:57,721 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 16:58:58,522 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 16:58:58,523 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 16:58:58,523 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 16:58:58,523 - storage - INFO - Database loaded into local
+2025-01-08 16:58:58,523 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 16:58:58,523 - storage - INFO - Context Manager started
+2025-01-08 16:58:58,523 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 16:58:58,523 - utils - INFO - Printing options menu...
+2025-01-08 16:58:58,524 - utils - INFO - ...finished printing options
+2025-01-08 16:59:01,545 - movie_app - INFO - Option executed Generate web page
+2025-01-08 16:59:01,547 - utils - INFO - Printing options menu...
+2025-01-08 16:59:01,547 - utils - INFO - ...finished printing options
+2025-01-08 16:59:49,517 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 16:59:49,521 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 16:59:49,521 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 16:59:49,522 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 16:59:49,522 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 16:59:49,522 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 16:59:49,522 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 16:59:49,522 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 16:59:50,216 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 16:59:50,216 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 16:59:50,216 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 16:59:50,216 - storage - INFO - Database loaded into local
+2025-01-08 16:59:50,216 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 16:59:50,216 - storage - INFO - Context Manager started
+2025-01-08 16:59:50,216 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 16:59:50,216 - utils - INFO - Printing options menu...
+2025-01-08 16:59:50,216 - utils - INFO - ...finished printing options
+2025-01-08 16:59:53,160 - movie_app - INFO - Option executed Generate web page
+2025-01-08 16:59:53,175 - utils - INFO - Printing options menu...
+2025-01-08 16:59:53,175 - utils - INFO - ...finished printing options
+2025-01-08 17:00:32,840 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 17:00:32,848 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 17:00:32,849 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:00:32,849 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:00:32,849 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:00:32,849 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 17:00:32,849 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 17:00:32,849 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:00:33,413 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 17:00:33,413 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 17:00:33,413 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 17:00:33,413 - storage - INFO - Database loaded into local
+2025-01-08 17:00:33,413 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 17:00:33,413 - storage - INFO - Context Manager started
+2025-01-08 17:00:33,413 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 17:00:33,413 - utils - INFO - Printing options menu...
+2025-01-08 17:00:33,413 - utils - INFO - ...finished printing options
+2025-01-08 17:00:36,090 - movie_app - INFO - Option executed Generate web page
+2025-01-08 17:00:36,096 - utils - INFO - Printing options menu...
+2025-01-08 17:00:36,096 - utils - INFO - ...finished printing options
+2025-01-08 17:21:29,371 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 17:21:29,483 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 17:21:29,485 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:21:29,486 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:21:29,486 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:21:29,486 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 17:21:29,486 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 17:21:29,486 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:32:26,782 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 17:32:26,782 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 17:32:26,782 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 17:32:26,782 - storage - INFO - Database loaded into local
+2025-01-08 17:32:26,782 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 17:32:26,782 - storage - INFO - Context Manager started
+2025-01-08 17:32:26,783 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 17:32:26,783 - utils - INFO - Printing options menu...
+2025-01-08 17:32:26,783 - utils - INFO - ...finished printing options
+2025-01-08 17:32:29,763 - movie_app - INFO - Option executed Generate web page
+2025-01-08 17:32:29,763 - storage - ERROR - Exception occurred: IStorage._inject_contents_into_web_template() missing 1 required positional argument: 'movie_grid'
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 89, in run
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 61, in <lambda>
+    "FUNCTION": lambda: storage.generate_web_page(),
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/istorage.py", line 189, in generate_web_page
+    url = self._inject_contents_into_web_template()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: IStorage._inject_contents_into_web_template() missing 1 required positional argument: 'movie_grid'
+2025-01-08 17:32:29,764 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 17:32:29,765 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:32:29,765 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:32:29,765 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:32:29,765 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 17:32:29,765 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 17:32:29,765 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:33:16,058 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 17:33:16,058 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 17:33:16,058 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 17:33:16,058 - storage - INFO - Database loaded into local
+2025-01-08 17:33:16,058 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 17:33:16,058 - storage - INFO - Context Manager started
+2025-01-08 17:33:16,058 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 17:33:16,058 - utils - INFO - Printing options menu...
+2025-01-08 17:33:16,058 - utils - INFO - ...finished printing options
+2025-01-08 17:33:18,950 - movie_app - INFO - Option executed Generate web page
+2025-01-08 17:33:18,950 - utils - INFO - Printing options menu...
+2025-01-08 17:33:18,950 - utils - INFO - ...finished printing options
+2025-01-08 17:35:10,663 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 17:35:10,669 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 17:35:10,670 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:35:10,670 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:35:10,670 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:35:10,670 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 17:35:10,670 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 17:35:10,670 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:35:11,199 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 17:35:11,199 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 17:35:11,199 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 17:35:11,199 - storage - INFO - Database loaded into local
+2025-01-08 17:35:11,199 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 17:35:11,199 - storage - INFO - Context Manager started
+2025-01-08 17:35:11,199 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 17:35:11,199 - utils - INFO - Printing options menu...
+2025-01-08 17:35:11,199 - utils - INFO - ...finished printing options
+2025-01-08 17:35:13,806 - movie_app - INFO - Option executed Generate web page
+2025-01-08 17:35:13,806 - utils - INFO - Printing options menu...
+2025-01-08 17:35:13,807 - utils - INFO - ...finished printing options
+2025-01-08 17:38:46,711 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 17:38:46,717 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 17:38:46,717 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:38:46,717 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:38:46,717 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:38:46,717 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 17:38:46,717 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 17:38:46,717 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:38:47,498 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 17:38:47,499 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 17:38:47,499 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 17:38:47,499 - storage - INFO - Database loaded into local
+2025-01-08 17:38:47,499 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 17:38:47,499 - storage - INFO - Context Manager started
+2025-01-08 17:38:47,499 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 17:38:47,499 - utils - INFO - Printing options menu...
+2025-01-08 17:38:47,499 - utils - INFO - ...finished printing options
+2025-01-08 17:38:49,767 - movie_app - INFO - Option executed Generate web page
+2025-01-08 17:38:49,768 - utils - INFO - Printing options menu...
+2025-01-08 17:38:49,768 - utils - INFO - ...finished printing options
+2025-01-08 17:40:46,446 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 17:40:46,448 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 17:40:46,448 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:40:46,449 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:40:46,449 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:40:46,449 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 17:40:46,449 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 17:40:46,449 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:40:46,992 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 17:40:46,992 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 17:40:46,992 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 17:40:46,992 - storage - INFO - Database loaded into local
+2025-01-08 17:40:46,992 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 17:40:46,992 - storage - INFO - Context Manager started
+2025-01-08 17:40:46,992 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 17:40:46,992 - utils - INFO - Printing options menu...
+2025-01-08 17:40:46,992 - utils - INFO - ...finished printing options
+2025-01-08 17:40:50,285 - movie_app - INFO - Option executed Generate web page
+2025-01-08 17:40:50,287 - utils - INFO - Printing options menu...
+2025-01-08 17:40:50,287 - utils - INFO - ...finished printing options
+2025-01-08 17:41:41,255 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 17:41:41,258 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 17:41:41,259 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:41:41,259 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:41:41,259 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:41:41,259 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 17:41:41,259 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 17:41:41,259 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:41:41,798 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 17:41:41,798 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 17:41:41,798 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 17:41:41,798 - storage - INFO - Database loaded into local
+2025-01-08 17:41:41,798 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 17:41:41,798 - storage - INFO - Context Manager started
+2025-01-08 17:41:41,798 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 17:41:41,798 - utils - INFO - Printing options menu...
+2025-01-08 17:41:41,798 - utils - INFO - ...finished printing options
+2025-01-08 17:41:43,941 - movie_app - INFO - Option executed Generate web page
+2025-01-08 17:41:43,941 - utils - INFO - Printing options menu...
+2025-01-08 17:41:43,942 - utils - INFO - ...finished printing options
+2025-01-08 17:43:00,064 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 17:43:00,067 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 17:43:00,067 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:43:00,067 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:43:00,067 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:43:00,067 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 17:43:00,067 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 17:43:00,067 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:43:00,609 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 17:43:00,609 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 17:43:00,609 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 17:43:00,609 - storage - INFO - Database loaded into local
+2025-01-08 17:43:00,609 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 17:43:00,609 - storage - INFO - Context Manager started
+2025-01-08 17:43:00,609 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 17:43:00,609 - utils - INFO - Printing options menu...
+2025-01-08 17:43:00,609 - utils - INFO - ...finished printing options
+2025-01-08 17:43:02,897 - movie_app - INFO - Option executed Generate web page
+2025-01-08 17:43:02,898 - utils - INFO - Printing options menu...
+2025-01-08 17:43:02,898 - utils - INFO - ...finished printing options
+2025-01-08 17:43:37,861 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 17:43:37,864 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 17:43:37,864 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:43:37,864 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:43:37,865 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:43:37,865 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 17:43:37,865 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 17:43:37,865 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:43:38,407 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 17:43:38,407 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 17:43:38,407 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 17:43:38,407 - storage - INFO - Database loaded into local
+2025-01-08 17:43:38,407 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 17:43:38,407 - storage - INFO - Context Manager started
+2025-01-08 17:43:38,407 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 17:43:38,407 - utils - INFO - Printing options menu...
+2025-01-08 17:43:38,407 - utils - INFO - ...finished printing options
+2025-01-08 17:43:40,212 - movie_app - INFO - Option executed Generate web page
+2025-01-08 17:43:40,214 - utils - INFO - Printing options menu...
+2025-01-08 17:43:40,214 - utils - INFO - ...finished printing options
+2025-01-08 17:50:49,825 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 17:50:49,828 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 17:50:49,828 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:50:49,828 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:50:49,829 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:50:49,829 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 17:50:49,829 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 17:50:49,829 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:50:50,535 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 17:50:50,535 - storage - INFO - Found: ['Batman', '1989', '7.5', 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 17:50:50,535 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 17:50:50,535 - storage - INFO - Database loaded into local
+2025-01-08 17:50:50,535 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 17:50:50,535 - storage - INFO - Context Manager started
+2025-01-08 17:50:50,535 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 17:50:50,535 - utils - INFO - Printing options menu...
+2025-01-08 17:50:50,535 - utils - INFO - ...finished printing options
+2025-01-08 17:50:52,907 - movie_app - INFO - Option executed Generate web page
+2025-01-08 17:50:52,912 - utils - INFO - Printing options menu...
+2025-01-08 17:50:52,912 - utils - INFO - ...finished printing options
+2025-01-08 17:51:19,832 - movie_app - INFO - Option executed Exit MovieMadness
+2025-01-08 17:51:19,834 - movie_app - INFO - Quit starting ...
+2025-01-08 17:51:19,834 - movie_app - INFO - Program terminating...
+2025-01-08 17:51:19,834 - movie_app - INFO - ... quit finished
+2025-01-08 17:51:19,834 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 15, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 89, in run
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 23, in <lambda>
+    "FUNCTION": lambda: self.quit(),
+                        ^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 218, in quit
+    sys.exit()
+SystemExit
+2025-01-08 17:51:19,838 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 17:51:19,839 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
+2025-01-08 17:51:19,839 - storage - INFO - Local Storage before saving: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:51:19,839 - storage - INFO - Reloaded Storage after reading: {'Batman': {'date': 1989, 'rating': 7.5, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 17:51:19,839 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 17:51:19,839 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 17:51:19,839 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/storage/movies.csv
