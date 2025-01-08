@@ -1,14 +1,2 @@
-{
-    "Jaws": {
-        "date": 1982,
-        "rating": 5.0
-    },
-    "War of the worlds": {
-        "date": 2006,
-        "rating": 8.9
-    },
-    "Inception": {
-        "date": 2015,
-        "rating": 8.6
-    }
-}
+Jaws,1975,8.1,https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg
+The Lord of the Rings: The Fellowship of the Ring,2001,8.9,https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_SX300.jpg

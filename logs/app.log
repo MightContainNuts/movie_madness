@@ -964,3 +964,526 @@ KeyboardInterrupt
 2025-01-08 20:35:52,082 - storage - INFO - Assertion checked: Remote is synced with Local
 2025-01-08 20:35:52,082 - storage - INFO - ... saving local_storage to file finished
 2025-01-08 20:35:52,082 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/data/movies.csv
+2025-01-08 20:38:23,184 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 20:38:23,185 - storage - INFO - Found: ['{']
+2025-01-08 20:38:23,185 - storage - INFO - Found: ['    "Jaws": {']
+2025-01-08 20:38:23,185 - storage - INFO - Found: ['        "date": 1982', '']
+2025-01-08 20:38:23,185 - storage - INFO - Found: ['        "rating": 5.0']
+2025-01-08 20:38:23,185 - storage - INFO - Found: ['    }', '']
+2025-01-08 20:38:23,185 - storage - INFO - Found: ['    "War of the worlds": {']
+2025-01-08 20:38:23,185 - storage - INFO - Found: ['        "date": 2006', '']
+2025-01-08 20:38:23,185 - storage - INFO - Found: ['        "rating": 8.9']
+2025-01-08 20:38:23,185 - storage - INFO - Found: ['    }', '']
+2025-01-08 20:38:23,185 - storage - INFO - Found: ['    "Inception": {']
+2025-01-08 20:38:23,185 - storage - INFO - Found: ['        "date": 2015', '']
+2025-01-08 20:38:23,185 - storage - INFO - Found: ['        "rating": 8.6']
+2025-01-08 20:38:23,185 - storage - INFO - Found: ['    }']
+2025-01-08 20:38:23,185 - storage - INFO - Found: ['}']
+2025-01-08 20:38:23,185 - storage - WARNING - Skipping row with incorrect number of fields: ['{']
+2025-01-08 20:38:23,185 - storage - WARNING - Skipping row with incorrect number of fields: ['    "Jaws": {']
+2025-01-08 20:38:23,185 - storage - WARNING - Skipping row with incorrect number of fields: ['        "date": 1982', '']
+2025-01-08 20:38:23,185 - storage - WARNING - Skipping row with incorrect number of fields: ['        "rating": 5.0']
+2025-01-08 20:38:23,185 - storage - WARNING - Skipping row with incorrect number of fields: ['    }', '']
+2025-01-08 20:38:23,185 - storage - WARNING - Skipping row with incorrect number of fields: ['    "War of the worlds": {']
+2025-01-08 20:38:23,185 - storage - WARNING - Skipping row with incorrect number of fields: ['        "date": 2006', '']
+2025-01-08 20:38:23,185 - storage - WARNING - Skipping row with incorrect number of fields: ['        "rating": 8.9']
+2025-01-08 20:38:23,185 - storage - WARNING - Skipping row with incorrect number of fields: ['    }', '']
+2025-01-08 20:38:23,185 - storage - WARNING - Skipping row with incorrect number of fields: ['    "Inception": {']
+2025-01-08 20:38:23,185 - storage - WARNING - Skipping row with incorrect number of fields: ['        "date": 2015', '']
+2025-01-08 20:38:23,185 - storage - WARNING - Skipping row with incorrect number of fields: ['        "rating": 8.6']
+2025-01-08 20:38:23,185 - storage - WARNING - Skipping row with incorrect number of fields: ['    }']
+2025-01-08 20:38:23,185 - storage - WARNING - Skipping row with incorrect number of fields: ['}']
+2025-01-08 20:38:23,185 - storage - WARNING - Remote database exists but is empty: /Users/dda/PycharmProjects/MovieMadness/data/movies.json
+2025-01-08 20:38:23,185 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 20:38:23,185 - storage - INFO - Context Manager started
+2025-01-08 20:38:23,185 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 20:38:23,185 - utils - INFO - Printing options menu...
+2025-01-08 20:38:23,185 - utils - INFO - ...finished printing options
+2025-01-08 20:38:35,791 - movie_app - INFO - Option executed List movies
+2025-01-08 20:38:35,794 - storage - INFO - Listing Movies started
+2025-01-08 20:38:35,794 - storage - ERROR - MovieApp is empty or not loaded correctly: /Users/dda/PycharmProjects/MovieMadness/data/movies.json
+2025-01-08 20:38:35,794 - storage - INFO - ... Listing Movies finished
+2025-01-08 20:38:35,795 - utils - INFO - Printing options menu...
+2025-01-08 20:38:35,795 - utils - INFO - ...finished printing options
+2025-01-08 20:39:04,253 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 54, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 20:39:04,256 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 20:39:04,257 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/movies.json
+2025-01-08 20:39:04,257 - storage - INFO - Local Storage before saving: {}
+2025-01-08 20:39:04,257 - storage - INFO - Reloaded Storage after reading: {}
+2025-01-08 20:39:04,257 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 20:39:04,257 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 20:39:04,257 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/data/movies.json
+2025-01-08 20:39:06,011 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 20:39:06,012 - storage - WARNING - Remote database exists but is empty: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-08 20:39:06,012 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 20:39:06,012 - storage - INFO - Context Manager started
+2025-01-08 20:39:06,012 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 20:39:06,012 - utils - INFO - Printing options menu...
+2025-01-08 20:39:06,012 - utils - INFO - ...finished printing options
+2025-01-08 20:39:08,152 - movie_app - INFO - Option executed List movies
+2025-01-08 20:39:08,152 - storage - INFO - Listing Movies started
+2025-01-08 20:39:08,152 - storage - ERROR - MovieApp is empty or not loaded correctly: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-08 20:39:08,152 - storage - INFO - ... Listing Movies finished
+2025-01-08 20:39:08,152 - utils - INFO - Printing options menu...
+2025-01-08 20:39:08,152 - utils - INFO - ...finished printing options
+2025-01-08 20:39:24,103 - movie_app - INFO - Option executed Add new movie
+2025-01-08 20:39:24,104 - storage - INFO - Add Movie started...
+2025-01-08 20:39:24,104 - utils - INFO - starting check_movie_title ...
+2025-01-08 20:39:26,317 - utils - INFO - Movie Title checked for validity jaws
+2025-01-08 20:39:26,318 - utils - INFO - ... Title check finished
+2025-01-08 20:39:26,319 - omdb_api - INFO - Retrieving jaws from OMDB
+2025-01-08 20:39:26,422 - omdb_api - INFO - Movie data retrieved for Jaws
+2025-01-08 20:39:26,423 - utils - INFO - starting movie_in_db check...
+2025-01-08 20:39:26,423 - storage - INFO - New movie added: Title: Jaws, Date: 1975, Rating: 8.1, URL: https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg
+2025-01-08 20:39:26,423 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 20:39:26,424 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-08 20:39:26,424 - storage - INFO - Local Storage before saving: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 20:39:26,424 - storage - INFO - Reloaded Storage after reading: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 20:39:26,424 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 20:39:26,424 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 20:39:26,424 - storage - INFO - ... Add movie finished
+2025-01-08 20:39:26,424 - utils - INFO - Printing options menu...
+2025-01-08 20:39:26,425 - utils - INFO - ...finished printing options
+2025-01-08 20:39:29,465 - movie_app - INFO - Option executed Add new movie
+2025-01-08 20:39:29,465 - storage - INFO - Add Movie started...
+2025-01-08 20:39:29,465 - utils - INFO - starting check_movie_title ...
+2025-01-08 20:39:32,178 - utils - INFO - Movie Title checked for validity inception
+2025-01-08 20:39:32,178 - utils - INFO - ... Title check finished
+2025-01-08 20:39:32,178 - omdb_api - INFO - Retrieving inception from OMDB
+2025-01-08 20:39:32,275 - omdb_api - INFO - Movie data retrieved for Inception
+2025-01-08 20:39:32,275 - utils - INFO - starting movie_in_db check...
+2025-01-08 20:39:32,275 - storage - INFO - New movie added: Title: Inception, Date: 2010, Rating: 8.8, URL: https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg
+2025-01-08 20:39:32,276 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 20:39:32,276 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-08 20:39:32,276 - storage - INFO - Local Storage before saving: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 20:39:32,276 - storage - INFO - Reloaded Storage after reading: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 20:39:32,276 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 20:39:32,277 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 20:39:32,277 - storage - INFO - ... Add movie finished
+2025-01-08 20:39:32,277 - utils - INFO - Printing options menu...
+2025-01-08 20:39:32,277 - utils - INFO - ...finished printing options
+2025-01-08 20:39:34,334 - movie_app - INFO - Option executed Delete movie from database
+2025-01-08 20:39:34,335 - storage - INFO - Delete Movie starting...
+2025-01-08 20:39:34,335 - utils - INFO - starting check_movie_title ...
+2025-01-08 20:39:38,546 - utils - INFO - Movie Title checked for validity batman
+2025-01-08 20:39:38,546 - utils - INFO - ... Title check finished
+2025-01-08 20:39:38,546 - utils - INFO - starting movie_in_db check...
+2025-01-08 20:39:38,546 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 20:39:38,547 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-08 20:39:38,547 - storage - INFO - Local Storage before saving: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 20:39:38,548 - storage - INFO - Reloaded Storage after reading: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 20:39:38,548 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 20:39:38,548 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 20:39:38,548 - storage - INFO - ... Delete Movie finished
+2025-01-08 20:39:38,548 - utils - INFO - Printing options menu...
+2025-01-08 20:39:38,548 - utils - INFO - ...finished printing options
+2025-01-08 20:39:40,530 - movie_app - INFO - Option executed List movies
+2025-01-08 20:39:40,530 - storage - INFO - Listing Movies started
+2025-01-08 20:39:40,530 - utils - INFO - Printing movies...
+2025-01-08 20:39:40,530 - utils - INFO - ...finished printing options
+2025-01-08 20:39:40,530 - storage - INFO - ... Listing Movies finished
+2025-01-08 20:39:40,530 - utils - INFO - Printing options menu...
+2025-01-08 20:39:40,531 - utils - INFO - ...finished printing options
+2025-01-08 20:39:48,254 - movie_app - INFO - Option executed Delete movie from database
+2025-01-08 20:39:48,254 - storage - INFO - Delete Movie starting...
+2025-01-08 20:39:48,254 - utils - INFO - starting check_movie_title ...
+2025-01-08 20:39:55,493 - utils - INFO - Movie Title checked for validity naked gun
+2025-01-08 20:39:55,493 - utils - INFO - ... Title check finished
+2025-01-08 20:39:55,493 - utils - INFO - starting movie_in_db check...
+2025-01-08 20:39:55,493 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 20:39:55,494 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-08 20:39:55,494 - storage - INFO - Local Storage before saving: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 20:39:55,494 - storage - INFO - Reloaded Storage after reading: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}}
+2025-01-08 20:39:55,495 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 20:39:55,495 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 20:39:55,495 - storage - INFO - ... Delete Movie finished
+2025-01-08 20:39:55,495 - utils - INFO - Printing options menu...
+2025-01-08 20:39:55,495 - utils - INFO - ...finished printing options
+2025-01-08 20:40:17,759 - movie_app - ERROR - Ooops. invalid option chosen  invalid literal for int() with base 10: 'dark angel'
+2025-01-08 20:40:17,760 - utils - INFO - Printing options menu...
+2025-01-08 20:40:17,760 - utils - INFO - ...finished printing options
+2025-01-08 20:40:25,119 - movie_app - INFO - Option executed Add new movie
+2025-01-08 20:40:25,120 - storage - INFO - Add Movie started...
+2025-01-08 20:40:25,120 - utils - INFO - starting check_movie_title ...
+2025-01-08 20:40:27,957 - utils - INFO - Movie Title checked for validity dark angel
+2025-01-08 20:40:27,958 - utils - INFO - ... Title check finished
+2025-01-08 20:40:27,959 - omdb_api - INFO - Retrieving dark angel from OMDB
+2025-01-08 20:40:28,369 - omdb_api - WARNING - Invalid date on movie retrieval, substituted with 0
+2025-01-08 20:40:28,369 - omdb_api - INFO - Movie data retrieved for Dark Angel
+2025-01-08 20:40:28,369 - utils - INFO - starting movie_in_db check...
+2025-01-08 20:40:28,369 - storage - INFO - New movie added: Title: Dark Angel, Date: 0, Rating: 7.4, URL: https://m.media-amazon.com/images/M/MV5BYjYzNzQyYWMtOTUyNS00Njc0LWI5ZjYtMjQ1M2E5YTRiZmE0XkEyXkFqcGc@._V1_SX300.jpg
+2025-01-08 20:40:28,369 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 20:40:28,370 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-08 20:40:28,370 - storage - INFO - Local Storage before saving: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}, 'Dark Angel': {'date': 0, 'rating': 7.4, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjYzNzQyYWMtOTUyNS00Njc0LWI5ZjYtMjQ1M2E5YTRiZmE0XkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 20:40:28,370 - storage - INFO - Reloaded Storage after reading: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}, 'Dark Angel': {'date': 0, 'rating': 7.4, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjYzNzQyYWMtOTUyNS00Njc0LWI5ZjYtMjQ1M2E5YTRiZmE0XkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 20:40:28,371 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 20:40:28,371 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 20:40:28,371 - storage - INFO - ... Add movie finished
+2025-01-08 20:40:28,371 - utils - INFO - Printing options menu...
+2025-01-08 20:40:28,371 - utils - INFO - ...finished printing options
+2025-01-08 20:40:34,315 - movie_app - INFO - Option executed List movies
+2025-01-08 20:40:34,315 - storage - INFO - Listing Movies started
+2025-01-08 20:40:34,315 - utils - INFO - Printing movies...
+2025-01-08 20:40:34,315 - utils - INFO - ...finished printing options
+2025-01-08 20:40:34,315 - storage - INFO - ... Listing Movies finished
+2025-01-08 20:40:34,315 - utils - INFO - Printing options menu...
+2025-01-08 20:40:34,315 - utils - INFO - ...finished printing options
+2025-01-08 20:40:39,697 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 54, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 20:40:39,698 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 20:40:39,699 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-08 20:40:39,699 - storage - INFO - Local Storage before saving: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}, 'Dark Angel': {'date': 0, 'rating': 7.4, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjYzNzQyYWMtOTUyNS00Njc0LWI5ZjYtMjQ1M2E5YTRiZmE0XkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 20:40:39,699 - storage - INFO - Reloaded Storage after reading: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}, 'Dark Angel': {'date': 0, 'rating': 7.4, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjYzNzQyYWMtOTUyNS00Njc0LWI5ZjYtMjQ1M2E5YTRiZmE0XkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 20:40:39,699 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 20:40:39,699 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 20:40:39,699 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-08 20:47:29,956 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 20:47:29,956 - storage - INFO - Found: ['Jaws', '1975', '8.1', 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 20:47:29,956 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 20:47:29,956 - storage - INFO - Found: ['Dark Angel', '0', '7.4', 'https://m.media-amazon.com/images/M/MV5BYjYzNzQyYWMtOTUyNS00Njc0LWI5ZjYtMjQ1M2E5YTRiZmE0XkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 20:47:29,956 - storage - INFO - Database loaded into local
+2025-01-08 20:47:29,956 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 20:47:29,956 - storage - INFO - Context Manager started
+2025-01-08 20:47:29,956 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 20:47:29,956 - utils - INFO - Printing options menu...
+2025-01-08 20:47:29,956 - utils - INFO - ...finished printing options
+2025-01-08 20:48:30,976 - movie_app - INFO - Option executed Exit MovieMadness
+2025-01-08 20:48:30,979 - movie_app - INFO - Quit starting ...
+2025-01-08 20:48:30,979 - movie_app - INFO - Program terminating...
+2025-01-08 20:48:30,979 - movie_app - INFO - ... quit finished
+2025-01-08 20:48:30,979 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 56, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 89, in run
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 23, in <lambda>
+    "FUNCTION": lambda: self.quit(),
+                        ^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 218, in quit
+    sys.exit()
+SystemExit
+2025-01-08 20:48:30,983 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 20:48:30,984 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-08 20:48:30,984 - storage - INFO - Local Storage before saving: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}, 'Dark Angel': {'date': 0, 'rating': 7.4, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjYzNzQyYWMtOTUyNS00Njc0LWI5ZjYtMjQ1M2E5YTRiZmE0XkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 20:48:30,984 - storage - INFO - Reloaded Storage after reading: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}, 'Dark Angel': {'date': 0, 'rating': 7.4, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjYzNzQyYWMtOTUyNS00Njc0LWI5ZjYtMjQ1M2E5YTRiZmE0XkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 20:48:30,984 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 20:48:30,984 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 20:48:30,985 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-08 20:48:32,889 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 20:48:32,889 - storage - ERROR - DB File not found: john
+2025-01-08 20:48:32,889 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 20:48:32,890 - storage - INFO - Context Manager started
+2025-01-08 20:48:32,890 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 20:48:32,890 - utils - INFO - Printing options menu...
+2025-01-08 20:48:32,890 - utils - INFO - ...finished printing options
+2025-01-08 20:50:28,710 - movie_app - INFO - Option executed Exit MovieMadness
+2025-01-08 20:50:28,712 - movie_app - INFO - Quit starting ...
+2025-01-08 20:50:28,712 - movie_app - INFO - Program terminating...
+2025-01-08 20:50:28,712 - movie_app - INFO - ... quit finished
+2025-01-08 20:50:28,713 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 56, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 89, in run
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 23, in <lambda>
+    "FUNCTION": lambda: self.quit(),
+                        ^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 218, in quit
+    sys.exit()
+SystemExit
+2025-01-08 20:50:28,720 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 20:50:28,720 - storage - INFO - Movie DB saved to file: john
+2025-01-08 20:50:28,720 - storage - INFO - Local Storage before saving: {}
+2025-01-08 20:50:28,720 - storage - INFO - Reloaded Storage after reading: {}
+2025-01-08 20:50:28,720 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 20:50:28,720 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 20:50:28,720 - storage - INFO - Context Manager exited. DB saved to: john
+2025-01-08 20:50:30,626 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 20:50:30,626 - storage - ERROR - DB File not found: john.json
+2025-01-08 20:50:30,626 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 20:50:30,626 - storage - INFO - Context Manager started
+2025-01-08 20:50:30,626 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 20:50:30,627 - utils - INFO - Printing options menu...
+2025-01-08 20:50:30,627 - utils - INFO - ...finished printing options
+2025-01-08 20:51:33,134 - movie_app - INFO - Option executed Exit MovieMadness
+2025-01-08 20:51:33,136 - movie_app - INFO - Quit starting ...
+2025-01-08 20:51:33,137 - movie_app - INFO - Program terminating...
+2025-01-08 20:51:33,137 - movie_app - INFO - ... quit finished
+2025-01-08 20:51:33,137 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 56, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 89, in run
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 23, in <lambda>
+    "FUNCTION": lambda: self.quit(),
+                        ^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 218, in quit
+    sys.exit()
+SystemExit
+2025-01-08 20:51:33,141 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 20:51:33,142 - storage - INFO - Movie DB saved to file: john.json
+2025-01-08 20:51:33,142 - storage - INFO - Local Storage before saving: {}
+2025-01-08 20:51:33,142 - storage - INFO - Reloaded Storage after reading: {}
+2025-01-08 20:51:33,142 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 20:51:33,142 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 20:51:33,142 - storage - INFO - Context Manager exited. DB saved to: john.json
+2025-01-08 20:51:46,952 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 20:51:46,952 - storage - INFO - Found: ['{']
+2025-01-08 20:51:46,952 - storage - INFO - Found: ['    "Jaws": {']
+2025-01-08 20:51:46,952 - storage - INFO - Found: ['        "date": 1982', '']
+2025-01-08 20:51:46,952 - storage - INFO - Found: ['        "rating": 5.0']
+2025-01-08 20:51:46,952 - storage - INFO - Found: ['    }', '']
+2025-01-08 20:51:46,952 - storage - INFO - Found: ['    "War of the worlds": {']
+2025-01-08 20:51:46,952 - storage - INFO - Found: ['        "date": 2006', '']
+2025-01-08 20:51:46,952 - storage - INFO - Found: ['        "rating": 8.9']
+2025-01-08 20:51:46,952 - storage - INFO - Found: ['    }', '']
+2025-01-08 20:51:46,952 - storage - INFO - Found: ['    "Inception": {']
+2025-01-08 20:51:46,952 - storage - INFO - Found: ['        "date": 2015', '']
+2025-01-08 20:51:46,952 - storage - INFO - Found: ['        "rating": 8.6']
+2025-01-08 20:51:46,952 - storage - INFO - Found: ['    }']
+2025-01-08 20:51:46,952 - storage - INFO - Found: ['}']
+2025-01-08 20:51:46,952 - storage - WARNING - Skipping row with incorrect number of fields: ['{']
+2025-01-08 20:51:46,952 - storage - WARNING - Skipping row with incorrect number of fields: ['    "Jaws": {']
+2025-01-08 20:51:46,952 - storage - WARNING - Skipping row with incorrect number of fields: ['        "date": 1982', '']
+2025-01-08 20:51:46,952 - storage - WARNING - Skipping row with incorrect number of fields: ['        "rating": 5.0']
+2025-01-08 20:51:46,952 - storage - WARNING - Skipping row with incorrect number of fields: ['    }', '']
+2025-01-08 20:51:46,952 - storage - WARNING - Skipping row with incorrect number of fields: ['    "War of the worlds": {']
+2025-01-08 20:51:46,953 - storage - WARNING - Skipping row with incorrect number of fields: ['        "date": 2006', '']
+2025-01-08 20:51:46,953 - storage - WARNING - Skipping row with incorrect number of fields: ['        "rating": 8.9']
+2025-01-08 20:51:46,953 - storage - WARNING - Skipping row with incorrect number of fields: ['    }', '']
+2025-01-08 20:51:46,953 - storage - WARNING - Skipping row with incorrect number of fields: ['    "Inception": {']
+2025-01-08 20:51:46,953 - storage - WARNING - Skipping row with incorrect number of fields: ['        "date": 2015', '']
+2025-01-08 20:51:46,953 - storage - WARNING - Skipping row with incorrect number of fields: ['        "rating": 8.6']
+2025-01-08 20:51:46,953 - storage - WARNING - Skipping row with incorrect number of fields: ['    }']
+2025-01-08 20:51:46,953 - storage - WARNING - Skipping row with incorrect number of fields: ['}']
+2025-01-08 20:51:46,953 - storage - WARNING - Remote database exists but is empty: /Users/dda/PycharmProjects/MovieMadness/data/john.json
+2025-01-08 20:51:46,953 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 20:51:46,953 - storage - INFO - Context Manager started
+2025-01-08 20:51:46,953 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 20:51:46,953 - utils - INFO - Printing options menu...
+2025-01-08 20:51:46,953 - utils - INFO - ...finished printing options
+2025-01-08 20:51:58,949 - movie_app - INFO - Option executed List movies
+2025-01-08 20:51:58,950 - storage - INFO - Listing Movies started
+2025-01-08 20:51:58,950 - storage - ERROR - MovieApp is empty or not loaded correctly: /Users/dda/PycharmProjects/MovieMadness/data/john.json
+2025-01-08 20:51:58,950 - storage - INFO - ... Listing Movies finished
+2025-01-08 20:51:58,950 - utils - INFO - Printing options menu...
+2025-01-08 20:51:58,950 - utils - INFO - ...finished printing options
+2025-01-08 20:52:00,695 - movie_app - INFO - Option executed List movies
+2025-01-08 20:52:00,695 - storage - INFO - Listing Movies started
+2025-01-08 20:52:00,695 - storage - ERROR - MovieApp is empty or not loaded correctly: /Users/dda/PycharmProjects/MovieMadness/data/john.json
+2025-01-08 20:52:00,695 - storage - INFO - ... Listing Movies finished
+2025-01-08 20:52:00,695 - utils - INFO - Printing options menu...
+2025-01-08 20:52:00,695 - utils - INFO - ...finished printing options
+2025-01-08 20:52:05,070 - movie_app - INFO - Option executed Add new movie
+2025-01-08 20:52:05,071 - storage - INFO - Add Movie started...
+2025-01-08 20:52:05,071 - utils - INFO - starting check_movie_title ...
+2025-01-08 20:52:06,914 - utils - INFO - Movie Title checked for validity jaws
+2025-01-08 20:52:06,915 - utils - INFO - ... Title check finished
+2025-01-08 20:52:06,916 - omdb_api - INFO - Retrieving jaws from OMDB
+2025-01-08 20:52:07,039 - omdb_api - INFO - Movie data retrieved for Jaws
+2025-01-08 20:52:07,039 - utils - INFO - starting movie_in_db check...
+2025-01-08 20:52:07,040 - storage - INFO - New movie added: Title: Jaws, Date: 1975, Rating: 8.1, URL: https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg
+2025-01-08 20:52:07,040 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 20:52:07,042 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/john.json
+2025-01-08 20:52:07,042 - storage - INFO - Local Storage before saving: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 20:52:07,042 - storage - INFO - Reloaded Storage after reading: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 20:52:07,042 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 20:52:07,042 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 20:52:07,042 - storage - INFO - ... Add movie finished
+2025-01-08 20:52:07,042 - utils - INFO - Printing options menu...
+2025-01-08 20:52:07,042 - utils - INFO - ...finished printing options
+2025-01-08 20:52:08,621 - movie_app - INFO - Option executed Add new movie
+2025-01-08 20:52:08,622 - storage - INFO - Add Movie started...
+2025-01-08 20:52:08,622 - utils - INFO - starting check_movie_title ...
+2025-01-08 20:52:15,001 - utils - INFO - Movie Title checked for validity lord of the rings
+2025-01-08 20:52:15,002 - utils - INFO - ... Title check finished
+2025-01-08 20:52:15,003 - omdb_api - INFO - Retrieving lord of the rings from OMDB
+2025-01-08 20:52:15,244 - omdb_api - INFO - Movie data retrieved for The Lord of the Rings: The Fellowship of the Ring
+2025-01-08 20:52:15,244 - utils - INFO - starting movie_in_db check...
+2025-01-08 20:52:15,245 - storage - INFO - New movie added: Title: The Lord of the Rings: The Fellowship of the Ring, Date: 2001, Rating: 8.9, URL: https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_SX300.jpg
+2025-01-08 20:52:15,245 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 20:52:15,246 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/john.json
+2025-01-08 20:52:15,246 - storage - INFO - Local Storage before saving: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'The Lord of the Rings: The Fellowship of the Ring': {'date': 2001, 'rating': 8.9, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 20:52:15,246 - storage - INFO - Reloaded Storage after reading: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'The Lord of the Rings: The Fellowship of the Ring': {'date': 2001, 'rating': 8.9, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 20:52:15,246 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 20:52:15,247 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 20:52:15,247 - storage - INFO - ... Add movie finished
+2025-01-08 20:52:15,247 - utils - INFO - Printing options menu...
+2025-01-08 20:52:15,247 - utils - INFO - ...finished printing options
+2025-01-08 20:52:17,586 - movie_app - INFO - Option executed List movies
+2025-01-08 20:52:17,586 - storage - INFO - Listing Movies started
+2025-01-08 20:52:17,586 - utils - INFO - Printing movies...
+2025-01-08 20:52:17,586 - utils - INFO - ...finished printing options
+2025-01-08 20:52:17,586 - storage - INFO - ... Listing Movies finished
+2025-01-08 20:52:17,586 - utils - INFO - Printing options menu...
+2025-01-08 20:52:17,586 - utils - INFO - ...finished printing options
+2025-01-08 20:52:26,951 - movie_app - INFO - Option executed Exit MovieMadness
+2025-01-08 20:52:26,953 - movie_app - INFO - Quit starting ...
+2025-01-08 20:52:26,953 - movie_app - INFO - Program terminating...
+2025-01-08 20:52:26,953 - movie_app - INFO - ... quit finished
+2025-01-08 20:52:26,953 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 56, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 89, in run
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 23, in <lambda>
+    "FUNCTION": lambda: self.quit(),
+                        ^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 218, in quit
+    sys.exit()
+SystemExit
+2025-01-08 20:52:26,957 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 20:52:26,958 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/john.json
+2025-01-08 20:52:26,959 - storage - INFO - Local Storage before saving: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'The Lord of the Rings: The Fellowship of the Ring': {'date': 2001, 'rating': 8.9, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 20:52:26,960 - storage - INFO - Reloaded Storage after reading: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'The Lord of the Rings: The Fellowship of the Ring': {'date': 2001, 'rating': 8.9, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 20:52:26,960 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 20:52:26,960 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 20:52:26,960 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/data/john.json
+2025-01-08 20:53:37,951 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 20:53:37,951 - storage - INFO - Found: ['Jaws', '1975', '8.1', 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 20:53:37,951 - storage - INFO - Found: ['The Lord of the Rings: The Fellowship of the Ring', '2001', '8.9', 'https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 20:53:37,951 - storage - INFO - Database loaded into local
+2025-01-08 20:53:37,951 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 20:53:37,951 - storage - INFO - Context Manager started
+2025-01-08 20:53:37,951 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 20:53:37,951 - utils - INFO - Printing options menu...
+2025-01-08 20:53:37,951 - utils - INFO - ...finished printing options
+2025-01-08 20:53:44,363 - movie_app - INFO - Option executed List movies
+2025-01-08 20:53:44,365 - storage - INFO - Listing Movies started
+2025-01-08 20:53:44,365 - utils - INFO - Printing movies...
+2025-01-08 20:53:44,366 - utils - INFO - ...finished printing options
+2025-01-08 20:53:44,366 - storage - INFO - ... Listing Movies finished
+2025-01-08 20:53:44,366 - utils - INFO - Printing options menu...
+2025-01-08 20:53:44,366 - utils - INFO - ...finished printing options
+2025-01-08 20:54:32,699 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 20:54:32,700 - storage - INFO - Found: ['Jaws', '1975', '8.1', 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 20:54:32,700 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 20:54:32,700 - storage - INFO - Found: ['Dark Angel', '0', '7.4', 'https://m.media-amazon.com/images/M/MV5BYjYzNzQyYWMtOTUyNS00Njc0LWI5ZjYtMjQ1M2E5YTRiZmE0XkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 20:54:32,700 - storage - INFO - Database loaded into local
+2025-01-08 20:54:32,700 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 20:54:32,700 - storage - INFO - Context Manager started
+2025-01-08 20:54:32,700 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 20:54:32,700 - utils - INFO - Printing options menu...
+2025-01-08 20:54:32,700 - utils - INFO - ...finished printing options
+2025-01-08 20:54:36,983 - movie_app - INFO - Option executed List movies
+2025-01-08 20:54:36,983 - storage - INFO - Listing Movies started
+2025-01-08 20:54:36,984 - utils - INFO - Printing movies...
+2025-01-08 20:54:36,984 - utils - INFO - ...finished printing options
+2025-01-08 20:54:36,984 - storage - INFO - ... Listing Movies finished
+2025-01-08 20:54:36,984 - utils - INFO - Printing options menu...
+2025-01-08 20:54:36,984 - utils - INFO - ...finished printing options
+2025-01-08 20:54:46,131 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 56, in main
+    app1.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 20:54:46,132 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 20:54:46,132 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-08 20:54:46,132 - storage - INFO - Local Storage before saving: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}, 'Dark Angel': {'date': 0, 'rating': 7.4, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjYzNzQyYWMtOTUyNS00Njc0LWI5ZjYtMjQ1M2E5YTRiZmE0XkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 20:54:46,132 - storage - INFO - Reloaded Storage after reading: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}, 'Dark Angel': {'date': 0, 'rating': 7.4, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjYzNzQyYWMtOTUyNS00Njc0LWI5ZjYtMjQ1M2E5YTRiZmE0XkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 20:54:46,132 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 20:54:46,132 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 20:54:46,132 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-08 21:01:40,964 - __main__ - INFO - New instance started /Users/dda/PycharmProjects/MovieMadness/data/default.json, <class 'storage.StorageJson'>
+2025-01-08 21:01:40,964 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 21:01:40,964 - storage - INFO - Found: ['Jaws', '1975', '8.1', 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 21:01:40,964 - storage - INFO - Found: ['Inception', '2010', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg']
+2025-01-08 21:01:40,964 - storage - INFO - Found: ['Dark Angel', '0', '7.4', 'https://m.media-amazon.com/images/M/MV5BYjYzNzQyYWMtOTUyNS00Njc0LWI5ZjYtMjQ1M2E5YTRiZmE0XkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 21:01:40,964 - storage - INFO - Database loaded into local
+2025-01-08 21:01:40,964 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 21:01:40,964 - storage - INFO - Context Manager started
+2025-01-08 21:01:40,964 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 21:01:40,965 - __main__ - INFO - New instance started /Users/dda/PycharmProjects/MovieMadness/data/default.json, <class 'storage.StorageJson'>
+2025-01-08 21:01:40,965 - utils - INFO - Printing options menu...
+2025-01-08 21:01:40,965 - utils - INFO - ...finished printing options
+2025-01-08 21:02:07,082 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 64, in main
+    app.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 73, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-08 21:02:07,084 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 21:02:07,084 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-08 21:02:07,084 - storage - INFO - Local Storage before saving: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}, 'Dark Angel': {'date': 0, 'rating': 7.4, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjYzNzQyYWMtOTUyNS00Njc0LWI5ZjYtMjQ1M2E5YTRiZmE0XkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 21:02:07,085 - storage - INFO - Reloaded Storage after reading: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'Inception': {'date': 2010, 'rating': 8.8, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}, 'Dark Angel': {'date': 0, 'rating': 7.4, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjYzNzQyYWMtOTUyNS00Njc0LWI5ZjYtMjQ1M2E5YTRiZmE0XkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 21:02:07,085 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 21:02:07,085 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 21:02:07,085 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-08 21:02:17,453 - movie_app - INFO - Option executed Exit MovieMadness
+2025-01-08 21:02:17,455 - movie_app - INFO - Quit starting ...
+2025-01-08 21:02:17,455 - movie_app - INFO - Program terminating...
+2025-01-08 21:02:17,455 - movie_app - INFO - ... quit finished
+2025-01-08 21:02:17,455 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 56, in main
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 89, in run
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 23, in <lambda>
+    "FUNCTION": lambda: self.quit(),
+                        ^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 218, in quit
+    sys.exit()
+SystemExit
+2025-01-08 21:02:17,460 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 21:02:17,461 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/john.json
+2025-01-08 21:02:17,461 - storage - INFO - Local Storage before saving: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'The Lord of the Rings: The Fellowship of the Ring': {'date': 2001, 'rating': 8.9, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 21:02:17,461 - storage - INFO - Reloaded Storage after reading: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'The Lord of the Rings: The Fellowship of the Ring': {'date': 2001, 'rating': 8.9, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 21:02:17,462 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 21:02:17,462 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 21:02:17,462 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/data/john.json
+2025-01-08 21:02:19,594 - __main__ - INFO - New instance started /Users/dda/PycharmProjects/MovieMadness/data/john.json, <class 'storage.StorageJson'>
+2025-01-08 21:02:19,594 - storage - INFO - loading csv file to local_storage started ...
+2025-01-08 21:02:19,594 - storage - INFO - Found: ['Jaws', '1975', '8.1', 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 21:02:19,594 - storage - INFO - Found: ['The Lord of the Rings: The Fellowship of the Ring', '2001', '8.9', 'https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_SX300.jpg']
+2025-01-08 21:02:19,594 - storage - INFO - Database loaded into local
+2025-01-08 21:02:19,594 - storage - INFO - ... loading file to local_storage finished
+2025-01-08 21:02:19,594 - storage - INFO - Context Manager started
+2025-01-08 21:02:19,594 - movie_app - INFO - New Instance of MovieApp started
+2025-01-08 21:02:19,594 - __main__ - INFO - New instance started /Users/dda/PycharmProjects/MovieMadness/data/john.json, <class 'storage.StorageJson'>
+2025-01-08 21:02:19,594 - utils - INFO - Printing options menu...
+2025-01-08 21:02:19,594 - utils - INFO - ...finished printing options
+2025-01-08 21:02:33,080 - movie_app - INFO - Option executed Exit MovieMadness
+2025-01-08 21:02:33,081 - movie_app - INFO - Quit starting ...
+2025-01-08 21:02:33,081 - movie_app - INFO - Program terminating...
+2025-01-08 21:02:33,081 - movie_app - INFO - ... quit finished
+2025-01-08 21:02:33,081 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 64, in main
+    app.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 89, in run
+    func()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 23, in <lambda>
+    "FUNCTION": lambda: self.quit(),
+                        ^^^^^^^^^^^
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 218, in quit
+    sys.exit()
+SystemExit
+2025-01-08 21:02:33,083 - storage - INFO - Saving local storage to CSV file ...
+2025-01-08 21:02:33,084 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/john.json
+2025-01-08 21:02:33,084 - storage - INFO - Local Storage before saving: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'The Lord of the Rings: The Fellowship of the Ring': {'date': 2001, 'rating': 8.9, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 21:02:33,084 - storage - INFO - Reloaded Storage after reading: {'Jaws': {'date': 1975, 'rating': 8.1, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg'}, 'The Lord of the Rings: The Fellowship of the Ring': {'date': 2001, 'rating': 8.9, 'poster_url': 'https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_SX300.jpg'}}
+2025-01-08 21:02:33,084 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-08 21:02:33,084 - storage - INFO - ... saving local_storage to file finished
+2025-01-08 21:02:33,084 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/data/john.json
