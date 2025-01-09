@@ -2057,3 +2057,171 @@ KeyboardInterrupt
 2025-01-09 09:31:26,767 - storage - INFO - Assertion checked: Remote is synced with Local
 2025-01-09 09:31:26,767 - storage - INFO - ... saving local_storage to file finished
 2025-01-09 09:31:26,767 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-09 09:43:52,844 - __main__ - INFO - New instance started /Users/dda/PycharmProjects/MovieMadness/data/default.json, <class 'storage.StorageJson'>
+2025-01-09 09:43:52,845 - storage - INFO - loading json file to local_storage started ...
+2025-01-09 09:43:52,845 - storage - INFO - Database loaded into local
+2025-01-09 09:43:52,845 - storage - INFO - ... loading file to local_storage finished
+2025-01-09 09:43:52,845 - storage - INFO - Context Manager started
+2025-01-09 09:43:52,845 - movie_app - INFO - New Instance of MovieApp started
+2025-01-09 09:43:52,845 - __main__ - INFO - New instance started /Users/dda/PycharmProjects/MovieMadness/data/default.json, <class 'storage.StorageJson'>
+2025-01-09 09:43:52,845 - utils - INFO - Printing options menu...
+2025-01-09 09:43:52,845 - utils - INFO - ...finished printing options
+2025-01-09 09:43:56,601 - movie_app - INFO - Option executed Generate web page
+2025-01-09 09:43:56,602 - storage - INFO - starting to generate content for grid
+2025-01-09 09:43:56,602 - storage - INFO - New contents created for Web
+2025-01-09 09:43:56,602 - storage - INFO - Replacing placeholder with grid contents
+2025-01-09 09:43:56,604 - utils - INFO - Printing options menu...
+2025-01-09 09:43:56,604 - utils - INFO - ...finished printing options
+2025-01-09 09:50:28,637 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 61, in main
+    app.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 71, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-09 09:50:28,641 - storage - INFO - Saving local storage to file %s...
+2025-01-09 09:50:28,642 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-09 09:50:28,642 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-09 09:50:28,642 - storage - INFO - ... saving local_storage to file finished
+2025-01-09 09:50:28,642 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-09 09:50:31,440 - __main__ - INFO - New instance started /Users/dda/PycharmProjects/MovieMadness/data/default.json, <class 'storage.StorageJson'>
+2025-01-09 09:50:31,440 - storage - INFO - loading json file to local_storage started ...
+2025-01-09 09:50:31,440 - storage - INFO - Database loaded into local
+2025-01-09 09:50:31,440 - storage - INFO - ... loading file to local_storage finished
+2025-01-09 09:50:31,440 - storage - INFO - Context Manager started
+2025-01-09 09:50:31,440 - movie_app - INFO - New Instance of MovieApp started
+2025-01-09 09:50:31,440 - __main__ - INFO - New instance started /Users/dda/PycharmProjects/MovieMadness/data/default.json, <class 'storage.StorageJson'>
+2025-01-09 09:50:31,440 - utils - INFO - Printing options menu...
+2025-01-09 09:50:31,441 - utils - INFO - ...finished printing options
+2025-01-09 09:50:33,816 - movie_app - INFO - Option executed Generate web page
+2025-01-09 09:50:33,816 - storage - INFO - starting to generate content for grid
+2025-01-09 09:50:33,816 - storage - INFO - New contents created for Web
+2025-01-09 09:50:33,816 - storage - INFO - Replacing placeholder with grid contents
+2025-01-09 09:50:33,818 - utils - INFO - Printing options menu...
+2025-01-09 09:50:33,818 - utils - INFO - ...finished printing options
+2025-01-09 09:51:32,034 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 61, in main
+    app.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 71, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-09 09:51:32,037 - storage - INFO - Saving local storage to file %s...
+2025-01-09 09:51:32,037 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-09 09:51:32,037 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-09 09:51:32,037 - storage - INFO - ... saving local_storage to file finished
+2025-01-09 09:51:32,037 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-09 09:51:33,597 - __main__ - INFO - New instance started /Users/dda/PycharmProjects/MovieMadness/data/default.json, <class 'storage.StorageJson'>
+2025-01-09 09:51:33,597 - storage - INFO - loading json file to local_storage started ...
+2025-01-09 09:51:33,597 - storage - INFO - Database loaded into local
+2025-01-09 09:51:33,597 - storage - INFO - ... loading file to local_storage finished
+2025-01-09 09:51:33,597 - storage - INFO - Context Manager started
+2025-01-09 09:51:33,597 - movie_app - INFO - New Instance of MovieApp started
+2025-01-09 09:51:33,597 - __main__ - INFO - New instance started /Users/dda/PycharmProjects/MovieMadness/data/default.json, <class 'storage.StorageJson'>
+2025-01-09 09:51:33,597 - utils - INFO - Printing options menu...
+2025-01-09 09:51:33,597 - utils - INFO - ...finished printing options
+2025-01-09 09:51:36,524 - movie_app - INFO - Option executed Generate web page
+2025-01-09 09:51:36,524 - storage - INFO - starting to generate content for grid
+2025-01-09 09:51:36,524 - storage - INFO - New contents created for Web
+2025-01-09 09:51:36,525 - storage - INFO - Replacing placeholder with grid contents
+2025-01-09 09:51:36,526 - utils - INFO - Printing options menu...
+2025-01-09 09:51:36,527 - utils - INFO - ...finished printing options
+2025-01-09 09:52:32,125 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 61, in main
+    app.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 71, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-09 09:52:32,128 - storage - INFO - Saving local storage to file %s...
+2025-01-09 09:52:32,128 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-09 09:52:32,128 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-09 09:52:32,128 - storage - INFO - ... saving local_storage to file finished
+2025-01-09 09:52:32,128 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-09 09:52:33,993 - __main__ - INFO - New instance started /Users/dda/PycharmProjects/MovieMadness/data/default.json, <class 'storage.StorageJson'>
+2025-01-09 09:52:33,993 - storage - INFO - loading json file to local_storage started ...
+2025-01-09 09:52:33,993 - storage - INFO - Database loaded into local
+2025-01-09 09:52:33,993 - storage - INFO - ... loading file to local_storage finished
+2025-01-09 09:52:33,993 - storage - INFO - Context Manager started
+2025-01-09 09:52:33,993 - movie_app - INFO - New Instance of MovieApp started
+2025-01-09 09:52:33,993 - __main__ - INFO - New instance started /Users/dda/PycharmProjects/MovieMadness/data/default.json, <class 'storage.StorageJson'>
+2025-01-09 09:52:33,993 - utils - INFO - Printing options menu...
+2025-01-09 09:52:33,993 - utils - INFO - ...finished printing options
+2025-01-09 09:52:36,220 - movie_app - INFO - Option executed Generate web page
+2025-01-09 09:52:36,221 - storage - INFO - starting to generate content for grid
+2025-01-09 09:52:36,221 - storage - INFO - New contents created for Web
+2025-01-09 09:52:36,221 - storage - INFO - Replacing placeholder with grid contents
+2025-01-09 09:52:36,223 - utils - INFO - Printing options menu...
+2025-01-09 09:52:36,223 - utils - INFO - ...finished printing options
+2025-01-09 09:54:27,068 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 61, in main
+    app.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 71, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-09 09:54:27,071 - storage - INFO - Saving local storage to file %s...
+2025-01-09 09:54:27,072 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-09 09:54:27,072 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-09 09:54:27,072 - storage - INFO - ... saving local_storage to file finished
+2025-01-09 09:54:27,072 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-09 09:54:28,845 - __main__ - INFO - New instance started /Users/dda/PycharmProjects/MovieMadness/data/default.json, <class 'storage.StorageJson'>
+2025-01-09 09:54:28,845 - storage - INFO - loading json file to local_storage started ...
+2025-01-09 09:54:28,845 - storage - INFO - Database loaded into local
+2025-01-09 09:54:28,845 - storage - INFO - ... loading file to local_storage finished
+2025-01-09 09:54:28,845 - storage - INFO - Context Manager started
+2025-01-09 09:54:28,846 - movie_app - INFO - New Instance of MovieApp started
+2025-01-09 09:54:28,846 - __main__ - INFO - New instance started /Users/dda/PycharmProjects/MovieMadness/data/default.json, <class 'storage.StorageJson'>
+2025-01-09 09:54:28,846 - utils - INFO - Printing options menu...
+2025-01-09 09:54:28,846 - utils - INFO - ...finished printing options
+2025-01-09 09:54:31,498 - movie_app - INFO - Option executed Generate web page
+2025-01-09 09:54:31,499 - storage - INFO - starting to generate content for grid
+2025-01-09 09:54:31,499 - storage - INFO - New contents created for Web
+2025-01-09 09:54:31,499 - storage - INFO - Replacing placeholder with grid contents
+2025-01-09 09:54:31,502 - utils - INFO - Printing options menu...
+2025-01-09 09:54:31,502 - utils - INFO - ...finished printing options
+2025-01-09 09:55:12,173 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 61, in main
+    app.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 71, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-09 09:55:12,176 - storage - INFO - Saving local storage to file %s...
+2025-01-09 09:55:12,176 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-09 09:55:12,176 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-09 09:55:12,176 - storage - INFO - ... saving local_storage to file finished
+2025-01-09 09:55:12,176 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-09 09:55:13,849 - __main__ - INFO - New instance started /Users/dda/PycharmProjects/MovieMadness/data/default.json, <class 'storage.StorageJson'>
+2025-01-09 09:55:13,849 - storage - INFO - loading json file to local_storage started ...
+2025-01-09 09:55:13,849 - storage - INFO - Database loaded into local
+2025-01-09 09:55:13,849 - storage - INFO - ... loading file to local_storage finished
+2025-01-09 09:55:13,849 - storage - INFO - Context Manager started
+2025-01-09 09:55:13,849 - movie_app - INFO - New Instance of MovieApp started
+2025-01-09 09:55:13,849 - __main__ - INFO - New instance started /Users/dda/PycharmProjects/MovieMadness/data/default.json, <class 'storage.StorageJson'>
+2025-01-09 09:55:13,849 - utils - INFO - Printing options menu...
+2025-01-09 09:55:13,849 - utils - INFO - ...finished printing options
+2025-01-09 09:55:17,116 - movie_app - INFO - Option executed Generate web page
+2025-01-09 09:55:17,117 - storage - INFO - starting to generate content for grid
+2025-01-09 09:55:17,117 - storage - INFO - New contents created for Web
+2025-01-09 09:55:17,117 - storage - INFO - Replacing placeholder with grid contents
+2025-01-09 09:55:17,119 - utils - INFO - Printing options menu...
+2025-01-09 09:55:17,119 - utils - INFO - ...finished printing options
+2025-01-09 09:56:21,074 - storage - ERROR - Exception occurred:
+Traceback (most recent call last):
+  File "/Users/dda/PycharmProjects/MovieMadness/main.py", line 61, in main
+    app.run()
+  File "/Users/dda/PycharmProjects/MovieMadness/movie_app.py", line 71, in run
+    action = int(input("\n\nWhat do you want to do ?   "))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-01-09 09:56:21,077 - storage - INFO - Saving local storage to file %s...
+2025-01-09 09:56:21,077 - storage - INFO - Movie DB saved to file: /Users/dda/PycharmProjects/MovieMadness/data/default.json
+2025-01-09 09:56:21,078 - storage - INFO - Assertion checked: Remote is synced with Local
+2025-01-09 09:56:21,078 - storage - INFO - ... saving local_storage to file finished
+2025-01-09 09:56:21,078 - storage - INFO - Context Manager exited. DB saved to: /Users/dda/PycharmProjects/MovieMadness/data/default.json

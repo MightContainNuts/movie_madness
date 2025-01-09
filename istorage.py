@@ -83,7 +83,7 @@ class IStorage(ABC):
                 new_movie_date = movie_to_add[self.DATE]
                 new_movie_rating = movie_to_add[self.RATING]
                 new_poster_url = movie_to_add[self.POSTER_URL]
-                new_note = "Note:"
+                new_note = "No Notes"
 
                 # save to local storage
                 try:
@@ -233,7 +233,7 @@ class IStorage(ABC):
                 continue
             else:
                 print(f"Adding new note to movie: \n {new_note}")
-                return "Note: " + new_note.strip()
+                return new_note.strip()
 
     def _generate_contents_for_webpage(self) -> str:
         """
@@ -248,7 +248,13 @@ class IStorage(ABC):
                 movie_title, movie_stats = movie
                 poster_url = movie_stats["poster_url"]
                 movie_date = movie_stats["date"]
-                img = f'<img class="movie-poster" src="{poster_url}"/>'
+                movie_note = movie_stats["note"]
+                movie_rating = movie_stats["rating"]
+                img = f'<img class="movie-poster" src="{poster_url} alt= "Movie Poster"/>'  # noqa E501
+                img_note = f'<p class="img_note">{movie_note}</p>'
+                movie_rating = (
+                    f'<p class="movie_rating">Rating: {movie_rating}/10</p>'
+                )
                 movie = f'<div class="movie-title">{movie_title}</div>'
                 date = f'<div class="movie-year">{movie_date}</div>'
 
@@ -256,8 +262,10 @@ class IStorage(ABC):
             <li>
                 <div class="movie">
                     {img}
+                    {img_note}
                     {movie}
                     {date}
+                    {movie_rating}
                 </div>
             </li>"""
 
