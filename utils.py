@@ -82,7 +82,6 @@ class MovieUtils:
             "MOVIE".ljust(50),
             "YEAR".ljust(5),
             "RATING".ljust(5),
-            "POSTER URL".ljust(30),
         )
         for idx, (movie, movie_data) in enumerate(
             sorted_movies.items(), start=1
@@ -92,7 +91,7 @@ class MovieUtils:
                 movie.ljust(50),
                 str(movie_data["date"]).ljust(5),
                 str(movie_data["rating"]).ljust(10),
-                str(movie_data["poster_url"]).ljust(30),
+                str(movie_data["note"]).ljust(30),
             )
         self.logger.info("...finished printing options")
 
@@ -191,6 +190,18 @@ class MovieUtils:
                 )
                 self.logger.warning(f"Invalid movie year: {movie_date}")
 
-    def movie_in_db(self, movie: str, db_instance: dict[str, dict]) -> bool:
-        self.logger.info("starting movie_in_db check...")
-        return movie in db_instance
+    def movie_in_db(
+        self, movie_to_update: str, db_instance: dict[str, dict]
+    ) -> bool:
+        """
+        Check if the movie exists in the database (case-insensitive).
+        :param movie_to_update: The movie title to check.
+        :param db_instance: The database instance (dict of movies).
+        :return: True if the movie exists, False otherwise.
+        """
+        self.logger.info("Starting movie_in_db check...")
+        movie_to_update_lower = movie_to_update.lower()
+        return any(
+            movie_to_update_lower == movie.lower()
+            for movie in db_instance.keys()
+        )

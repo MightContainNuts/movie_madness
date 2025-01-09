@@ -47,7 +47,7 @@ class StorageJson(IStorage):
         self.logger.info("... loading file to local_storage finished")
 
     def _save_to_file(self) -> None:
-        self.logger.info("Saving local storage to file ...")
+        self.logger.info("Saving local storage to file %s...")
         try:
             if self.json_storage is not None:
                 write_handle: TextIO
@@ -145,6 +145,7 @@ class StorageCsv(IStorage):
                                 value["date"],
                                 value["rating"],
                                 value["poster_url"],
+                                value["note"],
                             ]
                         )
                 self.logger.info(
@@ -170,18 +171,19 @@ class StorageCsv(IStorage):
         """
         storage_dict = {}
         for row in csv_rows:
-            if len(row) != 4:
+            if len(row) != 5:
                 self.logger.warning(
                     f"Skipping row with incorrect number of fields: {row}"
                 )
                 continue  # Skip rows with the wrong number of fields
 
-            title, date, rating, poster_url = row
+            title, date, rating, poster_url, note = row
 
             title = title.strip()
             date = date.strip()
             rating = rating.strip()
             poster_url = poster_url.strip()
+            note = note.strip()
 
             if not title:
                 self.logger.warning(f"Skipping row with empty title: {row}")
@@ -195,6 +197,7 @@ class StorageCsv(IStorage):
                     "date": date,
                     "rating": rating,
                     "poster_url": poster_url,
+                    "note": note,
                 }
             except ValueError as e:
                 self.logger.warning(

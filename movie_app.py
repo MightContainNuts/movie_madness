@@ -35,10 +35,8 @@ class MovieApp:
                 "FUNCTION": lambda: self.storage.delete_movie(),
             },
             4: {
-                "DESCRIPTION": "Update Movie rating - disabled!",
-                "FUNCTION": lambda: print(
-                    "func disabled"
-                ),  # self.storage.update_movie(),
+                "DESCRIPTION": "Update Movie notes ",
+                "FUNCTION": lambda: self.storage.update_movie(),
             },
             5: {
                 "DESCRIPTION": "Print statistics",

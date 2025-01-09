@@ -15,6 +15,7 @@ class IStorage(ABC):
     DATE = "date"
     RATING = "rating"
     POSTER_URL = "poster_url"
+    NOTE = "note"
 
     def __init__(self, storage_file: File):
         self.local_storage: LocalStorage = {}
@@ -82,6 +83,7 @@ class IStorage(ABC):
                 new_movie_date = movie_to_add[self.DATE]
                 new_movie_rating = movie_to_add[self.RATING]
                 new_poster_url = movie_to_add[self.POSTER_URL]
+                new_note = "Note:"
 
                 # save to local storage
                 try:
@@ -89,13 +91,15 @@ class IStorage(ABC):
                         self.DATE: new_movie_date,
                         self.RATING: new_movie_rating,
                         self.POSTER_URL: new_poster_url,
+                        self.NOTE: new_note,
                     }
                     self.logger.info(
-                        "New movie added: Title: %s, Date: %s, Rating: %s, URL: %s",  # noqa E501
+                        "New movie added: Title: %s, Date: %s, Rating: %s, URL: %s, Note: %s",  # noqa E501
                         new_movie_title,
                         new_movie_date,
                         new_movie_rating,
                         new_poster_url,
+                        new_note,
                     )
                     # sync file
                     self._save_to_file()
@@ -159,26 +163,33 @@ class IStorage(ABC):
         print("Updating Movie ...")
         self.logger.info("Starting update_movie")
         movie_to_update = self.utils.check_movie_title()
-        if self.utils.movie_in_db(movie_to_update, self.local_storage):
-            new_rating = self.utils.check_movie_rating()
-            old_rating = self.local_storage[movie_to_update]["rating"]
+
+        movie_to_update = next(
+            (
+                key
+                for key in self.local_storage
+                if key.lower() == movie_to_update.lower()
+            ),
+            None,
+        )
+        if movie_to_update:
+            new_note = self._get_new_note()
+            old_note = self.local_storage[movie_to_update]["note"]
             try:
-                self.local_storage[movie_to_update]["rating"] = new_rating
+                self.local_storage[movie_to_update]["note"] = new_note
             except Exception as e:
                 self.logger.error(
-                    "Unexpected error while updating rating: %s",
+                    "Unexpected error while updating note: %s",
                     e,
                     exc_info=True,
                 )
             self.logger.info(
                 "Film %s : rating updated from %s to %s",
                 movie_to_update,
-                old_rating,
-                new_rating,
+                old_note,
+                new_note,
             )
-            print(
-                f"{movie_to_update}': {old_rating}->{new_rating}"
-            )  # noqa E501
+            print(f"{movie_to_update}': {old_note}->{new_note}")  # noqa E501
         else:
             print(f"{movie_to_update} not in DB")
         self._save_to_file()
@@ -208,6 +219,21 @@ class IStorage(ABC):
         :rtype:
         """
         pass
+
+    @staticmethod
+    def _get_new_note() -> str:
+        """
+        update note for films
+        :return:
+        :rtype:
+        """
+        while True:
+            new_note = input("Enter Note for movie: ")
+            if not new_note:
+                continue
+            else:
+                print(f"Adding new note to movie: \n {new_note}")
+                return "Note: " + new_note.strip()
 
     def _generate_contents_for_webpage(self) -> str:
         """
