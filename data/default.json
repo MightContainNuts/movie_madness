@@ -1,3 +1,8 @@
-Jaws,1975,8.1,https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg
-Inception,2010,8.8,https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg
-Dark Angel,0,7.4,https://m.media-amazon.com/images/M/MV5BYjYzNzQyYWMtOTUyNS00Njc0LWI5ZjYtMjQ1M2E5YTRiZmE0XkEyXkFqcGc@._V1_SX300.jpg
+{
+    "Jaws": {
+        "date": 1975,
+        "rating": 8.1,
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg",
+        "note": "Note: An amazing movie"
+    }
+}

@@ -55,7 +55,7 @@ def _return_storage_type(storage_name: str) -> str:
 def main(storage_file, storage_type):
 
     logger.info("New instance started %s, %s", storage_file, storage_type)
-    with StorageCsv(storage_file) as storage:
+    with storage_type(storage_file) as storage:
         app = MovieApp(storage)
         logger.info("New instance started %s, %s", storage_file, storage_type)
         app.run()
