@@ -1,12 +1,16 @@
 import requests
+from dotenv import load_dotenv
+import os
 from logger import setup_logger
 
 
 class MovieDB_API:
     def __init__(self, movie_name):
         self.logger = setup_logger(__name__)
+        load_dotenv()
+        API_KEY = os.getenv("OMDB_API_KEY")
         BASE_URL = "http://www.omdbapi.com/?t="
-        API_KEY = "&apikey=f7235079"
+        API_KEY = f"&apikey={API_KEY}"
         self.URL = BASE_URL + movie_name + API_KEY
         self.movie_name = movie_name
 

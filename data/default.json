@@ -4,5 +4,11 @@
         "rating": 8.1,
         "poster_url": "https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_SX300.jpg",
         "note": "Note: An amazing movie"
+    },
+    "Mission: Impossible": {
+        "date": 1996,
+        "rating": 7.2,
+        "poster_url": "https://m.media-amazon.com/images/M/MV5BOGZjNDlkMTYtMTJkZi00OTkzLWI4NDEtYTA2ODQyMjcwYTdlXkEyXkFqcGc@._V1_SX300.jpg",
+        "note": "No Notes"
     }
 }
